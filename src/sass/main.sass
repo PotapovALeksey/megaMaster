@@ -1,0 +1,1115 @@
+﻿@import "vars"
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700')
+
+
+body
+    font-family: 'Roboto', sans-serif
+    font-size: 16px
+    font-weight: 400
+
+// !!!!!header!!!!!
+
+.header 
+    .welcome 
+        background-color: $background-color-dark-blue
+    .welcome__img 
+        margin: 0 auto
+
+    .info 
+        padding: 10px 0px
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        .info__img 
+            width: 100%
+    
+        .info__adress 
+            height: 45px
+            text-align: center
+            &:nth-child(-n + 3) 
+                padding-right: 15px
+                border-right: 1px solid $text-color-gray2   
+ 
+            .adress-station 
+                font-size: $small-text-size3
+                font-family: $font-Roboto
+                font-weight: 500
+                text-transform: uppercase
+                color: $text-color-black
+            
+            .adress-street 
+                font-size: $small-text-size2
+                color: $text-color-gray
+            
+            .adress-icon 
+                vertical-align: bottom;
+                margin-right: 4px;
+            .green 
+                fill: $icon-color-green;
+            .red 
+                fill: $icon-color-red;
+
+        .info__tel 
+            color: $text-color-black
+            .info__tel-item
+                background-image: url('../img/Layer 20 telephone.png')
+                background-repeat: no-repeat
+                padding-left: 17px
+                background-position-y: 5px
+                .tel-item-code 
+                    font-size: $small-text-size3;
+
+                .tel-item-num 
+                    font-size: $small-text-size4;
+                    font-weight: 500;
+        .info__btn-wrp
+            .info__btn 
+                background-color: $background-color-blue;
+                font-size: $small-text-size3;
+                color: $text-color-white;
+                text-transform: uppercase;
+                padding: 9px 24px;
+                border-radius: 35px;
+                .info__btn-icon 
+                    fill: $text-color-white;
+                    margin-right: 5px;
+                    vertical-align: -7px;
+    .nav 
+        background-color: $background-color-blue;
+        text-transform: uppercase;
+        font-size: $small-text-size3;
+        color: $text-color-white;
+        .nav__menu 
+            padding: 16px 0;
+            display: flex;
+            align-self: center;
+            margin-bottom: 0px;
+            justify-content: space-between
+            .menu-item 
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                &:not(:last-child)::after 
+                    content: "";
+                    display: block;
+                    height: 100%;
+                    width: 1px;
+                    background-color: $text-color-gray;
+                    margin-left: 20px
+                .item-icon 
+                    fill: $text-color-white;
+                    margin-right: 11px;
+
+    .banner 
+        background-image: linear-gradient( to right,#015965,#0f444e,#123137,#101f22,#060a0b);
+        padding-top: 10px;
+        .banner__text 
+            padding-top: 50px;
+            .text-title 
+                font-size: $medium-title-size4;
+                color: $text-color-white;
+                margin-bottom: 40px;
+
+            .text-about 
+                color: $text-color-white;
+                font-size: $medium-title-size5;
+                width: 500px;
+                margin-bottom: 40px;
+
+            .text-button 
+                padding: 7px 22px;
+                font-size: $small-text-size3;
+                color: $text-color-black;
+                border-radius: 35px;
+                background-color: #fff;
+                margin-bottom: 50px;
+
+            .text-icon 
+                margin-left: 12px;
+                display: inline-block;
+        .banner__image
+            width: 65%;
+        .position-img
+            text-align: right;
+    .manufacture__background 
+        background-color: $background-color-light;
+        .manufacture__list
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 9px 0;
+
+        .manufacture__wrap 
+            position: relative;
+
+        .manufacture__btn 
+            position: absolute;
+            top: 50%;
+            padding: 0;
+            transform: translateY(-50%);
+            background-color: transparent;
+            color: $text-color-gray2;
+        .left 
+            left: -15px;
+        .right 
+            right: -15px;
+       
+    .routing 
+        padding: 10px 0px;
+        .routing__link 
+            font-size: $small-text-size1;
+            font-weight: 300;
+            color: $text-color-gray2;
+        
+        .routing__item 
+            display: inline-block;
+            .icon-home
+                color: $text-color-blue;
+                font-size: 16px;
+            .icon-right
+                color: $text-color-blue;
+                font-size: 10px;
+// !!!!!megaMaster!!!!!
+
+.megaMaster
+    .our-services 
+        padding: 60px 0 115px;
+        .our-services__title 
+            font-size: $medium-title-size2;
+            color: $text-color-blue;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 52px;
+        .our-services__item 
+            display: flex;
+            position: relative;
+            height: 300px;
+            &:nth-child(odd)
+                .our-services__item-wrap
+                    margin-right: 40px;
+            &:nth-child(even)
+                .our-services__item-wrap
+                    margin-left: 40px;
+
+            &:not(:nth-child(n + 5)) 
+                margin-bottom: 50px;
+            .our-services__item-wrap
+                box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.75);
+                position: relative;
+                display: flex;
+                width: 100%;
+                background-color: #0d0d0d;
+                padding-top: 40px;
+                padding-bottom: 36px;
+                padding-left: 37px;
+             
+               
+            .our-services__text-wrap 
+                flex-basis: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .our-services__text 
+                    font-size: $medium-text-size5;
+                    color: $text-color-white;
+                    text-transform: uppercase;
+            .our-services__image 
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            .position--1 
+                right: -33px;
+
+            .position--2 
+                right: -40px;
+                bottom: -55px;
+
+            .position--3 
+                right: -42px;
+                bottom: -10px;
+
+            .position--4 
+                right: -33px;
+
+            .position--5 
+                right: -33px;
+
+            .our-services__button 
+                padding: 7px 22px;
+                font-size: $small-text-size3;
+                color: $text-color-black;
+                border-radius: 35px;
+                background-color: #fff;
+            .our-services__icon 
+                margin-left: 12px;
+                display: inline-block;
+    .easy-repair 
+        padding: 30px 0;
+        .easy-repair__title 
+            line-height: 1.45;
+            font-size: $medium-text-size5;
+            margin-bottom: 35px;
+            text-align: center;
+  
+        .easy-repair__text 
+            font-size: 15px;
+
+        .easy-repair__text-other 
+            display: block;
+            margin-top: 37px;
+
+        .easy-repair__cards 
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        
+        .easy-repair__card 
+            width: 31.45%;
+
+        .easy-repair__img 
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 35px;
+
+        .easy-repair__text 
+            font-size: $small-text-size4;
+            color: $text-color-gray4;
+            line-height: 1.6;
+        
+        .easy-repair__text2 
+            display: block;
+            margin-top: 36px;
+        
+        .mb50 
+            margin-bottom: 50px;
+    .advantages
+        padding-bottom: 49px
+
+        .advantages__title 
+            font-size: $medium-text-size5
+            padding: 60px 0 25px
+        
+        .advantages__services-text 
+            font-size: 15px
+            margin-bottom: 30px
+            
+        .advantages__services-title
+            font-size: $medium-text-size2
+            columns: $text-color-black
+            margin-bottom: 28px
+
+        .advantages__services-list 
+            padding-left: 34px
+            
+            .advantages__services-item 
+                color: #dd2616;
+                .advantages__services-item-text
+                    font-size: $medium-text-size2
+                
+        .advantages__services-img 
+            margin-bottom: 35px;
+
+    
+        .advantages__experience-about 
+            font-size: 15px;
+            text-align: center;         
+
+        .advantages__experience-item 
+            &:not(:nth-child(n + 3)) 
+                margin-bottom: 40px;
+                
+            .advantages__experience-num 
+                display: block;
+                font-size: $medium-text-size4;
+                color: $text-color-red;
+                font-weight: bold;       
+
+            .advantages__experience-text 
+                display: block;
+                color: $text-color-gray4;
+                font-size: $medium-text-size1;
+
+    .news 
+        background-color: #fafafa
+        padding:  50px 0
+        .news__title
+            font-size: 36px
+            margin-bottom: 38px
+            &:after
+                content: ''
+                display: block
+                margin: 16px auto 0
+                height: 4px
+                width: 60px
+                background-color: #e8e8e8
+        .item__text
+            font-size: $small-text-size3
+            margin-bottom: 0
+        .item__icon
+            margin-left: 17px
+            fill: $text-color-blue
+            vertical-align: -2px
+        .item__title
+            font-size: 14px
+            text-align: left
+            text-transform: none;
+        .item__img
+            margin-bottom: 16px
+
+// !!!!!megaMasterCategoriaTel!!!!!
+
+.megaMasterCategoriaTel
+    .repair-phone
+        padding-bottom: 100px
+        .repair-phone__title 
+            font-size: $medium-title-size2;
+            color: $text-color-blue;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: medium;
+            text-transform: uppercase;
+            margin-left: auto
+            margin-right: auto
+
+        .repair-phone__info 
+            font-size: $small-text-size3;
+            color: $text-color-gray4;
+            margin-bottom: 22px;
+            text-indent: 38px;
+            line-height: 1.6;                  
+
+        .repair-phone__card-wrap   
+            &:not(:nth-last-child(-n + 3)) 
+                margin-bottom: 30px
+
+        .repair-phone__card
+            padding-top: 18px
+            padding-bottom: 8px
+            border: 1px solid $background-color-light2;
+            border-radius: 10px;
+            font-weight: medium;
+            text-transform: uppercase;
+            color: $text-color-blue;
+            text-align: center;
+            &:hover 
+                transition: all 200ms ease;
+                box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+                transform: scale(1.005);
+        
+            .repair-phone__card-title 
+                font-size: $medium-text-size2;
+                margin-bottom: 8px;
+            
+            .repair-phone__card-name 
+                font-size: $medium-text-size4;
+                margin-bottom: 10px;
+            .repair-phone__card-title
+                max-width: 100%
+                height: auto
+    .service-centre 
+        .service-centre__title 
+            font-size: $medium-title-size1;
+            color: $text-color-blue;
+            font-family: $font-Roboto;
+            margin-bottom: 46px;
+            text-align: center;
+        
+        .service-centre__cards 
+            margin-bottom: 30px;
+
+        .service-centre__img 
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 35px;
+
+        .service-centre__text 
+            font-size: $small-text-size4;
+            color: $text-color-gray4;
+            line-height: 1.6;
+
+        .service-centre__text2 
+            display: block;
+            margin-top: 36px;
+    .warranty 
+        padding: 60px 0 55px;
+        line-height: 1.6;
+        .warranty__title 
+            font-size: $small-title-size;
+            color: $text-color-blue;
+            text-align: center;
+            margin: 0 auto 38px;
+            width: 700px;
+            font-weight: 400;
+
+        .warranty__text 
+            font-size: $small-text-size4;
+            color: $text-color-gray4;
+            margin-bottom: 32px;
+
+        .warranty__text2 
+            font-size: $medium-text-size2;
+            color: $text-color-gray4;
+            margin-bottom: 44px;
+            text-align: center;
+
+        .warranty__text3 
+            font-size: $small-text-size4;
+            color: $text-color-gray4;
+
+        .warranty__services 
+            .warranty__services-block 
+                padding-left: 46px;
+                &:not(:last-child) 
+                    margin-bottom: 37px;
+                &:last-child 
+                    margin-bottom: 65px;
+        
+            .warranty__services-title 
+                font-size: $medium-text-size1;
+                color: $text-color-blue;
+                font-weight: bold;
+                margin-bottom: 17px;
+            
+            .warranty__services-text 
+                font-size: $small-text-size3;
+                color: $text-color-gray4;
+                display: block;
+                padding-left: 36px;
+                margin-top: -12px;
+
+            .warranty__services-icon 
+                fill: #e11d14;
+                vertical-align: -20px;
+                margin-right: 15px;
+
+            .warranty__services-icon--mr 
+                margin-right: 5px;
+
+            .warranty__services-icon--mr2 
+                margin-right:   11px;
+
+            .warranty__services-icon--mr3 
+                margin-right:   7px;
+    .repair-work 
+        padding: 58px 0 60px
+
+        .repair-work__title 
+            font-size: $small-title-size
+            color: $text-color-blue
+            text-align: center
+            margin-bottom: 40px
+    
+        .repair-work__card 
+            // &:not(:nth-last-child(-n + 3))
+            margin-bottom: 50px
+        
+            .repair-work__card-img 
+                display: block
+                width: 100%
+                height: auto
+                border-radius: 10px
+                margin-bottom: 30px
+        
+            .repair-work__card-title
+                color: $text-color-blue
+                font-weight: medium
+                font-size: $medium-text-size2
+                margin-bottom: 28px
+            
+            .repair-work__card-text
+                font-size: $small-text-size4
+                color: $text-color-gray4
+                line-height: 1.6
+                margin-bottom: 0
+            
+            .repair-work__card-text2
+                display: inline-block
+                margin-top: 27px
+        
+
+// !!!!!megaMasterTovar!!!!!
+
+.megaMasterTovar
+    .repairs
+        .repair__text
+            margin-bottom: 60px
+        .repair__stock
+            width: 100%;
+            margin: 0 auto;
+            background-color: #fbfbfb
+            box-shadow: 0px 0px 7px -3px rgba(0,0,0,0.75);
+            border-radius: 3px
+            padding-top: 50px
+            padding-bottom: 30px
+            .stock-content
+                .stock-title
+                    margin-bottom: 40px
+                .stock-img
+                    display: block
+                    margin: 0 auto 15px
+                .stock-text
+                    text-align: center
+                    margin-bottom: 24px
+                    font-size: 15px
+    .defect
+        .defect__title
+            margin: 0 auto 33px
+            padding-top: 60px
+            font-size: 26px
+        .defect__list
+            display: flex
+            flex-direction: column
+            .list__item
+                display: flex
+                justify-content: space-between
+                border-radius: 3px
+                background-color: #fafafa
+                margin-bottom: 4px
+                box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+                padding: 8px 20px 8px 24px
+                align-items: center;
+                &:hover 
+                    color: $text-color-blue
+                    transition: all 200ms ease;
+                    transform: scale(1.02);
+                    &:hover
+                        .text__icon
+                            color: red
+                    &:hover
+                        .button__icon
+                            color: $text-color-blue
+
+                .item__text
+                    .text__icon
+                        color: $text-color-blue
+                        margin-right: 12px
+                        font-size: 20px
+                .item__button
+                    background-color: transparent
+                    .button__icon
+                        color: #cccccc
+
+
+// !!!!!footer!!!!!
+
+.footer 
+                   
+    .main__wrap 
+        background-color: $background-color-black;
+        padding-bottom: 14px
+  
+        .main 
+            display: flex;
+            justify-content: space-between;
+            font-family: $font-Roboto;
+            padding: 42px 24px 15px;
+    
+            .main__logo 
+                height: 180px;
+                .main__logo-link 
+                    display: block;
+      
+                .main__logo-icon 
+                    font-size: 30px;
+                    &:not(:last-child) 
+                    margin-right: 12px;
+
+        .main__menu-wrap 
+            flex-basis: 76%;
+            .main__menu-flex 
+                display: flex;
+                margin-bottom: 48px;
+                justify-content: space-between;
+
+                .main__menu 
+                    .main__menu-list 
+                        padding-left: 16px;
+                        .main__menu-item 
+                            font-size: $small-text-size3;
+                            color: $text-color-gray3;
+                            &:not(:last-child) 
+                                margin-bottom: 16px;
+                            &:hover 
+                                color: $text-color-white;
+
+                .main__adress 
+                    .main__adress-station 
+                        font-size: $small-text-size3;
+                        font-family: $font-Roboto;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        margin-bottom: 100px;
+                        color: $text-color-white;
+      
+                    .main__adress-street 
+                        font-size: $small-text-size2;
+                        margin-top: 10px;
+                        margin-bottom: 20px;
+                        color: $text-color-gray3;
+                        padding-left: 22px;
+      
+                    .main__adress-icon 
+                        vertical-align: -4px;
+                        margin-right: 2px;
+                    .green 
+                        fill: $icon-color-green;
+                            
+                    .red 
+                        fill: $icon-color-red;
+        .footer-info 
+            font-size: $small-text-size3
+            color: $text-color-gray3
+            text-align: center
+    .main__contacts 
+        font-size: $small-text-size3;
+        font-family: $font-Roboto;
+        font-weight: 300;
+        color: $text-color-gray3
+        .main__phone
+            .main__phone-num 
+                background-image: url('../img/Layer 20 telephone.png')
+                background-repeat: no-repeat
+                padding-left: 19px
+                background-position-y: 3px
+                &:not(:last-child)
+                    margin-bottom: 9px
+                &:last-child 
+                    margin-bottom: 26px
+        .main__contacts-mail
+            margin-bottom: 26px
+            background-image: url('../img/mail-icon.png')
+            background-repeat: no-repeat
+            padding-left: 26px
+            background-position-y: 3px
+
+        .main__contacts-schedule    
+            .main__contacts-icon
+                fill: $text-color-blue
+                vertical-align: bottom
+                margin-right: 4px
+                display: inline-block
+                vertical-align: 3px
+            .main__contacts-shedule-time 
+                display: inline-block
+                width: 105px           
+    .main__title 
+        font-size: $medium-text-size3;
+        color: $text-color-white;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 21px;
+        &::after 
+            margin-top: 9px
+            content: ""
+            display: block
+            background-color: $text-color-white
+            width: 43px
+            height: 2px
+
+// !!!!!!recal!!!!
+
+.recall__wrap 
+    background:linear-gradient(rgba(37, 105, 134, 0.9), rgba(37, 105, 134, 0.9)),
+    url("../img//Layer\ 639.jpg")
+    background-repeat: no-repeat;
+    background-size: cover;
+    .recall  
+        color: $text-color-white;
+        padding: 40px 0px;
+        .recall__title 
+            font-size: $medium-title-size3;
+            text-align: center;
+            font-weight: 400;
+            margin-bottom: 30px;
+    
+
+        .recall__text 
+            text-align: center;
+            font-size: $medium-text-size2;
+            margin-bottom: 24px;
+    
+
+        .recall__form 
+            font-size: $medium-text-size2;
+            display: flex;
+            justify-content: space-between;
+            .recall__form-input 
+                color: $text-color-white;
+                font-style: italic;
+                padding: 15px 0 15px 27px;
+                border-radius: 35px;
+                background-color: $background-color-blue2;
+                outline: none;
+                border: none;
+                width: 351px;
+                &::placeholder 
+                    color: $text-color-white;
+                    font-style: italic;
+      
+            .recall__form-button 
+                color: $text-color-white;
+                padding: 15px 74px;
+                border-radius: 35px;
+                background-color: $background-color-black;
+                outline: none;
+                border: none;
+                text-transform: uppercase;
+                .recall__form-icon
+                    margin-left: 26px
+                    fill: #ffffff
+
+// !!!!!discount-recall!!!!!
+
+.discount-recall__wrap 
+    background:linear-gradient(rgba(37, 105, 134, 0.9), rgba(37, 105, 134, 0.9)),
+    url("../img//Layer\ 639.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    .discount-recall
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $text-color-white;
+        padding: 50px 0px;
+        text-transform: uppercase
+    
+        .discount-recall__title
+            font-size: $medium-text-size5
+            font-weight: 400
+            
+        .discount-recall__button
+            color: $text-color-white
+            padding: 15px 74px
+            border-radius: 35px
+            background-color: $background-color-black
+            outline: none
+            text-transform: uppercase
+            border: none
+        .discount-recall__icon
+            margin-left: 26px
+            fill: #ffffff
+
+
+// !!!!!price!!!!!
+
+.price 
+    background: linear-gradient(rgba(250, 250, 250, 0.9),rgba(250, 250, 250,0.9) ),url("../img/backgroundSectionPrice.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .price-wrap 
+        padding: 68px 62px 59px 62px;
+        color: $text-color-gray4;
+
+    .price__title 
+        font-size: $medium-title-size2;
+        font-family: $font-Roboto;
+        color: $text-color-blue;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 33px;
+
+    .price__text 
+        font-size: $small-text-size3;
+        margin-bottom: 36px;
+        line-height: 1.7;
+        text-align: center; 
+
+    .price__about 
+        font-size: $small-text-size3;
+        line-height: 1.7;
+        width: 600px;
+        margin: 0 auto 47px;
+        color: $text-color-black;
+        text-align: center;
+
+    .table-wrap
+        padding-bottom: 40px
+        max-width: 831px    
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #fff;
+        box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.47);
+        padding-left: 25px
+        padding-right: 25px
+    .table 
+
+        .table__title
+            // background-color: $background-color-light3;
+            color: $text-color-blue;
+            text-transform: uppercase;
+            font-family: $font-Roboto;
+            font-size: $medium-text-size1;
+            font-weight: bold;
+            .table__title-item
+                border-top: none
+            .th-title-price
+                text-align: right
+        
+        .table__body
+            .table__item
+                font-size: $medium-text-size1;
+                border-top: none
+                border-bottom: 1px solid #dee2e6
+                &:hover 
+                    background-color: $background-color-light3;
+                    color: $text-color-blue;
+                    transition: all 200ms ease;
+                    transform: scale(1.02);
+                .th-price
+                    text-align: right    
+
+// !!!!!price-socond
+    
+.price-second
+    .price-wrap 
+        color: $text-color-gray4;
+
+    .price__title 
+        font-size: $medium-title-size2;
+        color: $text-color-blue;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 33px;
+        padding-top: 60px
+        font-size: 26px
+        max-width: 515px
+        margin-left: auto           
+        margin-right: auto
+
+    .table-wrap
+        padding-bottom: 5px
+        max-width: 831px    
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #fff;
+        box-shadow: 0px 0px 7px -3px rgba(0,0,0,0.75);
+        padding-left: 25px
+        padding-right: 25px
+    .table 
+        .table__title
+            // background-color: $background-color-light3;
+            color: $text-color-blue;
+            text-transform: uppercase;
+            font-size: $medium-text-size1;
+            font-weight: bold;
+            .table__title-item
+                border-top: none
+            .th-title
+                border-top: none
+            .th-title-price
+                text-align: right
+        
+        .table__body
+            .table__item
+                font-size: 14px
+                border-top: none
+                border-bottom: 1px solid #dee2e6
+                font-weight: 400
+                &:hover 
+                    background-color: $background-color-light3;
+                    color: $text-color-blue;
+                    transition: all 200ms ease;
+                    transform: scale(1.02);
+                    .text-style
+                        border-color: $text-color-blue
+                        color: $text-color-blue
+                .th-price
+                    text-align: right    
+                .th-order
+                    text-align: right
+                    
+                    i
+                        vertical-align: text-bottom;
+                        margin-left: 7px;
+                    .text-style
+                        border-bottom: 1px dashed $text-color-blue;
+                        cursor: pointer
+//  !!!!!location!!!!!
+
+.location
+
+    .location__adress-wrap 
+        position: relative;
+        margin-bottom: 75px;
+        .location__adress-title 
+            font-size: $small-title-size;
+            text-transform: uppercase;
+            color: $text-color-blue;
+            font-weight: medium;
+            padding-top: 50px;
+            padding-bottom: 40px;
+            text-align: center;
+        
+        .location__adress-info-wrap 
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 35px;
+
+
+            .location__adress-info-flex 
+                display: flex;
+                justify-content: center;
+
+                .location__adress-info
+                    color: $text-color-gray4;
+                    width: 253px;
+                    padding: 14px 0 20px;
+                    border: 1px solid $background-color-light2;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                    background-color: #fff;
+                    &:not(:last-child) 
+                        margin-right: 24px;
+
+                    .location__adress-info-icon 
+                        display: block;
+                        margin: 0 auto 13px;
+                    
+                    .location__adress-info-station 
+                        font-size: $medium-text-size2;
+                        text-transform: uppercase;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 22px;
+                        color: $text-color-black;   
+
+                    .location__adress-info-street-wrap 
+                        margin: 0 auto;
+                        font-size: $small-text-size3;
+                        text-align: center;
+
+                    .location__adress-info-street 
+                        margin-bottom: 16px;
+                        display: block;
+                    .location__adress-info-street-icon 
+                        color: $text-color-blue;
+                        font-size: 14px;
+                        margin-right: 6px
+
+        .location__adress-info-icon--red 
+            fill: $icon-color-red;
+
+        .location__adress-info-icon--green 
+            fill: $icon-color-green;
+
+// !!!!!sidebar!!!!
+
+.sidebar 
+    
+    .sidebar__banners
+        .sidebar__img-wrap
+            position: relative
+            margin-bottom: 33px;
+            height: 155px
+        
+        .sidebar__img 
+            position: absolute
+            display: block;
+
+    .sidebar__title 
+        font-weight: medium;
+        font-size: $medium-text-size2;
+        color: $text-color-blue;
+        text-align: center;
+        padding: 18px 0;
+        background-color: $background-color-light;
+        text-transform: uppercase;
+
+    .sidebar__reviews 
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        box-shadow: 1px 1px 5px -2px rgba(0, 0, 0, 0.75);
+        .sidebar__reviews-list 
+            padding: 16px 16px 0 18px;
+        
+            .sidebar__reviews-item 
+                border-bottom: 1px dashed $text-color-blue;
+                padding-left: 3px;
+                padding-bottom: 16px;
+                margin-bottom: 16px;
+
+                .sidebar__reviews-name-wrap 
+                    display: inline-block;
+                    width: 130px;
+                    margin-bottom: 5px;
+                
+                .sidebar__reviews-photo 
+                    vertical-align: -5px;
+
+                .sidebar__reviews-name 
+                    color: $text-color-blue;
+                    font-weight: 300;
+                    font-size: $medium-text-size1;
+                
+                .sidebar__reviews-date 
+                    font-weight: 300;
+                    font-style: italic;
+                    font-size: $small-text-size1;
+
+                .sidebar__reviews-text 
+                    font-size: $small-text-size3;
+                    font-weight: 300;
+                    color: $text-color-gray4;
+                    margin-bottom: 0
+                
+    .sidebar__text-still 
+        color: $text-color-blue;
+        cursor: pointer;
+        font-weight: 400;
+                
+    .sidebar__button 
+        color: $text-color-white;
+        font-size: $medium-text-size2;
+        background-color: $background-color-blue;
+        padding: 10px 62px;
+        border-radius: 35px;
+        outline: none;
+        border: none;
+        display: block;
+        margin: 0 auto;
+        cursor: pointer; 
+
+    .sidebar__info 
+        padding-bottom: 16px;
+        box-shadow: 1px 1px 5px -2px rgba(0, 0, 0, 0.75);
+        .sidebar__info-list 
+            padding: 14px 16px 0 18px;
+
+            .sidebar__info-item 
+                border-bottom: 1px dashed $text-color-blue;
+                padding-left: 3px;
+                padding-bottom: 16px;
+                margin-bottom: 16px;
+
+                .sidebar__info-title 
+                    color: $text-color-blue;
+                    font-weight: 300;
+                    margin-bottom: 16px;
+                    font-size: $medium-text-size1;
+                    line-height: 1.2
+
+                .sidebar__info-text 
+                    font-size: $small-text-size3;
+                    font-weight: 300;
+                    color: $text-color-gray4;
+                    margin-bottom: 0
+
+    .img--left12
+        left: -11px;
+
+    .img--left19 
+        left: -18px;
+
+    .img--top8
+        top: -8px;
+
