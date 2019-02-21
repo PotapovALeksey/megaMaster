@@ -234,9 +234,11 @@ body
 
 .megaMaster
     .our-services 
-        
         padding-top: 60px
         padding-bottom: 110px
+        +bp(lg)
+            padding-bottom: 30px
+            padding-top: 30px
         .our-services__title 
             font-size: $medium-title-size2;
             color: $text-color-blue;
@@ -377,12 +379,19 @@ body
         .advantages__services-text 
             font-size: 15px
             margin-bottom: 30px
-            
+            +bp(lg)
+                display: none
+        .advantages__services-text-mobile
+            display: none
+            +bp(lg)
+                display: block
+
         .advantages__services-title
             font-size: $medium-text-size2
             columns: $text-color-black
             margin-bottom: 28px
-
+            +bp(lg)
+                margin-bottom: 10px
         .advantages__services-list 
             padding-left: 34px
             
@@ -463,36 +472,46 @@ body
 // !!!!!megaMasterKategoriaPlanshet!!!!!
 
 .megaMasterKategoriaPlanshet
+    
     .warranty
         box-shadow: 1px 1px 5px -2px rgba(0, 0, 0, 0.75); 
-        .warranty__title
-            background-color: #f2f2f2
-            padding: 20px 0px 10px 70px
-            font-size: 15px
-            text-align: left;
-            position: relative
-            font-weight: bold
-            .title__icon
-                position: absolute
-                font-size: 36px
-                left: 20px;
-        .warranty__content
-            padding-top: 40px
-            padding-bottom: 12px
-            .warranty__list
-                font-size: 14px
-                
-                padding-left: 25px
-                .list__item
-                    line-height: 1.2
-                    margin-bottom: 16px
-                    position: relative
-                    .item__icon
-                        color: $text-color-blue
-                        position: absolute
-                        left: -16px
-                        top: 2px
-                        font-size: 12px
+        +bp(xl)
+            display: none
+    .warranty__mobile
+        margin-top: 30px
+        +bp(sssl)
+            display: none
+        +bp(xl)
+            display: block
+        +bp(sm)
+            margin-top: 0px
+    .warranty__title
+        background-color: #f2f2f2
+        padding: 20px 0px 10px 70px
+        font-size: 15px
+        text-align: left;
+        position: relative
+        font-weight: bold
+        .title__icon
+            position: absolute
+            font-size: 36px
+            left: 20px;
+    .warranty__content
+        padding-top: 40px
+        padding-bottom: 12px
+        .warranty__list
+            font-size: 14px
+            padding-left: 25px
+            .list__item
+                line-height: 1.2
+                margin-bottom: 16px
+                position: relative
+                .item__icon
+                    color: $text-color-blue
+                    position: absolute
+                    left: -16px
+                    top: 2px
+                    font-size: 12px
     .info
         padding-bottom: 50px
         .info__title
@@ -509,10 +528,8 @@ body
 
 .megaMasterKategoriaLaptop
     .benefits-wrap
-        
         +bp(xl)
             display: none
-
     .benefits-wrap__mobile
         margin-top: 30px
         +bp(sssl)
@@ -521,6 +538,9 @@ body
             display: block
         +bp(sm)
             margin-top: 0px
+        .margin-bottom
+            +bp(lg)
+                margin-bottom: 30px
     .benefits
         box-shadow: 1px 1px 5px -2px rgba(0, 0, 0, 0.75);
         height: 100%
@@ -558,9 +578,22 @@ body
                     color: $icon-color-green
 
     .info
-        padding: 60px 0 30px                    
-        .info__text
-            font-size: 15px
+        padding-top: 60px  
+        padding-bottom: 30px
+        font-size: 15px  
+        +bp(md)
+            padding-top: 30px
+        .info__img
+            +bp(md)
+                margin-bottom: 30px         
+        .info__text-desctop
+            display: block
+            +bp(lg)
+                display: none
+        .info__text-mobile
+            display: none
+            +bp(lg)
+                display: block
         .info__title
             padding-top: 20px
             padding-bottom: 30px
@@ -571,6 +604,9 @@ body
         .blog__title
             padding-top: 45px
             padding-bottom: 45px
+            +bp(lg)
+                padding-top: 30px
+                padding-bottom: 30px
         .blog-cards
 
             .blog-card
@@ -582,6 +618,8 @@ body
 
                 &:last-child
                     margin-bottom: 70px
+                    +bp(lg)
+                        margin-bottom: 30px
                 .blog-card__info
                     padding: 40px 0px 22px 30px
                     background-color: #fbfbfb
@@ -614,6 +652,8 @@ body
 
         .pagination  
             margin: 0 auto 100px
+            +bp(lg)
+                margin: 0 auto 30px
             max-width: 422px
             display: flex
             justify-content: center
@@ -653,7 +693,8 @@ body
 
 .megaMasterBrandiVnutri
     margin-bottom: 60px
-    
+    +bp(lg)
+        margin-bottom: 30px
     .brand-cards
         .brand-card__item 
             display: flex;
@@ -662,10 +703,13 @@ body
             &:nth-child(odd)
                 .brand-card__item-wrap
                     margin-right: 40px;
+                    +bp(xl)
+                        margin-right: 0px;
             &:nth-child(even)
                 .brand-card__item-wrap
                     margin-left: 40px;
-
+                    +bp(xl)
+                        margin-left: 0px;
             &:not(:nth-child(n + 5)) 
                 margin-bottom: 50px;
             .brand-card__item-wrap
@@ -812,15 +856,30 @@ body
     .repair-home
         .repair-home__title
             padding: 50px 0 50px
+            +bp(lg)
+                padding: 30px 0 30px
         .benefits-text
             font-size: 15px
+            display: block
+            +bp(xl)
+                display: none
+     
+        .benefits-text-mobile  
+            display: none
+            +bp(xl)
+                display: block
+        .repair-home__img
+            +bp(lg)
+                margin-bottom: 30px
+            
         .benefits-title
             font-size: 18px
             margin-bottom: 18px
             color: $text-color-gray4
         .benefits-list
             padding-left: 35px
-           
+            +bp(xs)
+                padding-left: 15px
             .benefits-item
                 color: red
 
@@ -832,7 +891,28 @@ body
                     color: $text-color-gray4
                     line-height: 1.35
 
+    .repair-description
+        +bp(lg)
+            margin-bottom: 10px
+    .description-text
+        +bp(sm)
+            padding-left: 15px
+    .repair-work
+        +bp(lg)
+            padding-top: 30px             
+        +bp(lg)
+            padding-bottom: 0px
 // !!!!!megaMasterBrandi!!!!!
+.megaMasterBrandi
+    .location-second
+        display: block
+        +bp(xl)
+            display: none
+        .location__adress-wrap     
+            .location__adress-info-flex
+                justify-content: space-around
+                .location__adress-info
+                    width: 27%
 
 // !!!!!megaMasterRemontDisplay!!!!!
 .megaMasterRemontDisplay
@@ -846,7 +926,23 @@ body
             padding-bottom: 30px
         .repair-display__text
             color: $text-color-gray4
-
+            +bp(xl)
+                display: none
+        .repair-display__text-mobile
+            display: none
+            +bp(xl)
+                display: block
+               
+        .repair-display__img
+            display: block
+            +bp(lg)
+                display: none
+                
+        .repair-display__img-mobile
+            display: none
+            +bp(lg)
+                display: block
+                margin-bottom: 30px
         .repair-display__title-list
             font-size: 18px
             color: $text-color-gray4
@@ -854,6 +950,8 @@ body
             margin-bottom: 16px
         .repair-display__list
             padding-left: 35px
+            +bp(xs)
+                padding-left: 15px
             .repair-display__item
                 color: red
                 .item__text
@@ -881,6 +979,9 @@ body
             margin-bottom: 60px
 
     .location-second
+        display: block
+        +bp(xl)
+            display: none
         .location__adress-wrap     
             .location__adress-info-flex
                 justify-content: space-around
@@ -963,8 +1064,16 @@ body
             display: flex
             padding: 20px 0px 20px 24px
             align-items: center
+            +bp(xs)
+                flex-direction: column
+                padding: 20px 0px
+            +bp(lg)
+                margin-bottom: 30px
             .social-text
-                margin-right: 62px
+                margin-right: 60px
+                +bp(xs)
+                    margin-right: 0px
+                    margin-bottom: 10px
             .social-icon
                 cursor: pointer
                 &:nth-child(-n+2)
@@ -1169,10 +1278,10 @@ body
             font-size: $medium-text-size5
             font-weight: 400
             margin-bottom: 35px
-            +bp(sm)
+            +bp(lg)
                 font-size: $medium-text-size3
-            +bp(md)
                 text-align: center
+          
         .discount-recall__button
             color: $text-color-white
             padding: 15px 74px
@@ -1287,6 +1396,7 @@ body
 
     .price__title 
         font-size: $medium-title-size2;
+   
         color: $text-color-blue;
         text-transform: uppercase;
         text-align: center;
@@ -1310,7 +1420,9 @@ body
             background-color: $background-color-light3;
             color: $text-color-blue;
             text-transform: uppercase;
-            font-size: $medium-text-size1;
+            font-size: $medium-text-size1
+            +bp(md)
+                font-size: $small-text-size1
             font-weight: bold;
             .table__title-item
                 border-top: none
@@ -1318,17 +1430,24 @@ body
                 border-top: none
             .th-title-price
                 text-align: center
+            
             .th-title-order
                 text-align: right
                 padding-right: 20px
+                +bp(md)
+                    padding-right: 5px
             .th-title-model
                 padding-left: 20px
+                +bp(md)
+                    padding-left: 5px
         .table__body
             .table__item
                 font-size: 14px
                 border-top: none
                 border-bottom: 1px solid #dee2e6
                 font-weight: 400
+                +bp(md)
+                    font-size: 10px
                 &:hover 
                     background-color: $background-color-light3;
                     color: $text-color-blue;
@@ -1340,9 +1459,12 @@ body
                 
                 .item__th
                     padding: 7px 20px 7px 20px
-                
+                    +bp(md)
+                        padding: 7px 5px 7px 5px
                 .th-price
-                    text-align: right    
+                    text-align: right  
+                    +bp(md)
+                        text-align: center  
                 .th-order
                     text-align: right
                     
@@ -1352,14 +1474,22 @@ body
                     .text-style
                         border-bottom: 1px dashed $text-color-blue;
                         cursor: pointer
-
+                .th-days
+                    +bp(md)
+                        text-align: center
 //  !!!!!location!!!!!
 
+.location__mobile
+    display: none
+    +bp(xl)
+        display: block
 .location 
-    
+
     .location__adress-wrap 
         position: relative;
         margin-bottom: 75px;
+        +bp(xl)
+            margin-bottom: 30px
         .location__adress-title 
             font-size: $small-title-size;
             text-transform: uppercase;
@@ -1368,7 +1498,9 @@ body
             padding-top: 50px;
             padding-bottom: 40px;
             text-align: center;
-        
+            +bp(xl)
+                padding-top: 30px;
+                padding-bottom: 30px;
         .location__adress-info-wrap 
             position: absolute;
             left: 50%;
@@ -1444,6 +1576,9 @@ body
 // !!!!!location-second!!!!
 
 .location-second
+    display: block
+    +bp(xl)
+        display: none
     .location__adress-iframe
         max-height: 553px
     .location__adress-wrap 
@@ -1659,6 +1794,8 @@ body
 
 .repair-catalog
     padding-bottom: 100px
+    +bp(lg)
+        padding-bottom: 30px
     .repair-catalog__title 
         font-size: $medium-title-size2;
         color: $text-color-blue;
@@ -1710,6 +1847,9 @@ body
 
 // !!!!!brand-catalog!!!!!
 .brand-catalog
+    margin-bottom: 20px
+    +bp(lg)
+        margin-bottom: 0px
     .brand-catalog__title
         font-size: 26px
         padding-top: 30px
@@ -1795,8 +1935,10 @@ body
 
 // !!!!!repair-work!!!!!
 .repair-work 
-    padding-top: 58px
+    padding-top: 60px
     padding-bottom: 30px
+    +bp(lg)
+        padding-top: 30px
     .repair-work__title 
         font-size: $small-title-size
         color: $text-color-blue
@@ -1850,6 +1992,9 @@ body
     .stock-content
         .stock-title
             margin-bottom: 40px
+            +bp(xl)
+                margin-top: 20px
+                margin-bottom: 20px
         .stock-img
             display: block
             margin: 0 auto 15px
@@ -1865,6 +2010,8 @@ body
         margin: 0 auto 30px
         padding-top: 30px
         font-size: 26px
+        
+
     .defect__list
         display: flex
         flex-direction: column
@@ -1876,6 +2023,9 @@ body
             margin-bottom: 4px
             box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
             padding: 8px 20px 8px 24px
+            +bp(md)
+                padding: 6px 10px 6px 10px
+                font-size: 12px
             align-items: center;
             &:hover 
                 color: $text-color-blue
@@ -1893,6 +2043,9 @@ body
                     color: $text-color-blue
                     margin-right: 12px
                     font-size: 20px
+                    +bp(md)
+                        margin-right: 5px
+                        font-size: 16px
             .item__button
                 background-color: transparent
                 .button__icon
@@ -1911,6 +2064,7 @@ body
             position: absolute
             font-size: 36px
             left: 20px;
+            top: 24px;
     .interest__content
         padding-top: 40px
         padding-bottom: 12px
