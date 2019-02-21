@@ -53,7 +53,9 @@ $w-md: 767.98px
 $w-lg: 991.98px
 $w-xl: 1199.98px
 $w-sl: 1399.98px
+$w-sssl: 3777px
 
+//миксин для быстрого использования адаптивной верстки
 @mixin bp($media) 
   @if $media == xs 
     @media (max-width: $w-xs) { @content; }
@@ -63,18 +65,19 @@ $w-sl: 1399.98px
     @media (max-width: $w-md) { @content; }
   @else if $media == lg
     @media (max-width: $w-lg) { @content; }
-  @else if $media == xl 
+  @else if $media == xl
     @media (max-width: $w-xl) { @content; }
   @else if $media == sl 
- 	 	@media (max-width: $w-sl) { @content; }
+    @media (max-width: $w-sl) { @content; }
+  @else if $media == sssl 
+    @media (max-width: $w-sssl) { @content; }
+
+
+
 
 
 // Стили по умолчанию
 
-.wrap-width 
-  width: 1113px
-  margin-left: auto
-  margin-right: auto
 
 .width 
   width: 100%
@@ -128,6 +131,7 @@ $w-sl: 1399.98px
 .no-padding 
   padding: 0
 
+
 .no-padding-left
   padding-left: 0
 
@@ -153,3 +157,19 @@ $w-sl: 1399.98px
 
 .text-uppercase
   text-transform: uppercase
+
+.top-6
+  top: 6px
+
+
+.flex-center
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.padding-left0-md
+  +bp(md)
+    padding-left: 0px
+
+.margin-top7
+  margin-top: 7px

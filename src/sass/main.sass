@@ -16,21 +16,34 @@ body
         margin: 0 auto
 
     .info 
-        padding: 10px 0px
-        display: flex
-        justify-content: space-between
-        align-items: center
-
+        padding-top: 10px 
+        padding-bottom: 10px 
+        +bp(xl)
+            padding-top: 20px 
+            padding-bottom: 20px 
+        .header-info__link
+            display: block
+            margin: 0 auto 20px;
+            +bp(xl)
+                width: 110px
         .info__img 
-            width: 100%
-    
+            +bp(ssl)
+                width: 100%
+            +bp(xl)
+                width: 110px
         .info__adress 
             height: 45px
             text-align: center
+            +bp(md)
+                margin-bottom: 40px
+            +bp(sm)
+                margin-bottom: 20px
+
             &:nth-child(-n + 3) 
                 padding-right: 15px
                 border-right: 1px solid $text-color-gray2   
- 
+                +bp(sm)
+                    border-right: none
             .adress-station 
                 font-size: $small-text-size3
                 font-family: $font-Roboto
@@ -51,18 +64,36 @@ body
                 fill: $icon-color-red;
 
         .info__tel 
-            color: $text-color-black
+            display: flex
+            flex-direction: column
+            +bp(xl)
+                flex-direction: row
+            +bp(md)
+                margin-bottom: 20px
+             
+            +bp(sm)
+                margin-bottom: 20px
+                flex-direction: column
+                
             .info__tel-item
-                background-image: url('../img/Layer 20 telephone.png')
-                background-repeat: no-repeat
-                padding-left: 17px
-                background-position-y: 5px
-                .tel-item-code 
-                    font-size: $small-text-size3;
+                width: 110px
+                color: $text-color-black
+                text-decoration: none
+                margin: 0 auto 8px
+                font-size: $small-text-size3;
+                position: relative
 
-                .tel-item-num 
-                    font-size: $small-text-size4;
-                    font-weight: 500;
+                &::before
+                    position: absolute
+                    display: inline-block
+                    content: ''
+                    width: 16px
+                    height: 16px
+                    background-image: url('../img/Layer 20 telephone.png')
+                    background-repeat: no-repeat
+                    left: -16px
+                    bottom: 0
+
         .info__btn-wrp
             .info__btn 
                 background-color: $background-color-blue;
@@ -80,7 +111,11 @@ body
         text-transform: uppercase;
         font-size: $small-text-size3;
         color: $text-color-white;
-        .nav__menu 
+        .nav__menu-pc
+            
+            
+            +bp(lg)
+                display: none
             padding: 16px 0;
             display: flex;
             align-self: center;
@@ -97,13 +132,36 @@ body
                     width: 1px;
                     background-color: $text-color-gray;
                     margin-left: 20px
+                    +bp(xl)
+                        display: none
                 .item-icon 
                     fill: $text-color-white;
                     margin-right: 11px;
-
+        .nav__menu-slider
+            display: none
+            +bp(lg)
+                display: block
+            padding: 16px 0;
+            margin-bottom: 0px;
+            .menu-item 
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                &:not(:last-child)::after 
+                    content: "";
+                    display: block;
+                    height: 100%;
+                    width: 1px;
+                    background-color: $text-color-gray;
+                    margin-left: 20px
+                .item-icon 
+                    fill: $text-color-white;
+                    margin-right: 11px;
     .banner 
         background-image: linear-gradient( to right,#015965,#0f444e,#123137,#101f22,#060a0b);
         padding-top: 10px;
+        +bp(xl)
+            display: none
         .banner__text 
             padding-top: 50px;
             .text-title 
@@ -134,6 +192,8 @@ body
             text-align: right;
     .manufacture__background 
         background-color: $background-color-light;
+        +bp(lg)
+            display: none
         .manufacture__list
             display: flex;
             justify-content: space-between;
@@ -174,7 +234,9 @@ body
 
 .megaMaster
     .our-services 
-        padding: 60px 0 115px;
+        
+        padding-top: 60px
+        padding-bottom: 110px
         .our-services__title 
             font-size: $medium-title-size2;
             color: $text-color-blue;
@@ -188,12 +250,22 @@ body
             &:nth-child(odd)
                 .our-services__item-wrap
                     margin-right: 40px;
+                    +bp(lg)
+                        margin-right: 20px
+                    +bp(md)
+                        margin-right: 0px
             &:nth-child(even)
                 .our-services__item-wrap
                     margin-left: 40px;
-
+                    +bp(lg)
+                        margin-left: 20px
+                    +bp(md)
+                        margin-left: 0px
             &:not(:nth-child(n + 5)) 
                 margin-bottom: 50px;
+            +bp(md)
+                &:not(:nth-child(n + 6)) 
+                    margin-bottom: 50px;
             .our-services__item-wrap
                 box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.75);
                 position: relative;
@@ -208,13 +280,15 @@ body
             .our-services__text-wrap 
                 flex-basis: 30%;
                 display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+                position: relative
 
                 .our-services__text 
                     font-size: $medium-text-size5;
                     color: $text-color-white;
                     text-transform: uppercase;
+                    top: 0
+                    position: absolute
+                    z-index: 1
             .our-services__image 
                 position: absolute;
                 right: 0;
@@ -242,11 +316,15 @@ body
                 color: $text-color-black;
                 border-radius: 35px;
                 background-color: #fff;
+                bottom: 0
+                position: absolute
+                z-index: 1
             .our-services__icon 
                 margin-left: 12px;
                 display: inline-block;
     .easy-repair 
-        padding: 30px 0;
+        padding-top: 30px
+        padding-bottom: 30px
         .easy-repair__title 
             line-height: 1.45;
             font-size: $medium-text-size5;
@@ -255,11 +333,12 @@ body
   
         .easy-repair__text 
             font-size: 15px;
-
+            margin-bottom: 40px
         .easy-repair__text-other 
             display: block;
             margin-top: 37px;
-
+            +bp(md)
+                margin-top: 15px
         .easy-repair__cards 
             display: flex;
             justify-content: space-between;
@@ -291,8 +370,10 @@ body
 
         .advantages__title 
             font-size: $medium-text-size5
-            padding: 60px 0 25px
-        
+            padding-top: 60px
+            padding-bottom: 25px
+            padding-left: 15px
+
         .advantages__services-text 
             font-size: 15px
             margin-bottom: 30px
@@ -309,7 +390,8 @@ body
                 color: #dd2616;
                 .advantages__services-item-text
                     font-size: $medium-text-size2
-                
+                    +bp(xl)
+                        font-size: $small-text-size3
         .advantages__services-img 
             margin-bottom: 35px;
 
@@ -321,7 +403,12 @@ body
         .advantages__experience-item 
             &:not(:nth-child(n + 3)) 
                 margin-bottom: 40px;
-                
+            +bp(md)
+                &:not(:nth-child(n + 5)) 
+                    margin-bottom: 30px;
+            +bp(sm)
+                &:not(:nth-child(n + 6)) 
+                    margin-bottom: 30px;
             .advantages__experience-num 
                 display: block;
                 font-size: $medium-text-size4;
@@ -346,17 +433,30 @@ body
                 height: 4px
                 width: 60px
                 background-color: #e8e8e8
+        .news__item
+            text-align: center
+            +bp(lg)
+                &:not(:nth-child(n + 3)) 
+                    margin-bottom: 30px;
+            +bp(md)
+                &:not(:nth-child(n + 4)) 
+                    margin-bottom: 30px;         
         .item__text
             font-size: $small-text-size3
             margin-bottom: 0
+            text-align: left
+            +bp(lg)
+                text-align: center 
         .item__icon
             margin-left: 17px
             fill: $text-color-blue
             vertical-align: -2px
         .item__title
             font-size: 14px
-            text-align: left
             text-transform: none;
+            text-align: left
+            +bp(lg)
+                text-align: center 
         .item__img
             margin-bottom: 16px
 
@@ -408,6 +508,19 @@ body
 // !!!!!megaMasterKategoriaLaptop!!!!!
 
 .megaMasterKategoriaLaptop
+    .benefits-wrap
+        
+        +bp(xl)
+            display: none
+
+    .benefits-wrap__mobile
+        margin-top: 30px
+        +bp(sssl)
+            display: none
+        +bp(xl)
+            display: block
+        +bp(sm)
+            margin-top: 0px
     .benefits
         box-shadow: 1px 1px 5px -2px rgba(0, 0, 0, 0.75);
         height: 100%
@@ -429,7 +542,6 @@ body
             flex-basis: 50%
             padding-left: 30px
             padding-top: 20px
-            // padding-bottom: 40px
             .list__item
                 line-height: 1.2
                 margin-bottom: 16px
@@ -452,9 +564,166 @@ body
         .info__title
             padding-top: 20px
             padding-bottom: 30px
-// !!!!!megaMasterCategoriaTel!!!!!
 
-.megaMasterCategoriaTel
+// !!!!!megaMasterBlog!!!!!
+.megaMasterBlog
+    .blog
+        .blog__title
+            padding-top: 45px
+            padding-bottom: 45px
+        .blog-cards
+
+            .blog-card
+                box-shadow: 1px 1px 5px -2px rgba(0, 0, 0, 0.75);
+                display: flex
+                margin-bottom: 30px
+                +bp(lg)
+                    flex-direction: column
+
+                &:last-child
+                    margin-bottom: 70px
+                .blog-card__info
+                    padding: 40px 0px 22px 30px
+                    background-color: #fbfbfb
+                    +bp(md)
+                        padding: 30px 0px 22px 0px
+                    .info__title
+                        font-size: 24px
+                        margin-bottom: 20px
+                        text-align: left
+                    .info__text
+                        margin-bottom: 30px
+                    .info__button 
+                        padding: 7px 22px;
+                        font-size: $small-text-size3;
+                        color: $text-color-blue;
+                        border-radius: 35px;
+                        background-color: #fbfbfb;
+                        border: 1px solid $text-color-blue          
+                   
+                        .info__icon 
+                            margin-left: 12px;
+                            display: inline-block;
+                            fill: $text-color-blue
+                        &:hover
+                            transition: all 200ms ease;  
+                            background-color: $text-color-blue
+                            color: #ffffff
+                            .info__icon
+                                fill: #ffffff
+
+        .pagination  
+            margin: 0 auto 100px
+            max-width: 422px
+            display: flex
+            justify-content: center
+            .pagination__item
+                &:first-child
+                    +bp(sm)
+                        display: none
+                &:last-child
+                    +bp(sm)
+                        display: none
+                &:not(:last-child)
+                    margin-right: 12px
+                .pagination__button
+                    font-size: 18px
+                    background-color: #fafafa
+                    border-radius: 50%
+                    font-weight: bold
+                    width: 50px
+                    height: 50px
+                    border: 1px solid $text-color-blue
+                    color: $text-color-blue
+                    +bp(sm)
+                        width: 40px
+                        height: 40px
+                    .button__icon
+                        font-size: 24px
+                        padding-top: 5px;
+                        
+                    &:hover
+                        transition: all 200ms ease;  
+                        background-color: $text-color-blue
+                        color: #ffffff
+                        .info__icon
+                            fill: #ffffff
+                            
+// !!!!!megaMasterBrandiVnutri!!!!!
+
+.megaMasterBrandiVnutri
+    margin-bottom: 60px
+    
+    .brand-cards
+        .brand-card__item 
+            display: flex;
+            position: relative;
+            height: 210px
+            &:nth-child(odd)
+                .brand-card__item-wrap
+                    margin-right: 40px;
+            &:nth-child(even)
+                .brand-card__item-wrap
+                    margin-left: 40px;
+
+            &:not(:nth-child(n + 5)) 
+                margin-bottom: 50px;
+            .brand-card__item-wrap
+                box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.75);
+                position: relative;
+                display: flex;
+                width: 100%;
+                background-color: #0d0d0d;
+                padding-top: 30px;
+                padding-bottom: 20px;
+                padding-left: 30px;
+               
+            .brand-card__text-wrap 
+                flex-basis: 30%;
+                position: relative
+                
+                .brand-card__text 
+                    font-size: 20px;
+                    color: $text-color-white;
+                    text-transform: uppercase;
+                    position: absolute
+                    top: 0
+                .brand-card__button 
+                    padding: 7px 22px;
+                    font-size: $small-text-size3;
+                    color: $text-color-black;
+                    border-radius: 35px;
+                    background-color: #fff;
+                    position: absolute
+                    bottom: 0
+                    z-index: 1
+                .brand-card__icon 
+                    margin-left: 12px;
+                    display: inline-block;
+
+            .brand-card__image 
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            .position--1 
+                right: -15px;
+                bottom: -10px;
+
+            .position--2 
+                right: -31px;
+                bottom: 10px;
+            
+            .position--3
+                right: -15px;
+                bottom: -10px;
+            
+
+
+
+
+// !!!!!megaMasterKategoriaTel!!!!!
+
+.megaMasterKategoriaTel
 
     .service-centre 
         .service-centre__title 
@@ -483,14 +752,15 @@ body
             display: block;
             margin-top: 36px;
     .warranty 
-        padding: 60px 0 55px;
+        padding-top: 60px
+        padding-bottom: 55px
         line-height: 1.6;
         .warranty__title 
             font-size: $small-title-size;
             color: $text-color-blue;
             text-align: center;
             margin: 0 auto 38px;
-            width: 700px;
+            max-width: 700px;
             font-weight: 400;
 
         .warranty__text 
@@ -503,46 +773,40 @@ body
             color: $text-color-gray4;
             margin-bottom: 44px;
             text-align: center;
-
+            +bp(md)
+                text-align: left
         .warranty__text3 
             font-size: $small-text-size4;
             color: $text-color-gray4;
 
         .warranty__services 
             .warranty__services-block 
-                padding-left: 46px;
+                padding-left: 56px;
                 &:not(:last-child) 
                     margin-bottom: 37px;
                 &:last-child 
                     margin-bottom: 65px;
-        
+             
             .warranty__services-title 
                 font-size: $medium-text-size1;
                 color: $text-color-blue;
                 font-weight: bold;
                 margin-bottom: 17px;
-            
+                position: relative
+                .warrany__services-icon
+                    position: absolute
+                    left: -40px;
+                .icon-1
+                    top: 3px
+                    
+                .icon-2
+                    top: 0
+
             .warranty__services-text 
-                font-size: $small-text-size3;
-                color: $text-color-gray4;
-                display: block;
-                padding-left: 36px;
-                margin-top: -12px;
+                font-size: $small-text-size3
+                color: $text-color-gray4
+                display: block
 
-            .warranty__services-icon 
-                fill: #e11d14;
-                vertical-align: -20px;
-                margin-right: 15px;
-
-            .warranty__services-icon--mr 
-                margin-right: 5px;
-
-            .warranty__services-icon--mr2 
-                margin-right:   11px;
-
-            .warranty__services-icon--mr3 
-                margin-right:   7px;
-    
 // !!!!!megaMasterRemontPC!!!!!
 .megaMasterRemontPC
     .repair-home
@@ -714,13 +978,13 @@ body
         padding-bottom: 14px
   
         .main 
-            display: flex;
-            justify-content: space-between;
+
             font-family: $font-Roboto;
             padding: 42px 24px 15px;
     
             .main__logo 
                 height: 180px;
+                margin-bottom: 20px
                 .main__logo-link 
                     display: block;
       
@@ -728,54 +992,52 @@ body
                     font-size: 30px;
                     &:not(:last-child) 
                     margin-right: 12px;
-
-        .main__menu-wrap 
-            flex-basis: 76%;
-            .main__menu-flex 
-                display: flex;
-                margin-bottom: 48px;
-                justify-content: space-between;
-
-                .main__menu 
-                    .main__menu-list 
-                        padding-left: 16px;
-                        .main__menu-item 
-                            font-size: $small-text-size3;
-                            color: $text-color-gray3;
-                            &:not(:last-child) 
-                                margin-bottom: 16px;
-                            &:hover 
-                                color: $text-color-white;
-
-                .main__adress 
-                    .main__adress-station 
+            
+            .main__menu 
+                margin-bottom: 20px
+                .main__menu-list 
+                    padding-left: 16px;
+                    .main__menu-item 
                         font-size: $small-text-size3;
-                        font-family: $font-Roboto;
-                        font-weight: 500;
-                        text-transform: uppercase;
-                        margin-bottom: 100px;
-                        color: $text-color-white;
-      
-                    .main__adress-street 
-                        font-size: $small-text-size2;
-                        margin-top: 10px;
-                        margin-bottom: 20px;
                         color: $text-color-gray3;
-                        padding-left: 22px;
+                        cursor: pointer
+                        &:not(:last-child) 
+                            margin-bottom: 16px;
+                        &:hover 
+                            color: $text-color-white;
+            .main__adress-wrap
+                margin-bottom: 20px
+            .main__adress 
+              
+                .main__adress-station 
+                    font-size: $small-text-size3;
+                    font-family: $font-Roboto;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    margin-bottom: 100px;
+                    color: $text-color-white;
       
-                    .main__adress-icon 
-                        vertical-align: -4px;
-                        margin-right: 2px;
-                    .green 
-                        fill: $icon-color-green;
+                .main__adress-street 
+                    font-size: $small-text-size2;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    color: $text-color-gray3;
+                    padding-left: 22px;
+      
+                .main__adress-icon 
+                    vertical-align: -4px;
+                    margin-right: 2px;
+                .green 
+                    fill: $icon-color-green;
                             
-                    .red 
-                        fill: $icon-color-red;
+                .red 
+                    fill: $icon-color-red;
         .footer-info 
             font-size: $small-text-size3
             color: $text-color-gray3
             text-align: center
     .main__contacts 
+        margin-bottom: 20px
         font-size: $small-text-size3;
         font-family: $font-Roboto;
         font-weight: 300;
@@ -786,6 +1048,9 @@ body
                 background-repeat: no-repeat
                 padding-left: 19px
                 background-position-y: 3px
+                display: block
+                color: $text-color-gray3
+                text-decoration: none
                 &:not(:last-child)
                     margin-bottom: 9px
                 &:last-child 
@@ -830,24 +1095,31 @@ body
     background-size: cover;
     .recall  
         color: $text-color-white;
-        padding: 40px 0px;
+        padding-top: 40px
+        padding-bottom: 40px
         .recall__title 
             font-size: $medium-title-size3;
             text-align: center;
             font-weight: 400;
             margin-bottom: 30px;
-    
+            +bp(sm)
+                font-size: $medium-text-size4
 
         .recall__text 
             text-align: center;
             font-size: $medium-text-size2;
             margin-bottom: 24px;
-    
+            +bp(sm)
+                font-size: $small-text-size3
 
         .recall__form 
             font-size: $medium-text-size2;
-            display: flex;
-            justify-content: space-between;
+            .input__wrap
+                text-align: center
+                margin-bottom: 20px
+            .button__wrap
+                text-align: center
+                
             .recall__form-input 
                 color: $text-color-white;
                 font-style: italic;
@@ -860,6 +1132,8 @@ body
                 &::placeholder 
                     color: $text-color-white;
                     font-style: italic;
+                +bp(sm)
+                    width: 282.34px
       
             .recall__form-button 
                 color: $text-color-white;
@@ -869,6 +1143,8 @@ body
                 outline: none;
                 border: none;
                 text-transform: uppercase;
+                +bp(sm)
+                    padding: 15px 44px
                 .recall__form-icon
                     margin-left: 26px
                     fill: #ffffff
@@ -885,13 +1161,18 @@ body
         justify-content: space-between;
         align-items: center;
         color: $text-color-white;
-        padding: 50px 0px;
+        padding-top: 50px
+        padding-bottom: 50px
         text-transform: uppercase
     
         .discount-recall__title
             font-size: $medium-text-size5
             font-weight: 400
-            
+            margin-bottom: 35px
+            +bp(sm)
+                font-size: $medium-text-size3
+            +bp(md)
+                text-align: center
         .discount-recall__button
             color: $text-color-white
             padding: 15px 74px
@@ -900,10 +1181,13 @@ body
             outline: none
             text-transform: uppercase
             border: none
+            +bp(sm)
+                padding: 15px 44px
         .discount-recall__icon
             margin-left: 26px
             fill: #ffffff
-
+        .discount-recall__button-wrap
+            text-align: center
 
 // !!!!!price!!!!!
 
@@ -914,6 +1198,10 @@ body
 
     .price-wrap 
         padding: 68px 62px 59px 62px;
+        +bp(md)
+            padding: 30px 0px 30px ;
+        padding-top: 68px
+        padding-bottom: 60px
         color: $text-color-gray4;
 
     .price__title 
@@ -929,11 +1217,12 @@ body
         margin-bottom: 36px;
         line-height: 1.7;
         text-align: center; 
-
+        +bp(md)
+            padding-left: 15px
     .price__about 
         font-size: $small-text-size3;
         line-height: 1.7;
-        width: 600px;
+        max-width: 600px;
         margin: 0 auto 47px;
         color: $text-color-black;
         text-align: center;
@@ -945,8 +1234,7 @@ body
         margin-right: auto;
         background-color: #fff;
         box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.47);
-        // padding-left: 25px
-        // padding-right: 25px
+
     .table 
 
         .table__title
@@ -956,14 +1244,21 @@ body
             font-family: $font-Roboto;
             font-size: $medium-text-size1;
             font-weight: bold;
-            
+                
             .table__title-item
                 border-top: none
-                .th-title
-                    padding: 20px 25px 15px 25px
-            .th-title-price
-                text-align: right
 
+            .th-title-model
+                padding: 20px 25px 15px 25px
+                +bp(md)
+                    padding: 20px 0px 15px 5px
+            .th-title-days
+
+            .th-title-price
+                padding-right: 33px
+                text-align: right
+                +bp(md)
+                    padding-right: 15px
         .table__body
             .table__item
                 font-size: $medium-text-size1;
@@ -973,6 +1268,9 @@ body
                 .th-item
                     padding-left: 25px
                     padding-right: 25px
+                    +bp(md)
+                        padding-left: 5px
+                        padding-right: 5px
                 &:hover 
                     background-color: $background-color-light3;
                     color: $text-color-blue;
@@ -1057,8 +1355,8 @@ body
 
 //  !!!!!location!!!!!
 
-.location
-
+.location 
+    
     .location__adress-wrap 
         position: relative;
         margin-bottom: 75px;
@@ -1077,10 +1375,19 @@ body
             transform: translateX(-50%);
             margin-top: 35px;
             width: 100%
+            +bp(sm)
+                position: static
+                left: 0;
+                transform: translateX(0);
+                margin-bottom: 30px
+           
+
             .location__adress-info-flex 
                 display: flex;
                 justify-content: center;
-
+                +bp(sm)
+                    flex-direction: column
+                    align-items: center
                 .location__adress-info
                     color: $text-color-gray4;
                     width: 22%;
@@ -1091,8 +1398,18 @@ body
                     flex-direction: column;
                     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
                     background-color: #fff;
+                    
+                    +bp(lg)
+                        width: 33%
+                    +bp(sm)
+                        width: 70%
                     &:nth-child(-n+2)
                         margin-right: 25px;
+                        +bp(md)
+                            margin-right: 0px
+                        +bp(sm)
+                            margin-bottom: 30px
+                
                     .location__adress-info-icon 
                         display: block;
                         margin: 0 auto 13px;
@@ -1199,14 +1516,52 @@ body
 .sidebar 
     
     .sidebar__banners
+        
         .sidebar__img-wrap
             position: relative
             margin-bottom: 30px;
             height: 155px
-        
-        .sidebar__img 
-            position: absolute
-            display: block;
+            text-align: center
+            +bp(lg)
+                height: 90px
+            +bp(md) 
+                height: 140px
+            &:nth-child(1)
+                .sidebar__img
+                    left: -18px;
+                    top: -8px;
+                    +bp(xl)
+                        left: 0
+                        margin-top: -3px
+                        margin-left: -20px;
+            &:nth-child(2)
+                .sidebar__img
+                    left: -18px;
+                    +bp(xl)
+                        left: 0
+                    +bp(md)
+                        margin-left: -22px
+
+            &:nth-child(3)
+                .sidebar__img
+                    left: -12px;
+                    +bp(xl)
+                        left: 11px
+            &:nth-child(4)
+                .sidebar__img
+                    left: -12px;
+                    +bp(xl)
+                        left: 11px
+            
+        .sidebar__img
+            position: relative
+            +bp(lg)
+                position: static
+                max-width: 100%
+                height: auto
+            
+          
+       
 
     .sidebar__title 
         font-weight: medium;
@@ -1221,6 +1576,8 @@ body
         padding-bottom: 20px;
         margin-bottom: 30px;
         box-shadow: 1px 1px 5px -2px rgba(0, 0, 0, 0.75);
+        +bp(lg)
+            display: none
         .sidebar__reviews-list 
             padding: 16px 16px 0 18px;
         
@@ -1274,6 +1631,8 @@ body
     .sidebar__info 
         padding-bottom: 16px;
         box-shadow: 1px 1px 5px -2px rgba(0, 0, 0, 0.75);
+        +bp(lg)
+            display: none
         .sidebar__info-list 
             padding: 14px 16px 0 18px;
 
@@ -1295,15 +1654,6 @@ body
                     font-weight: 300;
                     color: $text-color-gray4;
                     margin-bottom: 0
-
-    .img--left12
-        left: -11px;
-
-    .img--left19 
-        left: -18px;
-
-    .img--top8
-        top: -8px;
 
 // !!!!!reapir-catalog!!!!!
 
@@ -1329,7 +1679,9 @@ body
     .repair-catalog__card-wrap   
         &:not(:nth-last-child(-n + 3)) 
             margin-bottom: 30px
-
+        +bp(sm)
+            &:not(:last-child)
+                margin-bottom: 30px
         .repair-catalog__card
             padding-top: 18px
             padding-bottom: 8px
@@ -1443,8 +1795,8 @@ body
 
 // !!!!!repair-work!!!!!
 .repair-work 
-    padding: 58px 0 30px
-
+    padding-top: 58px
+    padding-bottom: 30px
     .repair-work__title 
         font-size: $small-title-size
         color: $text-color-blue
@@ -1467,7 +1819,8 @@ body
             font-weight: medium
             font-size: $medium-text-size2
             margin-bottom: 28px
-            
+            +bp(md)
+                margin-bottom: 14px
         .repair-work__card-text
             font-size: $small-text-size4
             color: $text-color-gray4
@@ -1477,6 +1830,8 @@ body
         .repair-work__card-text2
             display: inline-block
             margin-top: 27px
+            +bp(md)
+                margin-top: 14px
         .repair-work__card-warning
             color: #808080
             font-size: 14px
