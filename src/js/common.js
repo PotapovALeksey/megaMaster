@@ -21,7 +21,7 @@ $(document).ready(function() {
       },
       768: {
         items: 2,
-        
+
         lazyLoad: true
       },
       1000: {
@@ -32,135 +32,50 @@ $(document).ready(function() {
     }
   });
 
-  // sp-list
-  //   $(".img-wrapper .item").click(function() {
-  //     var tabs = $(".img-wrapper .item");
-  //     var cont = $(".img-wrapper .tab-cont");
-
-  //     // Удаляем классы active
-  //     tabs.removeClass("active");
-  //     cont.removeClass("active");
-  //     // Добавляем классы active
-  //     $(this).addClass("active");
-  //     cont.eq($(this).index()).addClass("active");
-  //   });
-
-  //OWL-CARUSEL
-  //   $('.owl-slider').owlCarousel({
-  //       items:1,
-  //       lazyLoad:true,
-  //       loop: true,
-  //       autoplay: true,
-  //       singleItem: true,
-  //       nav: true,
-  //       pagination: true,
-  //       margin: 25,
-  //       responsiveClass:true,
-  //       responsive:{
-  //           0:{
-  //               items:1,
-  //               loop: true,
-  //               lazyLoad: true
-  //           },
-  //           600:{
-  //               items:1,
-  //               loop: true,
-  //               lazyLoad: true
-  //           },
-  //           1000:{
-  //               items:1,
-  //               loop: true,
-  //               lazyLoad: true
-  //           }
-  //       }
-  //   })
-
-  // $('.owl-rigth-carousel').owlCarousel({
-  //     items:1,
-  //     lazyLoad:true,
-  //     loop: true,
-  //     autoplay: true,
-  //     singleItem: true,
-  //     nav: true,
-  //     pagination: true,
-  //     margin:0,
-  //     responsiveClass:true,
-  //     responsive:{
-  //         0:{
-  //             items:1,
-  //             nav:true,
-  //             pagination: true,
-  //             loop: true,
-  //             lazyLoad: true
-  //         },
-  //         600:{
-  //             items:1,
-  //             nav: true,
-  //             pagination: true,
-  //             loop: true,
-  //             lazyLoad: true
-  //         },
-  //         1000:{
-  //             items:1,
-  //             nav:true,
-  //             pagination: true,
-  //             loop: true,
-  //             lazyLoad: true
-  //         }
-  //     }
-  // })
-
-  // $('.owl-besrseller').owlCarousel({
-  //     items:1,
-  //     autoplay: true,
-  //     singleItem: true,
-  //     pagination: false,
-  //     nav: true,
-  //     margin:15,
-  //     responsiveClass:true,
-  //     responsive:{
-  //         0:{
-  //             items:1,
-  //             loop: true,
-  //             lazyLoad: true
-  //         },
-  //         600:{
-  //             items:1,
-  //             loop: true,
-  //             lazyLoad: true
-  //         },
-  //         1000:{
-  //             items:4,
-  //             loop: true,
-  //             lazyLoad: true
-  //         }
-  //     }
-  // })
-
-  //---------------------OUR-CASE --------------------------//
-
-  //-------------------------------------------------------//
-  //-------------------АяксФорма-------------------
-  $("form").submit(function() {
-    // Получение ID формы
-    var formID = $(this).attr("id");
-    // Добавление решётки к имени ID
-    var formNm = $("#" + formID);
-    $.ajax({
-      type: "POST",
-      url: "mail.php",
-      data: formNm.serialize(),
-      success: function(data) {
-        // Вывод текста результата отправки
-        $(formNm).html(data);
-      },
-      error: function(jqXHR, text, error) {
-        // Вывод текста ошибки отправки
-        $(formNm).html(error);
+  // Ограничение на срабатывание фукнции по событию
+  const throttle = (func, limit) => {
+    let inThrottle;
+    return function() {
+      const args = arguments;
+      const context = this;
+      if (!inThrottle) {
+        func.apply(context, args);
+        inThrottle = true;
+        setTimeout(() => (inThrottle = false), limit);
       }
-    });
-    return false;
-  });
+    };
+  };
 
-  //-------------------------
+  // Липкое меню
+  const nav = document.querySelector(".menu");
+  const navCoords = nav.getBoundingClientRect();
+
+  window.addEventListener("scroll", function() {
+    if (pageYOffset >= navCoords.top) {
+      document.body.style.paddingTop = nav.offsetHeight + "px";
+      nav.classList.add("nav-fixed");
+    } else {
+      document.body.style.paddingTop = "";
+      nav.classList.remove("nav-fixed");
+    }
+  });
 });
+
+const burger = document.querySelector(".js-menu-button");
+const menu = document.querySelector(".popup-wrap");
+
+burger.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  if (menu.classList.contains("show") && !menu.classList.contains("hide")) {
+    menu.classList.add("hide");
+    var cb = function () {
+      menu.classList.remove("show");
+      menu.classList.remove("hide");
+      menu.removeEventListener("transitionend", cb, false);
+    };
+    menu.addEventListener("transitionend", cb, false);
+  } else {
+    menu.classList.add("show");
+    menu.classList.remove("hide");
+  }
+})

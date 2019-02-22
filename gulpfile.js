@@ -10,8 +10,8 @@ var sass = require("gulp-sass"), // переводит SASS в CSS
   plumber = require("gulp-plumber"),
   coffee = require("gulp-coffee"),
   browserSync = require("browser-sync"), // Подключаем Browser Sync
-  rigger = require("gulp-rigger");
-
+  rigger = require("gulp-rigger"),
+  babel = require("gulp-babel");
 //npm i потом код снизу!
 //npm install --save-dev gulp-install установка gulp
 ///установка плагинов npm i gulp-jshint --save-dev
@@ -78,6 +78,11 @@ gulp.task("scripts", function() {
   return gulp
     .src("src/js/*.js") // директория откуда брать исходники
     .pipe(plumber())
+    .pipe(
+      babel({
+        presets: ["@babel/env"]
+      })
+    )
     .pipe(concat("common.js")) // объеденим все js-файлы в один
     .pipe(uglify()) // вызов плагина uglify - сжатие кода
     .pipe(rename({ suffix: ".min" })) // вызов плагина rename - переименование файла с приставкой .min

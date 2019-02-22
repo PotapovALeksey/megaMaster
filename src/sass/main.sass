@@ -9,7 +9,77 @@ body
 
 // !!!!!header!!!!!
 
+
+
+.header-mobile
+    display: none
+    +bp(md)
+        display: block
+    .menu
+        background-color: $background-color-blue
+        padding: 12px 20px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        z-index: 9999;
+        .menu-button
+            cursor: pointer
+            border: none
+            outline: none
+            background-color: transparent
+            color: #ffffff
+            font-size: 26px
+    .info__tel 
+        display: flex
+        flex-direction: row
+        text-align: center
+        flex-wrap: wrap
+        padding: 15px 10px
+        background-color: #f7f7f7
+        .info__tel-item
+            width: 110px
+            color: $text-color-black
+            text-decoration: none
+            margin: 0 auto 8px
+            font-size: $small-text-size3;
+            position: relative
+            &::before
+                position: absolute
+                display: inline-block
+                content: ''
+                width: 15px
+                height: 15px
+                background-repeat: no-repeat
+                background-size: contain
+                left: -19px
+                bottom: 0px;
+        .info__tel-item-wrp
+            margin-bottom: 4px
+            width: 50%
+            // padding-left: 20px
+            &:nth-child(1)
+                
+                .info__tel-item
+                    &::before
+                        background-image: url('../img/icon-vodafone.png')
+            &:nth-child(2)
+                
+                .info__tel-item
+                    &::before
+                        background-image: url('../img/icon-kyivstar.png')
+            &:nth-child(3)
+               
+                .info__tel-item
+                    &::before
+                        background-image: url('../img/icon-lifecell.png')
+            &:nth-child(4)
+               
+                .info__tel-item
+                    &::before
+                        background-image: url('../img/icon-telephone.png')       
 .header 
+    +bp(md)
+        display: none
     .welcome 
         background-color: $background-color-dark-blue
     .welcome__img 
@@ -66,8 +136,10 @@ body
         .info__tel 
             display: flex
             flex-direction: column
+            
             +bp(xl)
                 flex-direction: row
+                justify-content: space-around
             +bp(md)
                 margin-bottom: 20px
              
@@ -82,19 +154,39 @@ body
                 margin: 0 auto 8px
                 font-size: $small-text-size3;
                 position: relative
-
                 &::before
                     position: absolute
                     display: inline-block
                     content: ''
-                    width: 16px
-                    height: 16px
-                    background-image: url('../img/Layer 20 telephone.png')
+                    width: 15px
+                    height: 15px
                     background-repeat: no-repeat
-                    left: -16px
-                    bottom: 0
-
+                    background-size: contain
+                    left: -19px
+                    bottom: 0px;
+            .info__tel-item-wrp
+                margin-bottom: 4px
+                width: 100%
+                &:nth-child(1)
+                    .info__tel-item
+                        &::before
+                            background-image: url('../img/icon-vodafone.png')
+                &:nth-child(2)
+                    .info__tel-item
+                        &::before
+                            background-image: url('../img/icon-kyivstar.png')
+                &:nth-child(3)
+                    .info__tel-item
+                        &::before
+                            background-image: url('../img/icon-lifecell.png')
+                &:nth-child(4)
+                    .info__tel-item
+                        &::before
+                            background-image: url('../img/icon-telephone.png')
         .info__btn-wrp
+            display: block
+            +bp(xl)
+                display: none
             .info__btn 
                 background-color: $background-color-blue;
                 font-size: $small-text-size3;
