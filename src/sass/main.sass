@@ -3,7 +3,7 @@
 
 
 body
-    font-family: 'Roboto', sans-serif
+    font-family: 'Roboto', 'Arial', 'Helvetical', sans-serif
     font-size: 16px
     font-weight: 400
 
@@ -17,7 +17,7 @@ body
         display: block
     .menu
         background-color: $background-color-blue
-        padding: 12px 20px
+        padding: 4px 20px
         display: flex
         align-items: center
         justify-content: space-between
@@ -30,11 +30,12 @@ body
             color: #ffffff
             font-size: 26px
     .info__tel 
+       
         display: flex
         flex-direction: row
         text-align: center
         flex-wrap: wrap
-        padding: 15px 10px
+        padding: 5px 10px
         background-color: #f7f7f7
         .info__tel-item
             width: 110px
@@ -136,17 +137,18 @@ body
         .info__tel 
             display: flex
             flex-direction: column
-            
             +bp(xl)
-                flex-direction: row
-                justify-content: space-around
-            +bp(md)
-                margin-bottom: 20px
+                display: none
+            // +bp(xl)
+            //     flex-direction: row
+            //     justify-content: flex-end
+               
+            // +bp(md)
+            //     margin-bottom: 20px
              
-            +bp(sm)
-                margin-bottom: 20px
-                flex-direction: column
-                
+            // +bp(sm)
+            //     margin-bottom: 20px
+            //     flex-direction: column   
             .info__tel-item
                 width: 110px
                 color: $text-color-black
@@ -167,6 +169,11 @@ body
             .info__tel-item-wrp
                 margin-bottom: 4px
                 width: 100%
+                +bp(xl)
+                    width: 27%
+                +bp(lg)
+                    text-align: right
+                    width: 30%;
                 &:nth-child(1)
                     .info__tel-item
                         &::before
@@ -183,6 +190,57 @@ body
                     .info__tel-item
                         &::before
                             background-image: url('../img/icon-telephone.png')
+        .info__tel-tablet
+            display: none
+            +bp(xl)
+                display: block
+  
+            .info__tel-item
+                width: 110px
+                color: $text-color-black
+                text-decoration: none
+                margin: 0 auto 8px
+                font-size: $small-text-size3;
+                position: relative
+                
+                +bp(xl)
+                    margin-left: 25px;
+
+                +bp(lg)
+                    margin-left: 20px;
+
+                &::before
+                    position: absolute
+                    display: inline-block
+                    content: ''
+                    width: 15px
+                    height: 15px
+                    background-repeat: no-repeat
+                    background-size: contain
+                    left: -19px
+                    bottom: 0px;
+            .info__tel-item-wrp
+                margin-bottom: 4px
+                width: 100%
+                +bp(lg)
+                    text-align: center
+                &:nth-child(1)
+                    .info__tel-item
+                        &::before
+                            background-image: url('../img/icon-vodafone.png')
+                &:nth-child(2)
+                    .info__tel-item
+                        &::before
+                            background-image: url('../img/icon-kyivstar.png')
+                &:nth-child(3)
+                    .info__tel-item
+                        &::before
+                            background-image: url('../img/icon-lifecell.png')
+                        // &:nth-child(4)
+                        //     .info__tel-item
+                        //         &::before
+                        //             background-image: url('../img/icon-telephone.png')
+  
         .info__btn-wrp
             display: block
             +bp(xl)
@@ -200,55 +258,69 @@ body
                     vertical-align: -7px;
     .nav 
         background-color: $background-color-blue;
-        text-transform: uppercase;
-        font-size: $small-text-size3;
-        color: $text-color-white;
-        .nav__menu-pc
-            
-            
-            +bp(lg)
-                display: none
-            padding: 16px 0;
+        font-size: $small-text-size3
+        +bp(lg)
+            font-size: 13px
+        .nav__menu
+            align-items: center;
             display: flex;
             align-self: center;
             margin-bottom: 0px;
             justify-content: space-between
-            .menu-item 
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                &:not(:last-child)::after 
-                    content: "";
-                    display: block;
-                    height: 100%;
-                    width: 1px;
-                    background-color: $text-color-gray;
-                    margin-left: 20px
-                    +bp(xl)
-                        display: none
-                .item-icon 
-                    fill: $text-color-white;
-                    margin-right: 11px;
-        .nav__menu-slider
-            display: none
             +bp(lg)
+                flex-wrap: wrap
+            .border-menu
                 display: block
-            padding: 16px 0;
-            margin-bottom: 0px;
+                width: 1px
+                height: 45px
+                background-color: $text-color-gray
+                border: none   
+                +bp(xl)
+                    display: none
             .menu-item 
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                &:not(:last-child)::after 
-                    content: "";
-                    display: block;
-                    height: 100%;
-                    width: 1px;
-                    background-color: $text-color-gray;
-                    margin-left: 20px
+                position: relative
+                // width: 16.6%
+                &:last-child
+                    margin-top: 6px
+                +bp(lg)
+                    width: 28%
+                   
+                .item-link  
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none
+                    color: $text-color-white
+                    text-transform: uppercase;
+                    padding: 16px 0
+                    +bp(lg)
+                        padding: 8px 0
                 .item-icon 
                     fill: $text-color-white;
                     margin-right: 11px;
+
+                &:hover
+                    .nav-submenu
+                        display: block
+                .nav-submenu
+                    min-width: 200px
+                    position: absolute
+                    background-color: $text-color-gray2
+                    z-index: 25
+                    display: none
+                   
+                    .submenu-link
+                        padding: 6px 6px
+                        display: block
+                        text-decoration: none
+                        color: $text-color-gray
+                        text-transform: uppercase
+                        &:hover
+                            transition: all 200ms ease;  
+                            background-color: $text-color-gray
+                            color: #ffffff
+                        
+                            
+                        
     .banner 
         background-image: linear-gradient( to right,#015965,#0f444e,#123137,#101f22,#060a0b);
         padding-top: 10px;
@@ -1586,7 +1658,7 @@ body
             font-size: $small-title-size;
             text-transform: uppercase;
             color: $text-color-blue;
-            font-weight: medium;
+            font-weight: 500;
             padding-top: 50px;
             padding-bottom: 40px;
             text-align: center;
@@ -1680,7 +1752,7 @@ body
             font-size: $small-title-size;
             text-transform: uppercase;
             color: $text-color-blue;
-            font-weight: medium;
+            font-weight: 500;
             padding-top: 50px;
             padding-bottom: 40px;
             text-align: center;

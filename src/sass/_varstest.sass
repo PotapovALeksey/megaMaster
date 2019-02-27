@@ -147,7 +147,8 @@ $w-sssl: 3777px
 
 .justify-center
   justify-content: center
-
+.justify-end
+  justify-content: flex-end
 .img-cross
   max-width: 100%
   height: auto
@@ -183,79 +184,52 @@ $w-sssl: 3777px
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
   z-index: 9999;
 
-.popup-wrap
-  display: block;
+.popup-menu-wrap
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 999;
-
-.popup-menu
-  width: 90%
-  padding: 10px 10px
-  background-color: #287494
-  margin: 80px auto 0
-  position: relative
-  .popup-list
-    padding-left: 35px
-    margin-top: 40px
-    .popup-item
-      background-color: #f7f7f7
-      margin-bottom: 10px
-      padding: 8px
-      cursor: pointer
-.popup-button
-  cursor: pointer
-  border: none
-  outline: none
-  background-color: transparent
-  color: #ffffff
-  font-size: 20px
-  position: absolute
-  right: 20px
-
-.show
-  display: block
-.hide
-  display: none
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .popup-menu 
-//   width: 300px;
-//   height: 400px;
-//   background-color: #287494;
-//   animation: menu-open 0.25s;
-//   display: none;
-//   transition: 0.25s;
-
-
-// @keyframes menu-open 
-//   from {height: 0;}
-//   95% {height: 410px;}
-//   to {height: 400px;}
-
-// .show 
-//   display: block;
-
-// .hidding 
-//   height: 0;
+  z-index: 9999;
+  
+      
+  .popup-menu
+    width: 90%
+    padding: 10px 10px
+    background-color: #287494
+    margin: 80px auto 0
+    position: relative
+    .popup-list
+      padding-left: 20px
+      margin-top: 40px
+      .popup-item
+        background-color: #f7f7f7
+        margin-bottom: 10px
+        // padding: 4px
+        cursor: pointer
+        .popup-link
+          text-decoration: none
+          display: block
+          padding: 4px
+          color: $text-color-gray
+        .submenu
+          display: none
+          padding: 0
+          background-color: #fff
+          padding-left: 30px
+          // transition: all 200ms ease
+          .submenu-item
+            .submenu-link
+              text-decoration: none
+              color: $text-color-gray
+    
+  .popup-close
+    cursor: pointer
+    border: none
+    outline: none
+    background-color: transparent
+    color: #ffffff
+    font-size: 20px
+    position: absolute
+    right: 20px

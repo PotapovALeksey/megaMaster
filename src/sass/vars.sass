@@ -1,0 +1,231 @@
+//fonts
+$font-Roboto: "Roboto", sans-serif
+
+
+$font-weight-black: 900
+$font-weight-bold: 700
+$font-weight-light: 300
+$font-weight-italic: 300i
+//fonts sizes
+//for mobile
+$small-text-size1: 12px
+$small-text-size2: 13px
+$small-text-size3: 14px
+$small-text-size4: 15px
+
+$medium-text-size1: 16px
+$medium-text-size2: 18px
+$medium-text-size3: 22px
+$medium-text-size4: 24px
+$medium-text-size5: 26px
+
+$small-title-size: 28px
+$medium-title-size1: 34px
+$medium-title-size2: 36px
+$medium-title-size3: 44px
+$medium-title-size4: 48px
+$medium-title-size5: 30px
+
+$text-color-black: #000000
+$text-color-gray: #424242
+$text-color-gray2: #989898
+$text-color-white: #ffffff
+$text-color-blue: #287494
+$text-color-gray3: #c1c1c1
+$text-color-gray4: #595959
+$text-color-red: #e11d14
+
+$background-color-blue: #287494
+$background-color-black: #000000
+$background-color-dark-blue: #01124f
+$background-color-light: #f7f7f7
+$background-color-light2: #eaeaea
+$background-color-light3: #fafafa
+
+$background-color-blue2: #7ca5b6
+
+$icon-color-green: #35ac52
+$icon-color-red: #dd2616
+
+$w-xs: 479.98px
+$w-sm: 575.98px
+$w-md: 767.98px
+$w-lg: 991.98px
+$w-xl: 1199.98px
+$w-sl: 1399.98px
+$w-sssl: 3777px
+
+//миксин для быстрого использования адаптивной верстки
+@mixin bp($media) 
+  @if $media == xs 
+    @media (max-width: $w-xs) { @content; }
+  @else if $media == sm 
+    @media (max-width: $w-sm) { @content; }
+  @else if $media == md 
+    @media (max-width: $w-md) { @content; }
+  @else if $media == lg
+    @media (max-width: $w-lg) { @content; }
+  @else if $media == xl
+    @media (max-width: $w-xl) { @content; }
+  @else if $media == sl 
+    @media (max-width: $w-sl) { @content; }
+  @else if $media == sssl 
+    @media (max-width: $w-sssl) { @content; }
+
+
+
+
+
+// Стили по умолчанию
+
+
+.width 
+    width: 100%
+
+.text-style 
+    color: #595959
+    line-height: 1.7
+
+.color-title 
+    color: #287494
+    line-height: 1.45
+    text-align: center
+
+// сброс стилей
+
+* 
+    margin: 0
+    padding: 0
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+.img 
+    display: block
+    height: auto
+
+.link 
+    text-decoration: none
+
+.list 
+    list-style: none
+    padding: 0
+
+.btn 
+    display: inline-block
+    border: none
+    cursor: pointer
+    outline: none
+
+.icon 
+    vertical-align: bottom
+
+.mb0 
+    margin-bottom: 0px
+
+.mb20
+    margin-bottom: 20px
+
+.no-padding 
+    padding: 0
+
+.no-padding-left
+    padding-left: 0
+
+.no-padding-right
+    padding-right: 0
+
+.text-center
+    text-align: center
+
+.d-flex
+    display: flex
+    align-items: flex-end;
+
+.justify-center
+    justify-content: center
+
+.justify-end
+    justify-content: flex-end
+
+.img-cross
+    max-width: 100%
+    height: auto
+
+.mb40
+    margin-bottom: 40px
+
+.text-uppercase
+    text-transform: uppercase
+
+.top-6
+    top: 6px
+
+.flex-center
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.padding-left0-md
+    +bp(md)
+        padding-left: 0px
+
+.margin-top7
+    margin-top: 7px
+
+.nav-fixed 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+
+.popup-menu-wrap
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+  
+    .popup-menu
+        width: 90%
+        padding: 10px 10px
+        background-color: #287494
+        margin: 80px auto 0
+        position: relative
+        .popup-list
+            padding-left: 20px
+            margin-top: 40px
+        .popup-item
+            background-color: #f7f7f7
+            margin-bottom: 10px
+            // padding: 4px
+            cursor: pointer
+            .popup-link
+                text-decoration: none
+                display: block
+                padding: 4px
+                color: $text-color-gray
+            .submenu
+                display: none
+                padding: 0
+                background-color: #fff
+                padding-left: 30px
+            
+            .submenu-item
+                .submenu-link
+                    text-decoration: none
+                    color: $text-color-gray
+        
+    .popup-close
+        cursor: pointer
+        border: none
+        outline: none
+        background-color: transparent
+        color: #ffffff
+        font-size: 20px
+        position: absolute
+        right: 20px
