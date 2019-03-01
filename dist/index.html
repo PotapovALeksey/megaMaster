@@ -17,13 +17,12 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="css/owl.carousel.css" />
-    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="./css/slick.css">
     <link href="css/styles.min.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <!-- header-mobile -->
-    <header class="header-mobile">
+    <header class="header-mobile ">
       <div class="menu js-menu">
         <a href="#" class="link-logotype">
           <img src="img/logotype-mobile.png" alt="imaeg" class="img-logotype" />
@@ -56,6 +55,17 @@
           </div>
         </div>
       </div>
+
+      <ul class="routing container mb0">
+        <li class="routing__item">
+          <i class="fas fa-home icon-home"></i>
+          <a class="routing__link link" href="#">Главная</a>
+        </li>
+        <li class="routing__item">
+          <i class="fas fa-chevron-right icon-right"></i>
+          <a class="routing__link" href="#">Контакты</a>
+        </li>
+      </ul>
     </header>
     <!-- header -->
     <header class="header">
@@ -73,14 +83,14 @@
           <div class="info__logotype col-12 col-xl-2 col-md-2">
             <a href="#" class="header-info__link link">
               <img
-                class="info__img img image-fluid"
-                src="img/logotype.png"
+                class="info__img img img-fluid"
+                src="./img/logotype.png"
                 alt="logotype"
               />
             </a>
           </div>
           <div
-            class="info__adress padding-left0-md col-xl-2 col-lg-3 col-md-4 col-sm-4"
+            class="info__adress padding-left0-md col-xl-2 col-lg-3 col-md-3 col-sm-4"
           >
             <svg
               class="green adress-icon"
@@ -132,7 +142,7 @@
             <span class="adress-station">Позняки</span>
             <p class="adress-street">ул. Ахматовой 9/18</p>
           </div>
-          <div class="info__tel col-xl-2 col-md-12 col-12 text-center">
+          <div class="info__tel col-xl-2 col-lg-3 col-md-3 col-12 text-center">
             <div class="info__tel-item-wrp">
               <a class="info__tel-item" href="tel:+380996293030">
                 (099) 629 30 30
@@ -149,25 +159,7 @@
               </a>
             </div>
           </div>
-          <div class="info__tel-tablet col-md-12 col-12">
-            <div class="row justify-end">
-                <div class="info__tel-item-wrp col-lg-3 col-md-4 col-sm-4">
-                    <a class="info__tel-item" href="tel:+380996293030">
-                      (099) 629 30 30
-                    </a>
-                  </div>
-                  <div class="info__tel-item-wrp col-lg-3 col-md-3 col-sm-4">
-                    <a class="info__tel-item" href="tel:+380685782890">
-                      (068) 578 28 90
-                    </a>
-                  </div>
-                  <div class="info__tel-item-wrp col-lg-3 col-md-3 col-sm-4">
-                    <a class="info__tel-item" href="tel:+380636293030">
-                      (063) 629 30 30
-                    </a>
-                  </div>
-            </div>
-            </div>
+
           <div class="info__btn-wrp col-xl-2 col-md-4 col-12 text-center">
             <button class="info__btn btn">
               <svg
@@ -190,9 +182,9 @@
 
       <nav class="nav">
         <div class="container no-padding">
-          <ul class="nav__menu list">
-            <li class="menu-item ">
-              <a href="#" class="item-link">
+          <div class="nav__menu list">
+            <div class="menu-item ">
+              <a href="megaMasterKategoriaTel.html" class="item-link">
                 <svg
                   class="item-icon icon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -214,13 +206,14 @@
               </a>
               <ul class="nav-submenu list">
                 <li class="submenu-item">
-                  <a href="#" class="submenu-link">item 1</a>
+                  <a href="megaMasterRemontDisplay.html" class="submenu-link">Ремонт экранов телефонов</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="#" class="submenu-link">item 2</a>
+                  <a href="megaMasterRemontTel.html" class="submenu-link">Ремонт Apple iPhone</a>
                 </li>
+              
                 <li class="submenu-item">
-                  <a href="#" class="submenu-link">item 3</a>
+                  <a href="#" class="submenu-link">Ремонт Iphone 8</a>
                 </li>
                 <li class="submenu-item">
                   <a href="#" class="submenu-link">item 4</a>
@@ -232,11 +225,10 @@
                   <a href="#" class="submenu-link">itemitemitemitemitem</a>
                 </li>
               </ul>
-            </li>
-            
+            </div>
             <div class="border-menu"></div>
-            <li class="menu-item ">
-              <a href="#" class="item-link">
+            <div class="menu-item ">
+              <a href="megaMasterKategoriaPlanshet.html" class="item-link">
                 <svg
                   class="item-icon icon"
                   viewBox="0 0 23 32"
@@ -255,29 +247,29 @@
                 ></a
               >
               <ul class="nav-submenu list">
-                  <li class="submenu-item">
-                    <a href="#" class="submenu-link">item 1</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="#" class="submenu-link">item 2</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="#" class="submenu-link">item 3</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="#" class="submenu-link">item 4</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="#" class="submenu-link">item 5</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="#" class="submenu-link">itemitemitemitemitem</a>
-                  </li>
-                </ul>
-            </li>
+                <li class="submenu-item">
+                  <a href="#" class="submenu-link">item 1</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="#" class="submenu-link">item 2</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="#" class="submenu-link">item 3</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="#" class="submenu-link">item 4</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="#" class="submenu-link">item 5</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="#" class="submenu-link">itemitemitemitemitem</a>
+                </li>
+              </ul>
+            </div>
             <div class="border-menu"></div>
-            <li class="menu-item ">
-              <a href="#" class="item-link">
+            <div class="menu-item ">
+              <a href="megaMasterKategoriaLaptop.html" class="item-link">
                 <svg
                   class="item-icon icon"
                   width="37px"
@@ -295,10 +287,10 @@
                   ноутбуков</span
                 ></a
               >
-            </li>
+            </div>
             <div class="border-menu"></div>
-            <li class="menu-item ">
-              <a href="#" class="item-link">
+            <div class="menu-item ">
+              <a href="megaMasterRemontPC.html" class="item-link">
                 <svg
                   class="item-icon icon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -316,10 +308,10 @@
                   компьютеров</span
                 ></a
               >
-            </li>
+            </div>
             <div class="border-menu"></div>
-            <li class="menu-item ">
-              <a href="#" class="item-link">
+            <div class="menu-item ">
+              <a href="megaMasterBrandi.html" class="item-link">
                 <svg
                   viewBox="0 0 28 36"
                   xmlns="http://www.w3.org/2000/svg"
@@ -334,10 +326,10 @@
                 </svg>
                 <span>ВСЕ БРЕНДЫ</span>
               </a>
-            </li>
+            </div>
             <div class="border-menu"></div>
-            <li class="menu-item ">
-              <a href="#" class="item-link">
+            <div class="menu-item ">
+              <a href="megaMasterContacts.html" class="item-link">
                 <svg
                   viewBox="0 0 36 30"
                   xmlns="http://www.w3.org/2000/svg"
@@ -354,22 +346,54 @@
                 </svg>
                 <span>Контакты</span>
               </a>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </nav>
-
+      <div class="banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6 banner__text ">
+              <h2 class="text-title">
+                Сервисный центр
+              </h2>
+              <p class="text-about">
+                “Мегамастер” ремонт и настройка любого портативного девайса
+                максимально быстро.
+              </p>
+              <button class="text-button btn">
+                ПОДРОБНЕЕ
+                <svg
+                  class="text-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="18px"
+                  height="12px"
+                >
+                  <path
+                    d="M0.779,6.753 L15.341,6.753 L11.866,10.113 C11.562,10.407 11.562,10.885 11.866,11.179 C12.170,11.473 12.664,11.473 12.968,11.179 L17.773,6.532 C18.077,6.238 18.077,5.760 17.773,5.467 L12.968,0.819 C12.816,0.672 12.616,0.598 12.417,0.598 C12.218,0.598 12.018,0.672 11.866,0.819 C11.562,1.114 11.562,1.591 11.866,1.885 L15.341,5.245 L0.779,5.245 C0.349,5.245 -0.000,5.583 -0.000,5.999 C-0.000,6.415 0.349,6.753 0.779,6.753 Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="col-xl-6 position-img">
+              <img
+                src="img/header-tele.png"
+                alt="image"
+                class="banner__image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="manufacture__background ">
         <div class="manufacture__wrap container">
-          <button class="manufacture__btn left btn">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <ul class="manufacture__list list mb0">
+          <ul class="manufacture__list manufacture-carousel list mb0">
             <li class="manufacture__item">
               <img src="img/sam.png" alt="manufacture" class="item__img img" />
             </li>
-            <li class="manufacture__item">
-              <img src="img/ap.png" alt="manufacture" class="item__img img" />
+            <li class="manufacture__item ">
+              <img src="img/apple.png" alt="manufacture" class="item__img img apple" height="22px">
             </li>
             <li class="manufacture__item">
               <img src="img/hts.png" alt="manufacture" class="item__img img" />
@@ -397,13 +421,10 @@
               <img src="img/me.png" alt="manufacture" class="item__img img" />
             </li>
           </ul>
-          <button class="manufacture__btn right btn">
-            <i class="fas fa-chevron-right"></i>
-          </button>
         </div>
       </div>
       <div class="container">
-        <ul class="routing list mb0">
+        <ul class="routing mb0">
           <li class="routing__item">
             <i class="fas fa-home icon-home"></i>
             <a class="routing__link link" href="#">Главная</a>
@@ -423,6 +444,10 @@
         </button>
         <ul class="popup-list list">
           <li class="popup-item">
+            <button class="popup-button">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+
             <a class="popup-link js-popup-link">
               Ремонт мобильных телефонов
             </a>
@@ -443,6 +468,9 @@
             </ul>
           </li>
           <li class="popup-item">
+            <button class="popup-button">
+              <i class="fas fa-arrow-right"></i>
+            </button>
             <a class="popup-link js-popup-link">Ремонт планшетов </a>
             <ul class="submenu js-submenu">
               <li class="submenu-item">
@@ -460,6 +488,9 @@
             </ul>
           </li>
           <li class="popup-item">
+            <button class="popup-button">
+              <i class="fas fa-arrow-right"></i>
+            </button>
             <a class="popup-link js-popup-link">Ремонт ноутбуков</a>
             <ul class="submenu js-submenu">
               <li class="submenu-item">
@@ -490,195 +521,154 @@
         </ul>
       </div>
     </div>
-    <!-- sidebar  -->
-    <div class="col-xl-3 col-lg-4 col-12">
-      <div class="sidebar">
-        <div class="sidebar__banners row">
-          <div class="sidebar__img-wrap col-lg-12 col-md-3 col-sm-6 col-12">
-            <img
-              class="sidebar__img "
-              src="/img/attractive-banner1.png"
-              alt="news"
-            />
-          </div>
+    <!-- main -->
 
-          <div class="sidebar__img-wrap col-lg-12 col-md-3 col-sm-6 col-12">
-            <img
-              class="sidebar__img "
-              src="/img/attractive-banner2.png"
-              alt="news"
-            />
-          </div>
+    <main class="megaMaster">
+      <section class="our-services container">
+        <h2 class="our-services__title">Наши услуги</h2>
 
-          <div class="sidebar__img-wrap col-lg-12 col-md-3 col-sm-6 col-12">
-            <img
-              class="sidebar__img  "
-              src="/img/attractive-banner3.png"
-              alt="news"
-            />
-          </div>
-          <div class="sidebar__img-wrap col-lg-12 col-md-3 col-sm-6 col-12">
-            <img
-              class="sidebar__img  "
-              src="/img/attractive-banner4.png"
-              alt="news"
-            />
-          </div>
-        </div>
-        <div class="sidebar__reviews">
-          <h4 class="sidebar__title mb0 ">Последние отзывы</h4>
-          <ul class="sidebar__reviews-list mb0 list">
-            <li class="sidebar__reviews-item">
-              <img
-                src="img/Ellipse 771.png"
-                alt="photo"
-                class="sidebar__reviews-photo"
-              />
-              <div class="sidebar__reviews-name-wrap">
-                <span class="sidebar__reviews-name">Виктория</span>
-                <span class="sidebar__reviews-date">21.10.2018</span>
-              </div>
-              <p class="sidebar__reviews-text">
-                Ребята сделали всё без проблем, у меня телефон начал сам
-                выключаться, мне просто поменяли батарею и всё работает как
-                новое
-                <span class="sidebar__text-still">[...]</span>
-              </p>
-            </li>
-            <li class="sidebar__reviews-item">
-              <img
-                src="img/Ellipse 771.png"
-                alt="photo"
-                class="sidebar__reviews-photo"
-              />
-              <div class="sidebar__reviews-name-wrap">
-                <span class="sidebar__reviews-name">Виктория</span>
-                <span class="sidebar__reviews-date">21.10.2018</span>
-              </div>
-              <p class="sidebar__reviews-text">
-                Ребята сделали всё без проблем, у меня телефон начал сам
-                выключаться, мне просто поменяли батарею и всё работает как
-                новое
-                <span class="sidebar__text-still">[...]</span>
-              </p>
-            </li>
-            <li class="sidebar__reviews-item">
-              <img
-                src="img/Ellipse 771.png"
-                alt="photo"
-                class="sidebar__reviews-photo"
-              />
-              <div class="sidebar__reviews-name-wrap">
-                <span class="sidebar__reviews-name">Виктория</span>
-                <span class="sidebar__reviews-date">21.10.2018</span>
-              </div>
-              <p class="sidebar__reviews-text">
-                Ребята сделали всё без проблем, у меня телефон начал сам
-                выключаться, мне просто поменяли батарею и всё работает как
-                новое
-                <span class="sidebar__text-still">[...]</span>
-              </p>
-            </li>
-          </ul>
-          <button class="sidebar__button">Все новости</button>
-        </div>
-
-        <div class="sidebar__info">
-          <h4 class="sidebar__title mb0">Новости</h4>
-          <ul class="sidebar__info-list list mb0 ">
-            <li class="sidebar__info-item">
-              <p class="sidebar__info-title">
-                Стать клиентом сервисного центра Megamaster
-              </p>
-              <p class="sidebar__info-text">
-                Наше преимущество - профессионализм всех сотрудников.
-                Специалисты способны точно понять Вас, определить
-                <span class="sidebar__text-still">[...]</span>
-              </p>
-            </li>
-            <li class="sidebar__info-item">
-              <p class="sidebar__info-title">
-                Стать клиентом сервисного центра Megamaster
-              </p>
-              <p class="sidebar__info-text">
-                Наше преимущество - профессионализм всех сотрудников.
-                Специалисты способны точно понять Вас, определить
-                <span class="sidebar__text-still">[...]</span>
-              </p>
-            </li>
-            <li class="sidebar__info-item">
-              <p class="sidebar__info-title">
-                Стать клиентом сервисного центра Megamaster
-              </p>
-              <p class="sidebar__info-text">
-                Наше преимущество - профессионализм всех сотрудников.
-                Специалисты способны точно понять Вас, определить
-                <span class="sidebar__text-still">[...]</span>
-              </p>
-            </li>
-          </ul>
-          <button class="sidebar__button">Все новости</button>
-        </div>
-      </div>
-    </div>
-    <!-- recall__discount -->
-    <div class="discount-recall__wrap">
-      <div class="discount-recall container">
-        <div class="row">
-          <div class="col-12 col-lg-7">
-            <h2 class="discount-recall__title">
-              закажите звонок получите скидку на ремонт 5%
-            </h2>
-          </div>
-
-          <div class="col-12 col-lg-5 discount-recall__button-wrap">
-            <button type="submit" class="discount-recall__button btn">
-              Заказать звонок
-              <svg
-                class="discount-recall__icon"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="18px"
-                height="12px"
-              >
-                <path
-                  d="M0.779,6.753 L15.341,6.753 L11.866,10.113 C11.562,10.407 11.562,10.885 11.866,11.179 C12.170,11.473 12.664,11.473 12.968,11.179 L17.773,6.532 C18.077,6.238 18.077,5.760 17.773,5.467 L12.968,0.819 C12.816,0.672 12.616,0.598 12.417,0.598 C12.218,0.598 12.018,0.672 11.866,0.819 C11.562,1.114 11.562,1.591 11.866,1.885 L15.341,5.245 L0.779,5.245 C0.349,5.245 -0.000,5.583 -0.000,5.999 C-0.000,6.415 0.349,6.753 0.779,6.753 Z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- recall -->
-    <div class="recall__wrap">
-      <div class="recall container">
-        <h2 class="recall__title">
-          ЗАКАЖИТЕ ЗВОНОК И МЫ ОБЯЗАТЕЛЬНО ПОМОЖЕМ!
-        </h2>
-
-        <div class="recall__form-wrap">
-          <form action="" class="recall__form">
-            <div class="row justify-center">
-              <div class="col-xl-4 col-lg-5 input__wrap">
-                <input
-                  placeholder="Имя"
-                  type="text"
-                  class="recall__form-input"
-                />
-              </div>
-              <div class="col-xl-4 col-lg-5 input__wrap">
-                <input
-                  placeholder="Телефон"
-                  type="text"
-                  class="recall__form-input"
-                />
-              </div>
-              <div class="col-xl-4 col-12 button__wrap">
-                <button type="submit" class="recall__form-button btn">
-                  Заказать звонок
+        <div class="our-services__list row">
+          <div class="our-services__item col-12 col-md-6 no-padding-md">
+            <div class="our-services__item-wrap">
+              <div class="our-services__text-wrap">
+                <p class="our-services__text">
+                  Ремонт мобильных телефонов
+                </p>
+                <button class="btn our-services__button">
+                  ПОДРОБНЕЕ
                   <svg
-                    class="recall__form-icon"
+                    class="our-services__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="18px"
+                    height="12px"
+                  >
+                    <path
+                      d="M0.779,6.753 L15.341,6.753 L11.866,10.113 C11.562,10.407 11.562,10.885 11.866,11.179 C12.170,11.473 12.664,11.473 12.968,11.179 L17.773,6.532 C18.077,6.238 18.077,5.760 17.773,5.467 L12.968,0.819 C12.816,0.672 12.616,0.598 12.417,0.598 C12.218,0.598 12.018,0.672 11.866,0.819 C11.562,1.114 11.562,1.591 11.866,1.885 L15.341,5.245 L0.779,5.245 C0.349,5.245 -0.000,5.583 -0.000,5.999 C-0.000,6.415 0.349,6.753 0.779,6.753 Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <img
+                src="img/Stuff1.png"
+                alt="image"
+                class="our-services__image position--1 img-fluid"
+              />
+            </div>
+          </div>
+          <div class="our-services__item col-12 col-md-6 no-padding-md">
+            <div class="our-services__item-wrap">
+              <div class="our-services__text-wrap">
+                <p class="our-services__text">Ремонт Планшетов</p>
+                <button class="btn our-services__button">
+                  ПОДРОБНЕЕ
+                  <svg
+                    class="our-services__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="18px"
+                    height="12px"
+                  >
+                    <path
+                      d="M0.779,6.753 L15.341,6.753 L11.866,10.113 C11.562,10.407 11.562,10.885 11.866,11.179 C12.170,11.473 12.664,11.473 12.968,11.179 L17.773,6.532 C18.077,6.238 18.077,5.760 17.773,5.467 L12.968,0.819 C12.816,0.672 12.616,0.598 12.417,0.598 C12.218,0.598 12.018,0.672 11.866,0.819 C11.562,1.114 11.562,1.591 11.866,1.885 L15.341,5.245 L0.779,5.245 C0.349,5.245 -0.000,5.583 -0.000,5.999 C-0.000,6.415 0.349,6.753 0.779,6.753 Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <img
+                src="img/Stuff2.png"
+                alt="image"
+                class="our-services__image position--2 img-fluid"
+              />
+            </div>
+          </div>
+          <div class="our-services__item col-12 col-md-6 no-padding-md">
+            <div class="our-services__item-wrap">
+              <div class="our-services__text-wrap">
+                <p class="our-services__text">Ремонт ноутбуков</p>
+                <button class="btn our-services__button">
+                  ПОДРОБНЕЕ
+                  <svg
+                    class="our-services__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="18px"
+                    height="12px"
+                  >
+                    <path
+                      d="M0.779,6.753 L15.341,6.753 L11.866,10.113 C11.562,10.407 11.562,10.885 11.866,11.179 C12.170,11.473 12.664,11.473 12.968,11.179 L17.773,6.532 C18.077,6.238 18.077,5.760 17.773,5.467 L12.968,0.819 C12.816,0.672 12.616,0.598 12.417,0.598 C12.218,0.598 12.018,0.672 11.866,0.819 C11.562,1.114 11.562,1.591 11.866,1.885 L15.341,5.245 L0.779,5.245 C0.349,5.245 -0.000,5.583 -0.000,5.999 C-0.000,6.415 0.349,6.753 0.779,6.753 Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <img
+                src="img/Stuff3.png"
+                alt="image"
+                class="our-services__image position--3 img-fluid"
+              />
+            </div>
+          </div>
+          <div class="our-services__item col-12 col-md-6 no-padding-md">
+            <div class="our-services__item-wrap">
+              <div class="our-services__text-wrap">
+                <p class="our-services__text">РЕМОНТ КОМПЬЮТЕРОВ</p>
+                <button class="btn our-services__button">
+                  ПОДРОБНЕЕ
+                  <svg
+                    class="our-services__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="18px"
+                    height="12px"
+                  >
+                    <path
+                      d="M0.779,6.753 L15.341,6.753 L11.866,10.113 C11.562,10.407 11.562,10.885 11.866,11.179 C12.170,11.473 12.664,11.473 12.968,11.179 L17.773,6.532 C18.077,6.238 18.077,5.760 17.773,5.467 L12.968,0.819 C12.816,0.672 12.616,0.598 12.417,0.598 C12.218,0.598 12.018,0.672 11.866,0.819 C11.562,1.114 11.562,1.591 11.866,1.885 L15.341,5.245 L0.779,5.245 C0.349,5.245 -0.000,5.583 -0.000,5.999 C-0.000,6.415 0.349,6.753 0.779,6.753 Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <img
+                src="img/Stuff4.png"
+                alt="image"
+                class="our-services__image position--4 img-fluid"
+              />
+            </div>
+          </div>
+          <div class="our-services__item col-12 col-md-6 no-padding-md">
+            <div class="our-services__item-wrap">
+              <div class="our-services__text-wrap">
+                <p class="our-services__text">РЕМОНТ КОМПЬЮТЕРОВ</p>
+                <button class="btn our-services__button">
+                  ПОДРОБНЕЕ
+                  <svg
+                    class="our-services__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="18px"
+                    height="12px"
+                  >
+                    <path
+                      d="M0.779,6.753 L15.341,6.753 L11.866,10.113 C11.562,10.407 11.562,10.885 11.866,11.179 C12.170,11.473 12.664,11.473 12.968,11.179 L17.773,6.532 C18.077,6.238 18.077,5.760 17.773,5.467 L12.968,0.819 C12.816,0.672 12.616,0.598 12.417,0.598 C12.218,0.598 12.018,0.672 11.866,0.819 C11.562,1.114 11.562,1.591 11.866,1.885 L15.341,5.245 L0.779,5.245 C0.349,5.245 -0.000,5.583 -0.000,5.999 C-0.000,6.415 0.349,6.753 0.779,6.753 Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <img
+                src="img/Stuff5.png"
+                alt="image"
+                class="our-services__image position--5 img-fluid"
+              />
+            </div>
+          </div>
+          <div class="our-services__item col-12 col-md-6 no-padding-md">
+            <div class="our-services__item-wrap">
+              <div class="our-services__text-wrap">
+                <p class="our-services__text">РЕМОНТ КОМПЬЮТЕРОВ</p>
+                <button class="btn our-services__button">
+                  ПОДРОБНЕЕ
+                  <svg
+                    class="our-services__icon"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                     width="18px"
@@ -691,10 +681,453 @@
                 </button>
               </div>
             </div>
-          </form>
+          </div>
+        </div>
+      </section>
+      <div class="recall__wrap">
+        <div class="recall container">
+          <h2 class="recall__title">
+            ЗАКАЖИТЕ ЗВОНОК И МЫ ОБЯЗАТЕЛЬНО ПОМОЖЕМ!
+          </h2>
+
+          <div class="recall__form-wrap">
+            <form action="" class="recall__form">
+              <div class="row justify-center">
+                <div class="col-xl-4 col-lg-5 input__wrap">
+                  <input
+                    placeholder="Имя"
+                    type="text"
+                    class="recall__form-input"
+                  />
+                </div>
+                <div class="col-xl-4 col-lg-5 input__wrap">
+                  <input
+                    placeholder="Телефон"
+                    type="text"
+                    class="recall__form-input"
+                  />
+                </div>
+                <div class="col-xl-4 col-12 button__wrap">
+                  <button type="submit" class="recall__form-button btn">
+                    Заказать звонок
+                    <svg
+                      class="recall__form-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="18px"
+                      height="12px"
+                    >
+                      <path
+                        d="M0.779,6.753 L15.341,6.753 L11.866,10.113 C11.562,10.407 11.562,10.885 11.866,11.179 C12.170,11.473 12.664,11.473 12.968,11.179 L17.773,6.532 C18.077,6.238 18.077,5.760 17.773,5.467 L12.968,0.819 C12.816,0.672 12.616,0.598 12.417,0.598 C12.218,0.598 12.018,0.672 11.866,0.819 C11.562,1.114 11.562,1.591 11.866,1.885 L15.341,5.245 L0.779,5.245 C0.349,5.245 -0.000,5.583 -0.000,5.999 C-0.000,6.415 0.349,6.753 0.779,6.753 Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+      <section class="easy-repair container">
+        <div class="row">
+          <h2 class=" easy-repair__title color-title">
+            ПОЧЕМУ РЕМОНТ КОМПЬЮТЕРНОЙ И МОБИЛЬНОЙ ТЕХНИКИ НУЖНО ДЕЛАТЬ В
+            СЕРВИСНОМ ЦЕНТРЕ «МЕГАМАСТЕР»
+          </h2>
+
+          <div class="easy-repair__text text-style col-md-6">
+            Разбитый экран или не работает клавиатура, поврежденный корпус,
+            нерабочий блок питания, проблемы с охлаждением, вирусы мешают
+            работе, тормозят программы, нужно больше оперативной памяти,
+            необходима переустановка системы, не работает микрофон, устарела
+            аппаратная начинка, не включается камера, нет интернета, нужно
+            поменять кнопку Home, не работает wi-fi, нужно поменять батарею или
+            восстановить девайс после утопления?
+            <span class="easy-repair__text-other">
+              Все эти и многие другие проблемы с вашими портативными
+              устройствами мы решаем в сервисном центре «Мегамастер», который
+              находится в самом центре Киева.
+            </span>
+            <span class="easy-repair__text-other">
+              Разбился сенсорный экран и стало невозможно им управлять?
+              Необходим ремонт телефонов Мы поменяем тачскрин менее чем за
+              сутки! Вы не пропустите ни одного звонка. Ищите матрицу для
+              ноутбука, оперативную память образца DIMM, DDR1, SIMM, клавиатуру
+              определенной модели, кулер или графический контроллер? Наша база
+              запчастей для ноутбуков, смартфонов и планшетов насчитывает более
+              12500 тысяч наименований. А если запчасти в нашей базе нет, то она
+              точно есть у наших партнеров!
+            </span>
+            <span class="easy-repair__text-other">
+              На жестком диске был диплом или курсовая, а ноутбук вышел из
+              строя? Или отчет
+            </span>
+          </div>
+          <div class="easy-repair__text text-style col-md-6">
+            Сосед или родственник уже безуспешно пытались чинить Ваш ноутбук, но
+            явно не преуспели, а еще сильнее испортили ситуацию? Телефон после
+            такого вмешательства стал еще больше тормозить и глючить? Кнопки не
+            отвечают, планшет окирпичился, а ноутбук и вовсе выдает синий экран
+            смерти? Вот уже несколько лет мы исправляем такие косяки и собрали
+            большую статистику, что могло пойти не так при домашнем ремонте
+            ноутбука, смартфона или планшета. А в сочетании со специальным
+            оборудованием, опытом и прямыми руками, эта статистика дает
+            великолепные результаты. Мы сможем исправить практически любую как
+            первичную поломку, так и поломку, вызванную пробами ремонтировать
+            девайс самостоятельно.
+            <span class="easy-repair__text-other">
+              Практически никто в современной Украине не строит свою жизнь без
+              использования компьютера. Все сферы жизни так или иначе связаны с
+              компьютерной техникой. Мы используем ПК и ноутбук в работе и
+              учебе, проводим с ним свой досуг, отдыхаем. Независимо от
+              возраста, компьютер плотно вошел в жизнь каждого человека. Но, как
+              и любая техника, ваш компьютер рано или поздно будет нуждаться в
+              сервисном обслуживании.
+            </span>
+            <span class="easy-repair__text-other">
+              Можно попробовать починить компьютер самостоятельно, но никто не
+              справится с этой задачей лучше профессионалов центра ". Мы
+            </span>
+          </div>
+
+          <div class="easy-repair__card col-md-4 col-12">
+            <img src="img/Layer 861.jpg" alt="image" class="easy-repair__img" />
+            <p class="easy-repair__text">
+              Мы не только отремонтируем, но и сделаем эксплуатацию Вашего
+              оборудования удобнее. Специалисты «Мегамастер» настроят
+              программный пакет с учетом ваших индивидуальных предпочтений,
+              установим и настроим любое дополнительное оборудование, подготовим
+              компьютер к работе, учебе, играм, любым необходимым задачам. Мы
+              обеспечим сохранность Ваших данных, даже если они были удалены по
+              ошибке. Наши услугами пользуются не только частные лица, мы
+              предоставляем корпоративное обслуживание. Мы готовы провести
+              профилактику и ремонт всех компьютеров Вашего офиса. Оказываем
+              услуги построения больших локальных сетей, обеспечим их защиту и
+              высокую скорость взаимодействия.
+            </p>
+          </div>
+          <div class="easy-repair__card col-md-4 col-12">
+            <img src="img/Layer 862.jpg" alt="image" class="easy-repair__img" />
+            <p class="easy-repair__text">
+              Начинающий пользователь получит возможность настроить компьютер
+              сразу после покупки, как у себя на дому, так и в нашем сервисном
+              центре. Также мы предоставим помощь в вопросах гарантийного
+              обслуживания Вашего оборудования. Если продавец отказывается
+              ремонтировать по гарантии, мы Вам поможем!
+              <span class="easy-repair__text2">
+                Стать клиентом сервисного центра -- означает избавится от всех
+                возможных проблем с компьютером. Наше преимущество -
+                профессионализм всех сотрудников.
+              </span>
+            </p>
+          </div>
+          <div class="easy-repair__card col-md-4 col-12">
+            <img src="img/Layer 863.jpg" alt="image" class="easy-repair__img" />
+            <p class="easy-repair__text">
+              Специалисты способны точно понять Вас, определить причину
+              неполадки и быстро ее устранить. А наши услуги по обучению
+              первичной компьютерной грамоте будут полезны тем, кто только
+              начинает работу с компьютером.
+              <span class="easy-repair__text2">
+                Наши клиентами становятся также и опытные пользователи.
+                Сотрудники сервисного центр Мегамастер способны осуществить
+                ремонт и настройку любого компьютера, телефона, планшета или
+                ноутбука максимально быстро. Наша компания несет полную
+                ответственность за результат работ, мы сделаем все возможное,
+                что зависит от сотрудников «Мегамастер».
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="recall__wrap">
+        <div class="recall container">
+          <h2 class="recall__title">
+            ЗАКАЖИТЕ ЗВОНОК И МЫ ОБЯЗАТЕЛЬНО ПОМОЖЕМ!
+          </h2>
+
+          <div class="recall__form-wrap">
+            <form action="" class="recall__form">
+              <div class="row justify-center">
+                <div class="col-xl-4 col-lg-5 input__wrap">
+                  <input
+                    placeholder="Имя"
+                    type="text"
+                    class="recall__form-input"
+                  />
+                </div>
+                <div class="col-xl-4 col-lg-5 input__wrap">
+                  <input
+                    placeholder="Телефон"
+                    type="text"
+                    class="recall__form-input"
+                  />
+                </div>
+                <div class="col-xl-4 col-12 button__wrap">
+                  <button type="submit" class="recall__form-button btn">
+                    Заказать звонок
+                    <svg
+                      class="recall__form-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="18px"
+                      height="12px"
+                    >
+                      <path
+                        d="M0.779,6.753 L15.341,6.753 L11.866,10.113 C11.562,10.407 11.562,10.885 11.866,11.179 C12.170,11.473 12.664,11.473 12.968,11.179 L17.773,6.532 C18.077,6.238 18.077,5.760 17.773,5.467 L12.968,0.819 C12.816,0.672 12.616,0.598 12.417,0.598 C12.218,0.598 12.018,0.672 11.866,0.819 C11.562,1.114 11.562,1.591 11.866,1.885 L15.341,5.245 L0.779,5.245 C0.349,5.245 -0.000,5.583 -0.000,5.999 C-0.000,6.415 0.349,6.753 0.779,6.753 Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <section class=" advantages container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class=" advantages__title color-title">
+              ПОЧЕМУ РЕМОНТ КОМПЬЮТЕРНОЙ И МОБИЛЬНОЙ ТЕХНИКИ НУЖНО ДЕЛАТЬ В
+              СЕРВИСНОМ ЦЕНТРЕ «МЕГАМАСТЕР»
+            </h2>
+            <p
+              class=" advantages__services-text advantages__services-text-mobile text-style"
+            >
+              Если Вы оперативно обслуживаете свое оборудование, вы обеспечите
+              его долгую службу и, как следствие, сэкономите деньги.
+            </p>
+          </div>
+          <div class="advantages__services-wrap col-md-6">
+            <p class=" advantages__services-text text-style">
+              Если Вы оперативно обслуживаете свое оборудование, вы обеспечите
+              его долгую службу и, как следствие, сэкономите деньги.
+            </p>
+            <h6 class=" advantages__services-title">
+              Мы предоставляем услуги:
+            </h6>
+
+            <ul class=" advantages__services-list">
+              <li class=" advantages__services-item ">
+                <span class=" advantages__services-item-text text-style"
+                  >ремонта или замены аппаратных средств ( процессоры,
+                  видеокарты, жесткие диски);</span
+                >
+              </li>
+              <li class=" advantages__services-item ">
+                <span class=" advantages__services-item-text text-style">
+                  профилактика и удаление вирусов, рекламного спама в
+                  браузерах;</span
+                >
+              </li>
+              <li class=" advantages__services-item ">
+                <span class=" advantages__services-item-text text-style"
+                  >восстановление информации на носителях;</span
+                >
+              </li>
+              <li class=" advantages__services-item ">
+                <span class=" advantages__services-item-text text-style">
+                  восстановим работоспособность компьютера после любого
+                  сбоя;</span
+                >
+              </li>
+              <li class=" advantages__services-item ">
+                <span class=" advantages__services-item-text text-style">
+                  установим любое ПО, включая операционные системы, антивирусы,
+                  драйверы, пользовательские программы;</span
+                >
+              </li>
+              <li class=" advantages__services-item ">
+                <span class=" advantages__services-item-text text-style">
+                  установим любое ПО, включая операционные системы, антивирусы,
+                  драйверы, пользовательские программы;</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="img/Rectangle 866.png"
+              alt="image"
+              class=" advantages__services-img img-fluid "
+            />
+          </div>
+          <div class="col-12">
+            <p class="advantages__services-about ">
+              Мы не только отремонтируем, но и сделаем эксплуатацию Вашего
+              оборудования удобнее. Специалисты «Мегамастер» настроят
+              программный пакет с учетом ваших индивидуальных предпочтений,
+              установим и настроим любое дополнительное оборудование, подготовим
+              компьютер к работе, учебе, играм, любым необходимым задачам. Мы
+              обеспечим сохранность Ваших данных, даже если они были удалены по
+              ошибке.
+            </p>
+
+            <h2 class="advantages__title color-title ">
+              К СЛОВУ ОБ ОПЫТЕ НАШИХ СПЕЦИАЛИСТОВ: А ВСЕ ВРЕМЯ РАБОТЫ СЕРВИСНОГО
+              ЦЕНТРА «МЕГАМАСТЕР» МЫ ПРОИЗВЕЛИ:
+            </h2>
+
+            <p class="advantages__experience-about text-style">
+              Клиенты нашего сервиса получают гарантии для каждой нашей работы.
+              Наши мастера предпочитают не переделывать одно и то же действие по
+              многу раз, поэтому работают качественно с первой попытки.
+            </p>
+          </div>
+
+          <div class="advantages__experience-list col-12">
+            <div class="row">
+              <div class="advantages__experience-item col-md-4 col-sm-6 col-12">
+                <span class="advantages__experience-num">800</span>
+                <span class="advantages__experience-text"
+                  >Замен клавиатур, кнопок, корпусов и т.п.</span
+                >
+              </div>
+              <div class="advantages__experience-item col-md-4 col-sm-6 col-12">
+                <span class="advantages__experience-num">1675</span>
+                <span class="advantages__experience-text"
+                  >Переустановок операционной системы;</span
+                >
+              </div>
+              <div class="advantages__experience-item col-md-4 col-sm-6 col-12">
+                <span class="advantages__experience-num">560</span>
+                <span class="advantages__experience-text"
+                  >Замен экранов для ноутбуков;</span
+                >
+              </div>
+              <div class="advantages__experience-item col-md-4 col-sm-6 col-12">
+                <span class="advantages__experience-num">720</span>
+                <span class="advantages__experience-text"
+                  >Восстановлений телефонов или ноутбуков после попадания внутрь
+                  жидкости;</span
+                >
+              </div>
+              <div class="advantages__experience-item col-md-4 col-sm-6 col-12">
+                <span class="advantages__experience-num">1460</span>
+                <span class="advantages__experience-text"
+                  >Замен стекол и дисплеев смартфонов, из них – 756 замен стекла
+                  iPhone;</span
+                >
+              </div>
+              <div class="advantages__experience-item col-md-4 col-sm-6 col-12">
+                <span class="advantages__experience-num">980</span>
+                <span class="advantages__experience-text"
+                  >Замен прошивки планшетов и телефонов на Android;</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="news">
+        <div class="container ">
+          <h2 class="news__title color-title">Последнее в блоге</h2>
+          <div class="row">
+            <div class="news__item col-lg-3 col-md-6 col-12">
+              <img
+                src="img/newsRectangle1.png"
+                alt="image"
+                class="item__img img-fluid"
+              />
+              <p class="item__title color-title">
+                Почему ноутбук греется, «лагает» и зависает
+              </p>
+              <p class="text-style item__text">
+                Главная причина выхода из строя ноутбуков – это игнорирование
+                рекомендаций по очистке системы охлаждения.
+                <svg
+                  class="item__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="18px"
+                  height="12px"
+                >
+                  <path
+                    d="M0.779,6.753 L15.341,6.753 L11.866,10.113 C11.562,10.407 11.562,10.885 11.866,11.179 C12.170,11.473 12.664,11.473 12.968,11.179 L17.773,6.532 C18.077,6.238 18.077,5.760 17.773,5.467 L12.968,0.819 C12.816,0.672 12.616,0.598 12.417,0.598 C12.218,0.598 12.018,0.672 11.866,0.819 C11.562,1.114 11.562,1.591 11.866,1.885 L15.341,5.245 L0.779,5.245 C0.349,5.245 -0.000,5.583 -0.000,5.999 C-0.000,6.415 0.349,6.753 0.779,6.753 Z"
+                  />
+                </svg>
+              </p>
+            </div>
+            <div class="news__item col-lg-3 col-md-6 col-12">
+              <img
+                src="img/newsRectangle2.png"
+                alt="image"
+                class="item__img img-fluid"
+              />
+              <p class="item__title color-title">
+                Продление срока эксплуатации ноутбука
+              </p>
+              <p class="text-style item__text">
+                В статье будут раскрыты меры предосторожности, которые уберегут
+                ваш ноутбук от поломки.
+                <svg
+                  class="item__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="18px"
+                  height="12px"
+                >
+                  <path
+                    d="M0.779,6.753 L15.341,6.753 L11.866,10.113 C11.562,10.407 11.562,10.885 11.866,11.179 C12.170,11.473 12.664,11.473 12.968,11.179 L17.773,6.532 C18.077,6.238 18.077,5.760 17.773,5.467 L12.968,0.819 C12.816,0.672 12.616,0.598 12.417,0.598 C12.218,0.598 12.018,0.672 11.866,0.819 C11.562,1.114 11.562,1.591 11.866,1.885 L15.341,5.245 L0.779,5.245 C0.349,5.245 -0.000,5.583 -0.000,5.999 C-0.000,6.415 0.349,6.753 0.779,6.753 Z"
+                  />
+                </svg>
+              </p>
+            </div>
+            <div class="news__item col-lg-3 col-md-6 col-12">
+              <img
+                src="img/newsRectangle3.png"
+                alt="image"
+                class="item__img img-fluid"
+              />
+              <p class="item__title color-title">
+                Неполадки в работе тачскрина
+              </p>
+              <p class="text-style item__text">
+                Главная причина выхода из строя ноутбуков – это игнорирование
+                рекомендаций по очистке системы охлаждения.
+                <svg
+                  class="item__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="18px"
+                  height="12px"
+                >
+                  <path
+                    d="M0.779,6.753 L15.341,6.753 L11.866,10.113 C11.562,10.407 11.562,10.885 11.866,11.179 C12.170,11.473 12.664,11.473 12.968,11.179 L17.773,6.532 C18.077,6.238 18.077,5.760 17.773,5.467 L12.968,0.819 C12.816,0.672 12.616,0.598 12.417,0.598 C12.218,0.598 12.018,0.672 11.866,0.819 C11.562,1.114 11.562,1.591 11.866,1.885 L15.341,5.245 L0.779,5.245 C0.349,5.245 -0.000,5.583 -0.000,5.999 C-0.000,6.415 0.349,6.753 0.779,6.753 Z"
+                  />
+                </svg>
+              </p>
+            </div>
+            <div class="news__item col-lg-3 col-md-6 col-12">
+              <img
+                src="img/newsRectangle4.png"
+                alt="image"
+                class="item__img img-fluid"
+              />
+              <p class="item__title color-title">
+                Продление срока эксплуатации ноутбука
+              </p>
+              <p class="text-style item__text">
+                В статье будут раскрыты меры предосторожности, которые уберегут
+                ваш ноутбук от поломки.
+                <svg
+                  class="item__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="18px"
+                  height="12px"
+                >
+                  <path
+                    d="M0.779,6.753 L15.341,6.753 L11.866,10.113 C11.562,10.407 11.562,10.885 11.866,11.179 C12.170,11.473 12.664,11.473 12.968,11.179 L17.773,6.532 C18.077,6.238 18.077,5.760 17.773,5.467 L12.968,0.819 C12.816,0.672 12.616,0.598 12.417,0.598 C12.218,0.598 12.018,0.672 11.866,0.819 C11.562,1.114 11.562,1.591 11.866,1.885 L15.341,5.245 L0.779,5.245 C0.349,5.245 -0.000,5.583 -0.000,5.999 C-0.000,6.415 0.349,6.753 0.779,6.753 Z"
+                  />
+                </svg>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
     <footer class="footer">
       <div class="recall__wrap">
         <div class="recall container">
@@ -750,7 +1183,7 @@
               <div class="main__logo ">
                 <a class="main__logo-link" href="#">
                   <img
-                    src="/img/logotype.png"
+                    src="img/logotype.png"
                     alt="logotype"
                     class="main__logo-img"
                     width="191px"
@@ -781,14 +1214,34 @@
                 <h3 class="main__title">Меню</h3>
                 <ul class="main__menu-list">
                   <li class="main__menu-item">
-                    Ремонт мобильных телефонов
+                    <a href="#" class="item-link">
+                      Ремонт мобильных телефонов
+                    </a>
                   </li>
-                  <li class="main__menu-item">Ремонт ноутбуков</li>
-                  <li class="main__menu-item">Ремонт планшетов</li>
-                  <li class="main__menu-item">Ремонт компьютеров</li>
-                  <li class="main__menu-item">Ремонт Apple</li>
                   <li class="main__menu-item">
-                    Абонентское обслуживание
+                    <a href="#" class="item-link">
+                      Ремонт ноутбуков
+                    </a>
+                  </li>
+                  <li class="main__menu-item">
+                    <a href="#" class="item-link">
+                      Ремонт планшетов
+                    </a>
+                  </li>
+                  <li class="main__menu-item">
+                    <a href="#" class="item-link">
+                      Ремонт компьютеров
+                    </a>
+                  </li>
+                  <li class="main__menu-item">
+                    <a href="#" class="item-link">
+                      Ремонт Apple
+                    </a>
+                  </li>
+                  <li class="main__menu-item">
+                    <a href="#" class="item-link">
+                      Абонентское обслуживание
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -894,26 +1347,11 @@
         </div>
       </div>
     </footer>
-    <!--              Script          -->
-    <script src="js/wow.min.js"></script>
-    <!-- ВОВ анимация -->
-    <script>
-      new WOW().init();
-    </script>
     <script src="https://use.fontawesome.com/d23847c791.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
     ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/anime.min.js"></script>
-    <script src="js/common.min.js"></script>
+
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/common.min.js"></script>
   </body>
 </html>

@@ -11,7 +11,7 @@ $font-weight-italic: 300i
 $small-text-size1: 12px
 $small-text-size2: 13px
 $small-text-size3: 14px
-$small-text-size4: 15px
+$small-text-size4: 16px
 
 $medium-text-size1: 16px
 $medium-text-size2: 18px
@@ -202,8 +202,17 @@ $w-sssl: 3777px
         .popup-item
             background-color: #f7f7f7
             margin-bottom: 10px
-            // padding: 4px
             cursor: pointer
+            position: relative
+            .popup-button
+                border: none
+                cursor: pointer
+                outline: none
+                position: absolute
+                background-color: transparent
+                left: -20px;
+                top: 3px;
+                color: $text-color-gray
             .popup-link
                 text-decoration: none
                 display: block

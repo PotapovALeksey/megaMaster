@@ -1,36 +1,13 @@
 $(document).ready(function() {
-  //Прокрутка к якорям
-  //Наша философия
-  // $("#button").click(function() {
-  //   var top = $("#form").offset().top;
-  //   $("html,body").animate({ scrollTop: top }, 3000);
-  // });
-
-  // $(".owl-carousel").owlCarousel({
-  //   items: 4,
-  //   singleItem: true,
-  //   pagination: true,
-  //   nav: false,
-  //   margin: 20,
-  //   responsiveClass: true,
-  //   responsive: {
-  //     0: {
-  //       items: 1,
-
-  //       lazyLoad: true
-  //     },
-  //     768: {
-  //       items: 2,
-
-  //       lazyLoad: true
-  //     },
-  //     1000: {
-  //       items: 3,
-
-  //       lazyLoad: true
-  //     }
-  //   }
-  // });
+  $(".manufacture-carousel").slick({
+    slidesToShow: 6,
+    slidesToScroll: 3,
+    infinite: true,
+    prevArrow:
+      '<button class="manufacture__btn left btn slider-prev "><i class="fas fa-chevron-left"></i></button>',
+    nextArrow:
+      '<button class="manufacture__btn right btn slider-next"><i class="fas fa-chevron-right"></i></button>'
+  });
 
   // Липкое меню
   const nav = document.querySelector(".js-menu");
@@ -46,52 +23,52 @@ $(document).ready(function() {
     }
   });
 
-  // Показать меню по нажатию на бургер
-  // const buttonBurger = document.querySelector(".js-menu-button");
-  // const menu = document.querySelector(".popup-menu-wrap");
-  // const closeBurger = document.querySelector(".js-popup-close");
+  // popup burger menu
 
-  // const showBurgerMenu = () => {
-  //   menu.style.opacity = "1";
-  //   menu.style.zIndex = "999";
-  // };
-
-  // const closeBurgerMenu = () => {
-  //   menu.style.opacity = "0";
-  //   menu.style.zIndex = "-1";
-  // };
-
-  // buttonBurger.addEventListener("click", showBurgerMenu);
-  // closeBurger.addEventListener("click", closeBurgerMenu);
-  // window.addEventListener("keydown", () => {
-  //   if (event.code === "Escape") closeBurgerMenu();
-  // });
-
-  // open submenu in burger menu
-  const popupLink = [...document.querySelectorAll(".js-popup-link")];
-
-  // const toggleMenu = () => {
-  //   const parrentItem = event.target.closest(".popup-item");
-  //   const submenu = parrentItem.querySelector(".js-submenu");
-
-  //   if (submenu.style.display === "block") {
-  //     submenu.style.display = "none";
-  //   } else {
-  //     submenu.style.display = "block";
-  //   }
-  // };
-  $('.menu-button').click(function() {
-    $('.popup-menu-wrap').slideToggle();
+  $(".menu-button").click(function() {
+    $(".popup-menu-wrap").slideToggle();
   });
-  $('.popup-close').click(function(){
-    $('.popup-menu-wrap').slideToggle();
-  })
-  $('.popup-item').click(function() {
-    $(this).addClass('submenu-visible').siblings().removeClass('submenu-visible');
-    $('.submenu-visible .submenu').slideToggle('slow');
+  $(".popup-close").click(function() {
+    $(".popup-menu-wrap").slideToggle();
+  });
+  $(".popup-item").click(function() {
+    $(this)
+      .addClass("submenu-visible")
+      .siblings()
+      .removeClass("submenu-visible");
+    $(".submenu-visible .submenu").slideToggle("slow");
   });
 
-  // add event listener submenu links
+  // Запуск счётчиков
+  const counterList = document.querySelector(".advantages__experience-list");
+  let wasRunning = false;
 
-  // popupLink.forEach(el => el.addEventListener("click", toggleMenu));
+  if (counterList) {
+    window.addEventListener("scroll", function() {
+      var scrollTop = $(window).scrollTop(),
+        elementOffset = $(".advantages__experience-list").offset().top,
+        distance = elementOffset - scrollTop;
+
+      if (distance < 650 && !wasRunning) {
+        $(".advantages__experience-num").each(function() {
+          $(this)
+            .prop("Counter", 0)
+            .animate(
+              {
+                Counter: $(this).text()
+              },
+              {
+                duration: 3000,
+                easing: "swing",
+                step: function(now) {
+                  $(this).text(Math.ceil(now));
+                }
+              }
+            );
+        });
+
+        wasRunning = true;
+      }
+    });
+  }
 });

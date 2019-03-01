@@ -30,12 +30,11 @@ body
             color: #ffffff
             font-size: 26px
     .info__tel 
-       
         display: flex
         flex-direction: row
         text-align: center
         flex-wrap: wrap
-        padding: 5px 10px
+        padding: 12px 10px
         background-color: #f7f7f7
         .info__tel-item
             width: 110px
@@ -44,6 +43,8 @@ body
             margin: 0 auto 8px
             font-size: $small-text-size3;
             position: relative
+            +bp(md)
+                font-size: $medium-text-size1
             &::before
                 position: absolute
                 display: inline-block
@@ -57,7 +58,6 @@ body
         .info__tel-item-wrp
             margin-bottom: 4px
             width: 50%
-            // padding-left: 20px
             &:nth-child(1)
                 
                 .info__tel-item
@@ -92,6 +92,9 @@ body
         +bp(xl)
             padding-top: 20px 
             padding-bottom: 20px 
+        .info__logotype
+            +bp(xl)
+                display: none
         .header-info__link
             display: block
             margin: 0 auto 20px;
@@ -137,18 +140,7 @@ body
         .info__tel 
             display: flex
             flex-direction: column
-            +bp(xl)
-                display: none
-            // +bp(xl)
-            //     flex-direction: row
-            //     justify-content: flex-end
-               
-            // +bp(md)
-            //     margin-bottom: 20px
-             
-            // +bp(sm)
-            //     margin-bottom: 20px
-            //     flex-direction: column   
+   
             .info__tel-item
                 width: 110px
                 color: $text-color-black
@@ -169,11 +161,7 @@ body
             .info__tel-item-wrp
                 margin-bottom: 4px
                 width: 100%
-                +bp(xl)
-                    width: 27%
-                +bp(lg)
-                    text-align: right
-                    width: 30%;
+
                 &:nth-child(1)
                     .info__tel-item
                         &::before
@@ -236,10 +224,6 @@ body
                     .info__tel-item
                         &::before
                             background-image: url('../img/icon-lifecell.png')
-                        // &:nth-child(4)
-                        //     .info__tel-item
-                        //         &::before
-                        //             background-image: url('../img/icon-telephone.png')
   
         .info__btn-wrp
             display: block
@@ -250,7 +234,7 @@ body
                 font-size: $small-text-size3;
                 color: $text-color-white;
                 text-transform: uppercase;
-                padding: 9px 24px;
+                padding: 9px 14px;
                 border-radius: 35px;
                 .info__btn-icon 
                     fill: $text-color-white;
@@ -260,15 +244,14 @@ body
         background-color: $background-color-blue;
         font-size: $small-text-size3
         +bp(lg)
-            font-size: 13px
+            font-size: 11px
         .nav__menu
             align-items: center;
             display: flex;
             align-self: center;
             margin-bottom: 0px;
             justify-content: space-between
-            +bp(lg)
-                flex-wrap: wrap
+
             .border-menu
                 display: block
                 width: 1px
@@ -279,11 +262,6 @@ body
                     display: none
             .menu-item 
                 position: relative
-                // width: 16.6%
-                &:last-child
-                    margin-top: 6px
-                +bp(lg)
-                    width: 28%
                    
                 .item-link  
                     display: flex;
@@ -297,7 +275,10 @@ body
                 .item-icon 
                     fill: $text-color-white;
                     margin-right: 11px;
-
+                    +bp(lg)
+                        margin-right: 1px
+                        width: 30px 
+                        height: 20px
                 &:hover
                     .nav-submenu
                         display: block
@@ -363,13 +344,20 @@ body
             justify-content: space-between;
             align-items: center;
             padding: 9px 0;
-
+        .manufacture__item
+            outline: none
+            margin-top: 10px
+            text-align: center
+            .item__img 
+                margin: 0 auto
+            .apple
+                height: 21px 
         .manufacture__wrap 
             position: relative;
 
         .manufacture__btn 
             position: absolute;
-            top: 50%;
+            top: 55%;
             padding: 0;
             transform: translateY(-50%);
             background-color: transparent;
@@ -379,21 +367,7 @@ body
         .right 
             right: -15px;
        
-    .routing 
-        padding: 10px 0px;
-        .routing__link 
-            font-size: $small-text-size1;
-            font-weight: 300;
-            color: $text-color-gray2;
-        
-        .routing__item 
-            display: inline-block;
-            .icon-home
-                color: $text-color-blue;
-                font-size: 16px;
-            .icon-right
-                color: $text-color-blue;
-                font-size: 10px;
+
 // !!!!!megaMaster!!!!!
 
 .megaMaster
@@ -405,14 +379,19 @@ body
             padding-top: 30px
         .our-services__title 
             font-size: $medium-title-size2;
+            
             color: $text-color-blue;
             text-align: center;
             text-transform: uppercase;
             margin-bottom: 52px;
+            +bp(md)
+                font-size: $medium-text-size3
+                margin-bottom: 30px
         .our-services__item 
             display: flex;
             position: relative;
             height: 300px;
+    
             &:nth-child(odd)
                 .our-services__item-wrap
                     margin-right: 40px;
@@ -455,27 +434,49 @@ body
                     top: 0
                     position: absolute
                     z-index: 1
+                    +bp(md)
+                        font-size: $medium-text-size3
             .our-services__image 
                 position: absolute;
                 right: 0;
                 bottom: 0;
+                    
             .position--1 
                 right: -33px;
-
+                +bp(md)
+                    right: 0
+                    height: 200px;
+                    top: 88px;
             .position--2 
-                right: -40px;
+                right: -30px;
                 bottom: -55px;
-
+                +bp(xl)
+                    right: -20px
+                +bp(md)
+                    right: 0
+                    bottom: 0
+                    height: 214px;
+                    top: 88px;
             .position--3 
                 right: -42px;
                 bottom: -10px;
-
+                +bp(md)
+                    right: 0
+                    bottom: 0
+                    height: 166px;
+                    top: 88px;
             .position--4 
-                right: -33px;
-
+                right: -23px;
+                +bp(md)
+                    right: 0
+                    height: 200px;
+                    top: 88px;
             .position--5 
                 right: -33px;
-
+                +bp(md)
+                    right: 0
+                    height: 178px;
+                    top: 88px;
             .our-services__button 
                 padding: 7px 22px;
                 font-size: $small-text-size3;
@@ -485,6 +486,9 @@ body
                 bottom: 0
                 position: absolute
                 z-index: 1
+                &:hover
+                    transition: all 200ms easy
+                    background-color: #c1c1c1
             .our-services__icon 
                 margin-left: 12px;
                 display: inline-block;
@@ -496,9 +500,10 @@ body
             font-size: $medium-text-size5;
             margin-bottom: 35px;
             text-align: center;
-  
+            +bp(md)
+                font-size: $medium-text-size3
         .easy-repair__text 
-            font-size: 15px;
+            font-size: 16px;
             margin-bottom: 40px
         .easy-repair__text-other 
             display: block;
@@ -539,10 +544,14 @@ body
             padding-top: 60px
             padding-bottom: 25px
             padding-left: 15px
-
+            +bp(md)
+                padding-top: 30px
+                font-size: $medium-text-size3
         .advantages__services-text 
             font-size: 15px
             margin-bottom: 30px
+            +bp(md)
+                font-size: 16px
             +bp(lg)
                 display: none
         .advantages__services-text-mobile
@@ -564,16 +573,19 @@ body
                 .advantages__services-item-text
                     font-size: $medium-text-size2
                     +bp(xl)
-                        font-size: $small-text-size3
+                        font-size: 16px
         .advantages__services-img 
             margin-bottom: 35px;
 
     
         .advantages__experience-about 
-            font-size: 15px;
+            font-size: 16px;
             text-align: center;         
 
         .advantages__experience-item 
+            +bp(md)
+                text-align: center
+
             &:not(:nth-child(n + 3)) 
                 margin-bottom: 40px;
             +bp(md)
@@ -596,9 +608,13 @@ body
     .news 
         background-color: #fafafa
         padding:  50px 0
+        +bp(md)
+            padding: 30px 0
         .news__title
             font-size: 36px
             margin-bottom: 38px
+            +bp(md)
+                font-size: $medium-text-size3
             &:after
                 content: ''
                 display: block
@@ -615,7 +631,7 @@ body
                 &:not(:nth-child(n + 4)) 
                     margin-bottom: 30px;         
         .item__text
-            font-size: $small-text-size3
+            font-size: $small-text-size4
             margin-bottom: 0
             text-align: left
             +bp(lg)
@@ -625,7 +641,7 @@ body
             fill: $text-color-blue
             vertical-align: -2px
         .item__title
-            font-size: 14px
+            font-size: 16px
             text-transform: none;
             text-align: left
             +bp(lg)
@@ -680,9 +696,10 @@ body
         padding-bottom: 50px
         .info__title
             padding: 40px 0px 30px
-
+            +bp(md)
+                font-size: $medium-text-size3
         .info__text
-            font-size: 15px
+            font-size: $small-text-size4
             
             .info__text-about        
                 display: inline-block;
@@ -768,18 +785,17 @@ body
         .blog__title
             padding-top: 45px
             padding-bottom: 45px
+            font-size: $medium-title-size1
             +bp(lg)
                 padding-top: 30px
                 padding-bottom: 30px
+            +bp(md)
+                font-size: $medium-text-size3
         .blog-cards
 
             .blog-card
                 box-shadow: 1px 1px 5px -2px rgba(0, 0, 0, 0.75);
-                display: flex
                 margin-bottom: 30px
-                +bp(lg)
-                    flex-direction: column
-
                 &:last-child
                     margin-bottom: 70px
                     +bp(lg)
@@ -793,6 +809,8 @@ body
                         font-size: 24px
                         margin-bottom: 20px
                         text-align: left
+                        +bp(md)
+                            font-size: 20px
                     .info__text
                         margin-bottom: 30px
                     .info__button 
@@ -814,6 +832,8 @@ body
                             .info__icon
                                 fill: #ffffff
 
+                .blog-card__img
+                    height: 100%
         .pagination  
             margin: 0 auto 100px
             +bp(lg)
@@ -859,6 +879,9 @@ body
     margin-bottom: 60px
     +bp(lg)
         margin-bottom: 30px
+    .repair__title
+        +bp(md)
+            font-size: $medium-text-size3
     .brand-cards
         .brand-card__item 
             display: flex;
@@ -905,6 +928,9 @@ body
                     position: absolute
                     bottom: 0
                     z-index: 1
+                    &:hover
+                        transition: all 200ms easy
+                        background-color: $text-color-gray3
                 .brand-card__icon 
                     margin-left: 12px;
                     display: inline-block;
@@ -916,15 +942,19 @@ body
             .position--1 
                 right: -15px;
                 bottom: -10px;
-
+                +bp(xl)
+                    right: 0
+                    
             .position--2 
                 right: -31px;
                 bottom: 10px;
-            
+                +bp(xl)
+                    right: 0
             .position--3
                 right: -15px;
                 bottom: -10px;
-            
+                +bp(xl)
+                    right: 0
 
 
 
@@ -940,7 +970,9 @@ body
             font-family: $font-Roboto;
             margin-bottom: 46px;
             text-align: center;
-        
+            +bp(md)
+                font-size: $medium-text-size3
+
         .service-centre__cards 
             margin-bottom: 30px;
 
@@ -970,7 +1002,8 @@ body
             margin: 0 auto 38px;
             max-width: 700px;
             font-weight: 400;
-
+            +bp(md)
+                font-size: $medium-text-size3
         .warranty__text 
             font-size: $small-text-size4;
             color: $text-color-gray4;
@@ -1014,6 +1047,8 @@ body
                 font-size: $small-text-size3
                 color: $text-color-gray4
                 display: block
+                +bp(md)
+                    font-size: $small-text-size4
 
 // !!!!!megaMasterRemontPC!!!!!
 .megaMasterRemontPC
@@ -1022,6 +1057,8 @@ body
             padding: 50px 0 50px
             +bp(lg)
                 padding: 30px 0 30px
+            +bp(md)
+                font-size: $medium-text-size3
         .benefits-text
             font-size: 15px
             display: block
@@ -1088,6 +1125,8 @@ body
             margin-bottom: 0
             padding-top: 40px
             padding-bottom: 30px
+            +bp(md)
+                font-size: $medium-text-size3
         .repair-display__text
             color: $text-color-gray4
             +bp(xl)
@@ -1128,12 +1167,6 @@ body
         .repair-display__img-duo
             margin-bottom: 30px
 
-            
-
-
-
-
-
 
 // !!!!!megaMasterRemontTel!!!!!
 
@@ -1157,7 +1190,9 @@ body
     .contacts
         .contacts-title
             margin-bottom: 30px;
-            
+            +bp(md)
+                font-size: $medium-text-size3
+                margin-bottom: 20px
         .feedback-background
             background:linear-gradient(rgba(225, 225, 225, 0.9), rgba(225, 225, 225, 0.9)),
             url("../img/backgroundContacts.png")
@@ -1202,6 +1237,12 @@ body
                     padding: 9px 0
                     border-radius: 35px
                     margin-bottom: 31px;
+                    border: 1px transparent solid;
+                    &:hover
+                        transition: all 200ms ease;  
+                        background-color: transparent
+                        color: #000
+                        border: 1px #000 solid;
         .contacts-cards
             .contacts-card
                 background-color: #f2f2f2
@@ -1244,14 +1285,11 @@ body
                     margin-right: 7px
 // !!!!!footer!!!!!
 
-.footer 
-                   
+.footer           
     .main__wrap 
         background-color: $background-color-black;
         padding-bottom: 14px
-  
         .main 
-
             font-family: $font-Roboto;
             padding: 42px 24px 15px;
     
@@ -1260,7 +1298,10 @@ body
                 margin-bottom: 20px
                 .main__logo-link 
                     display: block;
-      
+                    .main__logo-img
+                        +bp(md)
+                            width: 130px
+                            height: 85px
                 .main__logo-icon 
                     font-size: 30px;
                     &:not(:last-child) 
@@ -1271,15 +1312,24 @@ body
                 .main__menu-list 
                     padding-left: 16px;
                     .main__menu-item 
-                        font-size: $small-text-size3;
                         color: $text-color-gray3;
-                        cursor: pointer
-                        &:not(:last-child) 
-                            margin-bottom: 16px;
                         &:hover 
                             color: $text-color-white;
+                        &:not(:last-child) 
+                            margin-bottom: 12px;
+                        
+                        .item-link
+                            font-size: $small-text-size3;
+                            color: $text-color-gray3;
+                            text-decoration: none
+                            &:not(:last-child) 
+                                margin-bottom: 16px;
+                            &:hover 
+                                color: $text-color-white;
             .main__adress-wrap
                 margin-bottom: 20px
+                +bp(md)
+                    text-align: center
             .main__adress 
               
                 .main__adress-station 
@@ -1316,14 +1366,20 @@ body
         font-weight: 300;
         color: $text-color-gray3
         .main__phone
+            +bp(md)
+                text-align: center
             .main__phone-num 
                 background-image: url('../img/Layer 20 telephone.png')
                 background-repeat: no-repeat
                 padding-left: 19px
                 background-position-y: 3px
                 display: block
+                width: 120px;
                 color: $text-color-gray3
                 text-decoration: none
+                +bp(md)
+                    margin-left: auto
+                    margin-right: auto
                 &:not(:last-child)
                     margin-bottom: 9px
                 &:last-child 
@@ -1335,7 +1391,9 @@ body
             padding-left: 26px
             background-position-y: 3px
 
-        .main__contacts-schedule    
+        .main__contacts-schedule   
+            +bp(md)
+                text-align: center 
             .main__contacts-icon
                 fill: $text-color-blue
                 vertical-align: bottom
@@ -1344,13 +1402,17 @@ body
                 vertical-align: 3px
             .main__contacts-shedule-time 
                 display: inline-block
-                width: 105px           
+                width: 105px
+                +bp(md)
+                    text-align: center  
     .main__title 
         font-size: $medium-text-size3;
         color: $text-color-white;
         font-weight: 500;
         text-transform: uppercase;
         margin-bottom: 21px;
+        +bp(md)
+            text-align: center
         &::after 
             margin-top: 9px
             content: ""
@@ -1358,7 +1420,8 @@ body
             background-color: $text-color-white
             width: 43px
             height: 2px
-
+            +bp(md)
+                margin: 9px auto 0
 // !!!!!!recal!!!!
 
 .recall__wrap 
@@ -1377,7 +1440,8 @@ body
             margin-bottom: 30px;
             +bp(sm)
                 font-size: $medium-text-size4
-
+            +bp(md)
+                font-size: $medium-text-size3
         .recall__text 
             text-align: center;
             font-size: $medium-text-size2;
@@ -1407,17 +1471,26 @@ body
                     font-style: italic;
                 +bp(sm)
                     width: 282.34px
-      
+                +bp(md)
+                    padding: 7px 0 7px 17px;
             .recall__form-button 
                 color: $text-color-white;
                 padding: 15px 74px;
                 border-radius: 35px;
                 background-color: $background-color-black;
                 outline: none;
-                border: none;
                 text-transform: uppercase;
-                +bp(sm)
-                    padding: 15px 44px
+                border: 1px transparent solid;
+                &:hover
+                    transition: all 200ms ease;  
+                    background-color: transparent
+                    color: #000
+                    border: 1px #000 solid;
+                    .recall__form-icon
+                        fill: #000
+                +bp(md)
+                    padding: 8px 44px  
+               
                 .recall__form-icon
                     margin-left: 26px
                     fill: #ffffff
@@ -1454,6 +1527,14 @@ body
             outline: none
             text-transform: uppercase
             border: none
+            border: 1px transparent solid;
+            &:hover
+                transition: all 200ms ease;  
+                background-color: transparent
+                color: #000
+                border: 1px #000 solid;
+                .recall__form-icon
+                    fill: #000
             +bp(sm)
                 padding: 15px 44px
         .discount-recall__icon
@@ -1484,12 +1565,15 @@ body
         text-transform: uppercase;
         text-align: center;
         margin-bottom: 33px;
-
+        +bp(md)
+            font-size: $medium-text-size3
+            margin-bottom: 20px;
     .price__text 
-        font-size: $small-text-size3;
+        font-size: $small-text-size4;
         margin-bottom: 36px;
         line-height: 1.7;
         text-align: center; 
+
         +bp(md)
             padding-left: 15px
     .price__about 
@@ -1560,7 +1644,6 @@ body
 
     .price__title 
         font-size: $medium-title-size2;
-   
         color: $text-color-blue;
         text-transform: uppercase;
         text-align: center;
@@ -1570,7 +1653,9 @@ body
         max-width: 515px
         margin-left: auto           
         margin-right: auto
-
+        +bp(md)
+            font-size: $medium-text-size3
+            margin-bottom: 20px;
     .table-wrap
         padding-bottom: 5px
         max-width: 831px    
@@ -1665,6 +1750,8 @@ body
             +bp(xl)
                 padding-top: 30px;
                 padding-bottom: 30px;
+            +bp(md)
+                font-size: $medium-text-size3
         .location__adress-info-wrap 
             position: absolute;
             left: 50%;
@@ -1676,7 +1763,8 @@ body
                 left: 0;
                 transform: translateX(0);
                 margin-bottom: 30px
-           
+            +bp(md)
+                margin-top: 10px
 
             .location__adress-info-flex 
                 display: flex;
@@ -1763,6 +1851,8 @@ body
             transform: translateX(-50%);
             margin-top: 35px;
             width: 100%
+            +bp(md)
+                margin-top: 10px
             .location__adress-info-flex 
                 display: flex;
                 justify-content: space-around;
@@ -1969,13 +2059,16 @@ body
         text-transform: uppercase;
         margin-left: auto
         margin-right: auto
-
+        +bp(md)
+            font-size: $medium-text-size3
     .repair-catalog__info 
         font-size: $small-text-size3;
         color: $text-color-gray4;
         margin-bottom: 22px;
         text-indent: 38px;
-        line-height: 1.6;                  
+        line-height: 1.6;
+        +bp(md)
+            display: none           
 
     .repair-catalog__card-wrap   
         &:not(:nth-last-child(-n + 3)) 
@@ -1990,13 +2083,16 @@ body
             border-radius: 10px;
             font-weight: medium;
             text-transform: uppercase;
-            color: $text-color-blue;
+            
             text-align: center;
             &:hover 
                 transition: all 200ms ease;
                 box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
                 transform: scale(1.005);
-        
+            .card-link
+                text-decoration: none
+                display: block
+                color: $text-color-blue;
             .repair-catalog__card-title 
                 font-size: $medium-text-size2;
                 margin-bottom: 8px;
@@ -2008,7 +2104,11 @@ body
                 max-width: 100%
                 height: auto
 
-
+// !!!!!repair
+.repairs
+    .repair__text
+        +bp(md)
+            display: none
 // !!!!!brand-catalog!!!!!
 .brand-catalog
     margin-bottom: 20px
@@ -2019,6 +2119,7 @@ body
         padding-top: 30px
         padding-bottom: 20px
         margin-bottom: 0
+
     .brand-catalog__cards
 
         .brand-catalog__card
@@ -2026,11 +2127,10 @@ body
             padding-bottom: 8px
             border: 1px solid $background-color-light2;
             border-radius: 10px;
-            font-weight: medium;
             text-transform: uppercase;
-            color: $text-color-blue;
             text-align: center;
             margin-bottom: 30px
+
             &:hover 
                 transition: all 200ms ease;
                 box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
@@ -2039,7 +2139,10 @@ body
             .card__title
                 font-size: 16px
                 font-weight: bold
-            
+                color: $text-color-blue
+            .card__link
+                display: block
+                text-decoration: none
             .card__title-border
                 &::after
                     display: block
@@ -2054,10 +2157,16 @@ body
         display: flex
         flex-wrap: wrap
         justify-content: center
+        +bp(sm)
+            justify-content: space-between
         .icons-item
             text-align: left
             flex-basis: 44%;
             cursor: pointer
+            +bp(sm)
+                &:nth-child(odd)
+                    text-align: right
+
             &:hover
                 .item-icon
                     color: $text-color-blue;
@@ -2065,14 +2174,18 @@ body
                 .item-text
                     color: $text-color-blue;
                     transition: all 200ms ease;
+            .item-link
+                text-decoration: none
             .item-icon
                 color: $text-color-black
                 font-size: 18px
-                 
+            //   <a href="megaMasterBrandiVnutri.html" class="card__link">   
             .item-text
                 font-size: 12px
                 color: #808080  
-                vertical-align: 2px;  
+                vertical-align: 2px;
+                +bp(lg)
+                    font-size: 11px
 
     .brand-catalog__card-custom
         
@@ -2108,7 +2221,8 @@ body
         color: $text-color-blue
         text-align: center
         margin-bottom: 40px
-    
+        +bp(md)
+            font-size: $medium-text-size3
     .repair-work__card 
         // &:not(:nth-last-child(-n + 3))
         margin-bottom: 50px
@@ -2174,7 +2288,8 @@ body
         margin: 0 auto 30px
         padding-top: 30px
         font-size: 26px
-        
+        +bp(md)
+            font-size: $medium-text-size3
 
     .defect__list
         display: flex
@@ -2253,6 +2368,27 @@ body
             padding-top: 25px
             padding-bottom: 20px
             font-size: 28px
+            +bp(md)
+                font-size: $medium-text-size3
         .description-text
             font-size: 15px
             margin-bottom: 27px
+
+.routing 
+    padding: 10px 0px;
+    list-style: none
+    +bp(md)
+        padding: 10px 10px
+    .routing__link 
+        font-size: $small-text-size1;
+        font-weight: 300;
+        color: $text-color-gray2;
+        
+    .routing__item 
+        display: inline-block;
+        .icon-home
+            color: $text-color-blue;
+            font-size: 16px;
+        .icon-right
+            color: $text-color-blue;
+            font-size: 10px;
