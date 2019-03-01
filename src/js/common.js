@@ -71,4 +71,18 @@ $(document).ready(function() {
       }
     });
   }
+
+  // Добавление эффекта при наведение на пункт меню
+
+  const itemList = [...document.querySelectorAll(".js-menu-item")];
+  const headerHover = document.querySelector('.hover-js');
+
+  itemList.forEach(el => el.addEventListener("mouseenter", () => {
+    headerHover.style.opacity = 1;
+
+  }))
+  itemList.forEach(el => el.addEventListener("mouseleave", () => {
+    headerHover.style.opacity = 0;
+
+  }))
 });

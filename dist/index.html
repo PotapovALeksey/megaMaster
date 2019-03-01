@@ -16,8 +16,8 @@
       integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
       crossorigin="anonymous"
     />
-
     <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link href="css/styles.min.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -69,6 +69,7 @@
     </header>
     <!-- header -->
     <header class="header">
+        <div class="header-hover hover-js"></div>
       <div class="welcome ">
         <div class="container">
           <img
@@ -181,9 +182,10 @@
       </div>
 
       <nav class="nav">
+        
         <div class="container no-padding">
           <div class="nav__menu list">
-            <div class="menu-item ">
+            <div class="menu-item js-menu-item">
               <a href="megaMasterKategoriaTel.html" class="item-link">
                 <svg
                   class="item-icon icon"
@@ -213,10 +215,10 @@
                 </li>
               
                 <li class="submenu-item">
-                  <a href="#" class="submenu-link">Ремонт Iphone 8</a>
+                  <a href="megaMasterBlog.html" class="submenu-link">Блог</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="#" class="submenu-link">item 4</a>
+                  <a href="#" class="submenu-link">adfgadfgadf</a>
                 </li>
                 <li class="submenu-item">
                   <a href="#" class="submenu-link">item 5</a>
@@ -227,7 +229,7 @@
               </ul>
             </div>
             <div class="border-menu"></div>
-            <div class="menu-item ">
+            <div class="menu-item js-menu-item">
               <a href="megaMasterKategoriaPlanshet.html" class="item-link">
                 <svg
                   class="item-icon icon"
@@ -268,7 +270,7 @@
               </ul>
             </div>
             <div class="border-menu"></div>
-            <div class="menu-item ">
+            <div class="menu-item js-menu-item">
               <a href="megaMasterKategoriaLaptop.html" class="item-link">
                 <svg
                   class="item-icon icon"
@@ -289,7 +291,7 @@
               >
             </div>
             <div class="border-menu"></div>
-            <div class="menu-item ">
+            <div class="menu-item js-menu-item">
               <a href="megaMasterRemontPC.html" class="item-link">
                 <svg
                   class="item-icon icon"
@@ -310,7 +312,7 @@
               >
             </div>
             <div class="border-menu"></div>
-            <div class="menu-item ">
+            <div class="menu-item js-menu-item">
               <a href="megaMasterBrandi.html" class="item-link">
                 <svg
                   viewBox="0 0 28 36"
@@ -328,7 +330,7 @@
               </a>
             </div>
             <div class="border-menu"></div>
-            <div class="menu-item ">
+            <div class="menu-item js-menu-item">
               <a href="megaMasterContacts.html" class="item-link">
                 <svg
                   viewBox="0 0 36 30"
@@ -528,7 +530,7 @@
         <h2 class="our-services__title">Наши услуги</h2>
 
         <div class="our-services__list row">
-          <div class="our-services__item col-12 col-md-6 no-padding-md">
+          <div class="our-services__item col-12 col-md-6 no-padding-md wow bounceInLeft delay-custom-1">
             <div class="our-services__item-wrap">
               <div class="our-services__text-wrap">
                 <p class="our-services__text">
@@ -557,7 +559,7 @@
               />
             </div>
           </div>
-          <div class="our-services__item col-12 col-md-6 no-padding-md">
+          <div class="our-services__item col-12 col-md-6 no-padding-md wow bounceInRight delay-custom-2">
             <div class="our-services__item-wrap">
               <div class="our-services__text-wrap">
                 <p class="our-services__text">Ремонт Планшетов</p>
@@ -583,7 +585,7 @@
               />
             </div>
           </div>
-          <div class="our-services__item col-12 col-md-6 no-padding-md">
+          <div class="our-services__item col-12 col-md-6 no-padding-md wow bounceInLeft delay-custom-2">
             <div class="our-services__item-wrap">
               <div class="our-services__text-wrap">
                 <p class="our-services__text">Ремонт ноутбуков</p>
@@ -609,7 +611,7 @@
               />
             </div>
           </div>
-          <div class="our-services__item col-12 col-md-6 no-padding-md">
+          <div class="our-services__item col-12 col-md-6 no-padding-md wow bounceInRight delay-custom-1">
             <div class="our-services__item-wrap">
               <div class="our-services__text-wrap">
                 <p class="our-services__text">РЕМОНТ КОМПЬЮТЕРОВ</p>
@@ -635,7 +637,7 @@
               />
             </div>
           </div>
-          <div class="our-services__item col-12 col-md-6 no-padding-md">
+          <div class="our-services__item col-12 col-md-6 no-padding-md wow bounceInLeft delay-custom-1">
             <div class="our-services__item-wrap">
               <div class="our-services__text-wrap">
                 <p class="our-services__text">РЕМОНТ КОМПЬЮТЕРОВ</p>
@@ -661,7 +663,7 @@
               />
             </div>
           </div>
-          <div class="our-services__item col-12 col-md-6 no-padding-md">
+          <div class="our-services__item col-12 col-md-6 no-padding-md wow bounceInRight delay-custom-2">
             <div class="our-services__item-wrap">
               <div class="our-services__text-wrap">
                 <p class="our-services__text">РЕМОНТ КОМПЬЮТЕРОВ</p>
@@ -1347,6 +1349,12 @@
         </div>
       </div>
     </footer>
+    <!--              Script          -->
+    <script src="js/wow.min.js"></script>
+    <!-- ВОВ анимация -->
+    <script>
+       new WOW().init();
+    </script>
     <script src="https://use.fontawesome.com/d23847c791.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
     ></script>

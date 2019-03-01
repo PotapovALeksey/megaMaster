@@ -78,7 +78,8 @@ body
                 .info__tel-item
                     &::before
                         background-image: url('../img/icon-telephone.png')       
-.header 
+.header
+    position: relative
     +bp(md)
         display: none
     .welcome 
@@ -236,10 +237,27 @@ body
                 text-transform: uppercase;
                 padding: 9px 14px;
                 border-radius: 35px;
+                border: 1px solid transparent
+                &:hover
+                    transition: all 100ms ease;
+                    background-color: transparent
+                    color: #000
+                    border: 1px #000 solid;
+                    .info__btn-icon
+                        fill: #000
                 .info__btn-icon 
                     fill: $text-color-white;
                     margin-right: 5px;
                     vertical-align: -7px;
+    .header-hover
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        opacity: 0
+        transition: all 400ms ease
+        background: rgba(0, 0, 0, 0.9);
     .nav 
         background-color: $background-color-blue;
         font-size: $small-text-size3
@@ -283,9 +301,9 @@ body
                     .nav-submenu
                         display: block
                 .nav-submenu
-                    min-width: 200px
+                    min-width: calc(30px + 100%)
                     position: absolute
-                    background-color: $text-color-gray2
+                    background-color: $background-color-blue
                     z-index: 25
                     display: none
                    
@@ -293,12 +311,14 @@ body
                         padding: 6px 6px
                         display: block
                         text-decoration: none
-                        color: $text-color-gray
+                        color: #fff
                         text-transform: uppercase
+                        border-bottom: 1px solid #fff
+                        font-size: 12px;
                         &:hover
                             transition: all 200ms ease;  
                             background-color: $text-color-gray
-                            color: #ffffff
+                            
                         
                             
                         
@@ -327,7 +347,12 @@ body
                 border-radius: 35px;
                 background-color: #fff;
                 margin-bottom: 50px;
-
+                border: 1px solid transparent
+                &:hover
+                    transition: all 200ms ease;  
+                    background-color: transparent
+                    border: 1px #000 solid;
+                    color: #fff
             .text-icon 
                 margin-left: 12px;
                 display: inline-block;
@@ -1127,6 +1152,7 @@ body
             padding-bottom: 30px
             +bp(md)
                 font-size: $medium-text-size3
+                text-align: left
         .repair-display__text
             color: $text-color-gray4
             +bp(xl)
@@ -1484,7 +1510,6 @@ body
                 &:hover
                     transition: all 200ms ease;  
                     background-color: transparent
-                    color: #000
                     border: 1px #000 solid;
                     .recall__form-icon
                         fill: #000
@@ -1531,7 +1556,6 @@ body
             &:hover
                 transition: all 200ms ease;  
                 background-color: transparent
-                color: #000
                 border: 1px #000 solid;
                 .recall__form-icon
                     fill: #000
@@ -2004,7 +2028,9 @@ body
         color: $text-color-blue;
         cursor: pointer;
         font-weight: 400;
-                
+        &:hover
+            transition: all 200ms ease;
+            color: #000
     .sidebar__button 
         color: $text-color-white;
         font-size: $medium-text-size2;
@@ -2016,7 +2042,9 @@ body
         display: block;
         margin: 0 auto;
         cursor: pointer; 
-
+        &:hover
+            transition: all 300ms ease;
+            background-color: $background-color-dark-blue
     .sidebar__info 
         padding-bottom: 16px;
         box-shadow: 1px 1px 5px -2px rgba(0, 0, 0, 0.75);
@@ -2119,7 +2147,8 @@ body
         padding-top: 30px
         padding-bottom: 20px
         margin-bottom: 0
-
+        +bp(md)
+            font-size: 22px
     .brand-catalog__cards
 
         .brand-catalog__card
@@ -2135,7 +2164,9 @@ body
                 transition: all 200ms ease;
                 box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
                 transform: scale(1.055);
-
+            .card-link
+                text-decoration: none
+                color: $text-color-blue
             .card__title
                 font-size: 16px
                 font-weight: bold
