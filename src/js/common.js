@@ -75,14 +75,57 @@ $(document).ready(function() {
   // Добавление эффекта при наведение на пункт меню
 
   const itemList = [...document.querySelectorAll(".js-menu-item")];
-  const headerHover = document.querySelector('.hover-js');
+  const headerHover = document.querySelector(".hover-js");
 
-  itemList.forEach(el => el.addEventListener("mouseenter", () => {
-    headerHover.style.opacity = 1;
+  itemList.forEach(el =>
+    el.addEventListener("mouseenter", () => {
+      headerHover.style.opacity = 1;
+    })
+  );
+  itemList.forEach(el =>
+    el.addEventListener("mouseleave", () => {
+      headerHover.style.opacity = 0;
+    })
+  );
 
-  }))
-  itemList.forEach(el => el.addEventListener("mouseleave", () => {
-    headerHover.style.opacity = 0;
+  // Добавление кнопок
+  const allTextItem = [...document.querySelectorAll(".sidebar__info-text")];
 
-  }))
+  allTextItem.forEach(el => {
+    const parrentItem =
+      el.closest(".sidebar__reviews-item") || el.closest(".sidebar__info-item");
+    const button = parrentItem.querySelector(".sidebar__button-text");
+    const heightElem = $(el).height();
+    el.dataset.height = heightElem;
+    if (heightElem > 105) {
+      button.style.display = "block";
+      el.style.height = '105px';
+    }
+  });
+
+  // Открытие текста в сайдбаре
+  const buttonsText = [...document.querySelectorAll(".sidebar__button-text")];
+  const arrowTop = "fa-arrow-up";
+  const arrowBottom = "fa-arrow-down";
+
+  buttonsText.forEach(el =>
+    el.addEventListener("click", function(e) {
+      const item =
+        e.target.closest(".sidebar__reviews-item") ||
+        e.target.closest(".sidebar__info-item");
+      const text = item.querySelector(".sidebar__info-text");
+      const heightElem = text.dataset.height;
+
+
+      if (text.style.height === '105px') {
+        text.style.height = heightElem + "px";
+        e.target.classList.remove(arrowBottom);
+        e.target.classList.add(arrowTop);
+      } else {
+        text.style.height = "105px";
+        e.target.classList.remove(arrowTop);
+        e.target.classList.add(arrowBottom);
+      }
+    })
+  );
 });
