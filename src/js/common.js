@@ -8,6 +8,13 @@ $(document).ready(function() {
     nextArrow:
       '<button class="manufacture__btn right btn slider-next"><i class="fas fa-chevron-right"></i></button>'
   });
+  // Деактивировать последнюю ссылку
+  const routingLinks = [...document.querySelectorAll(".routing__link")];
+  const lastLink = routingLinks.length - 1;
+
+  if (routingLinks.length !== 0) {
+    routingLinks[lastLink].style.pointerEvents = "none";
+  }
 
   // Липкое меню
   const nav = document.querySelector(".js-menu");
@@ -99,7 +106,7 @@ $(document).ready(function() {
     el.dataset.height = heightElem;
     if (heightElem > 105) {
       button.style.display = "block";
-      el.style.height = '105px';
+      el.style.height = "105px";
     }
   });
 
@@ -116,8 +123,7 @@ $(document).ready(function() {
       const text = item.querySelector(".sidebar__info-text");
       const heightElem = text.dataset.height;
 
-
-      if (text.style.height === '105px') {
+      if (text.style.height === "105px") {
         text.style.height = heightElem + "px";
         e.target.classList.remove(arrowBottom);
         e.target.classList.add(arrowTop);
