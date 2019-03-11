@@ -6,8 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // if (isset($_POST['email'])) {$email = $_POST['email'];}
     if (isset($_POST['formData'])) {$formData = $_POST['formData'];}
  
-    $to = "info@webheaven.com.ua"; /*Укажите адрес, на который должно приходить письмо*/
-    $sendfrom   = "Order@SEO.com.ua"; /*Укажите адрес, с которого будет приходить письмо, можно не настоящий, нужно для формирования заголовка письма*/
+    $to = "alex.potap1811@gmail.com"; /*Укажите адрес, на который должно приходить письмо*/
+    $sendfrom   = "aleksey.potapov1811@gmail.com"; /*Укажите адрес, с которого будет приходить письмо, можно не настоящий, нужно для формирования заголовка письма*/
     $headers  = "From: " . strip_tags($sendfrom) . "\r\n";
     $headers .= "Reply-To: ". strip_tags($sendfrom) . "\r\n";
     $headers .= "MIME-Version: 1.0\r\n";

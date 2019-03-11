@@ -76,6 +76,8 @@ $w-sssl: 3777px
 
 // Стили по умолчанию
 
+iframe
+    width: 100%
 
 .width 
     width: 100%
@@ -244,3 +246,69 @@ $w-sssl: 3777px
         font-size: 20px
         position: absolute
         right: 20px
+
+
+.popup-form-wrap
+    display: block;
+    position: fixed;
+    background-color: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    .popup-form-content
+        width: 400px;
+        height: 350px;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        position: relative;
+        margin: 80px auto 0;
+        background-color: #fff;
+        box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+        .popup-form-close
+            background-color: transparent
+            border: 0
+            outline: 0
+            cursor: pointer
+            display: block
+            margin-left: auto
+            color: $text-color-blue
+        .popup-title
+            font-size: 26px
+        .popup-form
+
+            .form-input
+                margin: 0 auto 10px
+                display: block
+                color: $text-color-white;
+                font-style: italic;
+                padding: 7px 0 7px 27px;
+                border-radius: 35px;
+                background-color: $background-color-blue2;
+                outline: none;
+                border: none;
+                width: 251px;
+                &::placeholder 
+                    color: $text-color-white;
+            .form-button
+                color: $text-color-white;
+                width: 251px
+                padding: 6px 0
+                border-radius: 35px;
+                background-color: $background-color-black;
+                outline: none;
+                text-transform: uppercase;
+                border: 1px transparent solid;
+                cursor: pointer
+                .button-icon
+                    fill: #fff
+                    margin-left: 12px
+                &:hover
+                    transition: all 200ms ease;  
+                    background-color: transparent
+                    border: 1px #000 solid;
+                    color: #000
+                    .button-icon
+                        fill: #000
