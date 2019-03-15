@@ -4,704 +4,25 @@
     <meta charset="UTF-8" />
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./css/slick.css" />
-    <link href="css/styles.min.css" rel="stylesheet" type="text/css" />
+
+@@include('footer-header/links.html')
   </head>
   <body>
-    <!-- header-mobile -->
-    <header class="header-mobile ">
-        <div class="menu js-menu">
-          <a href="https://megamaster.kiev.ua" class="link-logotype">
-            <img src="img/logotype-mobile.png" alt="imaeg" class="img-logotype" />
-          </a>
-          <button class="menu-button js-menu-button">
-            <i class="fas fa-bars menu-icon"></i>
-          </button>
-        </div>
-        <div class="info js-info">
-          <div class="info__tel">
-            <div class="info__tel-item-wrp">
-              <a class="info__tel-item" href="tel:+380996293030">
-                (099) 629 30 30
-              </a>
-            </div>
-            <div class="info__tel-item-wrp">
-              <a class="info__tel-item" href="tel:+380686293030">
-                (068) 629 30 30
-              </a>
-            </div>
-            <div class="info__tel-item-wrp">
-              <a class="info__tel-item" href="tel:+380635782890">
-                (063) 578 28 90
-              </a>
-            </div>
-            <div class="info__tel-item-wrp">
-              <a class="info__tel-item" href="tel:0445782890">
-                (044) 578 28 90
-              </a>
-            </div>
-          </div>
-        </div>
-  
-        <ul class="routing container mb0">
-          <li class="routing__item">
-            <i class="fas fa-home icon-home"></i>
-            <a class="routing__link" href="https://megamaster.kiev.ua">Главная</a>
-          </li>
-          <li class="routing__item">
-            <i class="fas fa-chevron-right icon-right"></i>
-            <a class="routing__link" href="">Все бренды</a>
-          </li>
-        </ul>
-      </header>
-      <!-- header -->
-      <header class="header">
-        <div class="header-hover hover-js"></div>
-        <div class="welcome ">
-          <div class="container">
-            <img
-              class="welcome__img img-fluid"
-              src="img/backgroundHeader.png"
-              alt="welcome"
-            />
-          </div>
-        </div>
-        <div class="info container ">
-          <div class="row align-items-center justify-center">
-            <div class="info__logotype col-12 col-xl-2 col-md-2">
-              <a href="https://megamaster.kiev.ua/" class="header-info__link link">
-                <img
-                  class="info__img img img-fluid"
-                  src="./img/logotype.png"
-                  alt="logotype"
-                />
-              </a>
-            </div>
-            <div
-              class="info__adress padding-left0-md col-xl-2 col-lg-3 col-md-3 col-sm-4"
-            >
-              <svg
-                class="green adress-icon"
-                width="16px"
-                height="18px"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 18 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M14.501,0.159 L9.095,7.787 L3.573,0.336 L0.541,12.813 L4.644,12.813 L5.396,8.822 L9.028,13.839 L12.641,8.932 L13.368,12.835 L17.459,12.835 L14.501,0.159 Z"
-                />
-              </svg>
-              <span class="adress-station">Лукьяновка</span>
-              <p class="adress-street">ул. Сечевых Стрельцов 103</p>
-            </div>
-            <div class="info__adress col-xl-2 col-lg-3 col-md-3 col-sm-4">
-              <svg
-                class="red adress-icon"
-                width="16px"
-                height="18px"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 18 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M14.501,0.159 L9.095,7.787 L3.573,0.336 L0.541,12.813 L4.644,12.813 L5.396,8.822 L9.028,13.839 L12.641,8.932 L13.368,12.835 L17.459,12.835 L14.501,0.159 Z"
-                />
-              </svg>
-              <span class="adress-station">Арсенальная</span>
-              <p class="adress-street">ул. Мазепы 12а</p>
-            </div>
-            <div class="info__adress col-xl-2 col-lg-3 col-md-3 col-sm-4">
-              <svg
-                class="green adress-icon"
-                width="16px"
-                height="18px"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 18 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M14.501,0.159 L9.095,7.787 L3.573,0.336 L0.541,12.813 L4.644,12.813 L5.396,8.822 L9.028,13.839 L12.641,8.932 L13.368,12.835 L17.459,12.835 L14.501,0.159 Z"
-                />
-              </svg>
-              <span class="adress-station">Позняки</span>
-              <p class="adress-street">ул. Ахматовой 9/18</p>
-            </div>
-            <div class="info__tel col-xl-2 col-lg-3 col-md-3 col-12 text-center">
-              <div class="info__tel-item-wrp">
-                <a class="info__tel-item" href="tel:+380996293030">
-                  (099) 629 30 30
-                </a>
-              </div>
-              <div class="info__tel-item-wrp">
-                <a class="info__tel-item" href="tel:+380686293030">
-                  (068) 629 30 30
-                </a>
-              </div>
-              <div class="info__tel-item-wrp">
-                <a class="info__tel-item" href="tel:+380635782890">
-                  (063) 578 28 90
-                </a>
-              </div>
-            </div>
-  
-            <div class="info__btn-wrp col-xl-2 col-md-4 col-12 text-center">
-              <button class="info__btn btn">
-                <svg
-                  class="info__btn-icon icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  viewBox="0 4 20 24"
-                  width="16px"
-                  height="24px"
-                >
-                  <path
-                    d="M14.138,0.598 L2.861,0.598 C1.783,0.598 0.912,1.473 0.912,2.550 L0.912,25.449 C0.912,26.525 1.783,27.399 2.861,27.399 L14.137,27.399 C15.215,27.399 16.088,26.525 16.088,25.449 L16.088,2.550 C16.089,1.473 15.216,0.598 14.138,0.598 ZM5.716,1.785 L11.285,1.785 C11.425,1.785 11.539,1.994 11.539,2.255 C11.539,2.515 11.425,2.726 11.285,2.726 L5.716,2.726 C5.576,2.726 5.463,2.515 5.463,2.255 C5.463,1.994 5.576,1.785 5.716,1.785 ZM8.500,25.473 C7.813,25.473 7.254,24.915 7.254,24.226 C7.254,23.538 7.814,22.983 8.500,22.983 C9.186,22.983 9.746,23.541 9.746,24.226 C9.746,24.915 9.185,25.473 8.500,25.473 ZM14.627,21.205 L2.373,21.205 L2.373,3.892 L14.627,3.892 L14.627,21.205 Z"
-                  />
-                </svg>
-                <span class="header-info__btn-text">Заказать звонок</span>
-              </button>
-            </div>
-          </div>
-        </div>
-  
-        <nav class="nav">
-          <div class="container no-padding">
-            <div class="nav__menu list">
-              <div class="menu-item js-menu-item">
-                <a href="remont-mobilnyix-telefonov.html" class="item-link">
-                  <svg
-                    class="item-icon icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    viewBox="0 2 16 24"
-                    width="18px"
-                    height="32px"
-                  >
-                    <path
-                      d="M14.138,0.598 L2.861,0.598 C1.783,0.598 0.912,1.473 0.912,2.550 L0.912,25.449 C0.912,26.525 1.783,27.399 2.861,27.399 L14.137,27.399 C15.215,27.399 16.088,26.525 16.088,25.449 L16.088,2.550 C16.089,1.473 15.216,0.598 14.138,0.598 ZM5.716,1.785 L11.285,1.785 C11.425,1.785 11.539,1.994 11.539,2.255 C11.539,2.515 11.425,2.726 11.285,2.726 L5.716,2.726 C5.576,2.726 5.463,2.515 5.463,2.255 C5.463,1.994 5.576,1.785 5.716,1.785 ZM8.500,25.473 C7.813,25.473 7.254,24.915 7.254,24.226 C7.254,23.538 7.814,22.983 8.500,22.983 C9.186,22.983 9.746,23.541 9.746,24.226 C9.746,24.915 9.185,25.473 8.500,25.473 ZM14.627,21.205 L2.373,21.205 L2.373,3.892 L14.627,3.892 L14.627,21.205 Z"
-                    />
-                  </svg>
-                  <span
-                    >Ремонт мобильных
-  
-                    <br />
-                    телефонов
-                  </span>
-                </a>
-                <ul class="nav-submenu list">
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/remont-ekrana-telefona.html.html" class="submenu-link"
-                      >Ремонт экрана телефона</a
-                    >
-                  </li>
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/remont-shlejfa-telefona.html.html" class="submenu-link"
-                      >Ремонт шлейфа телефона</a
-                    >
-                  </li>
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/remont-kitajskix-telefonov.html.html" class="submenu-link">Ремонт китайских телефонов</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/remont-akkumulyatora-telefona.html.html" class="submenu-link">Ремонт и замена аккумулятора</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/remont-zaryadnogo-ustrojstva-telefona.html.html" class="submenu-link">Ремонт зарядного устройства телефона</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/phone-diagnostic.html.html" class="submenu-link">Диагностика мобильного телефона</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/remont-telefonov-fly.html.html" class="submenu-link">Ремонт телефонов Fly</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/remont-telefonov-sony.html.html" class="submenu-link">Ремонт телефонов Sony</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/remont-telefonov-lenovo.html.html" class="submenu-link">Ремонт телефонов Lenovo</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/remont-telefonov-nokia.html.html" class="submenu-link">Ремонт телефонов Nokia</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/remont-telefonov-htc.html.html" class="submenu-link">Ремонт телефонов HTC</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/remont-telefonov-lg.html.html" class="submenu-link">Ремонт телефонов LG</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/remont-telefonov-samsung.html.html" class="submenu-link">Ремонт телефонов Samsung</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/remont-kitajskix-iphone.html.html" class="submenu-link">Ремонт китайских IPhone</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/remont-apple-iphone.html.html" class="submenu-link">Ремонт Apple iPhone</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/remont-telefonov-philips.html.html" class="submenu-link">Ремонт телефонов Philips</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/remont-telefonov-xiaomi.html.html" class="submenu-link">Ремонт телефонов Xiaomi</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/remont-telefonov-meizu.html.html" class="submenu-link">Ремонт телефонов Meizu</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/remont-telefonov-asus.html.html" class="submenu-link">Ремонт телефонов Asus</a>
-                  </li>
-                  <li class="submenu-item">
-                    <a href="remont-mobilnyix-telefonov/remont-telefonov-huawei.html.html" class="submenu-link">Ремонт телефонов Huawei</a>
-                  </li>
-  
-                </ul>
-              </div>
-              <div class="border-menu"></div>
-              <div class="menu-item js-menu-item">
-                <a href="planshety.html" class="item-link">
-                  <svg
-                    class="item-icon icon"
-                    viewBox="0 0 23 32"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    width="23px"
-                    height="32px"
-                  >
-                    <path
-                      d="M20.616,0.701 L2.384,0.701 C1.234,0.701 0.309,1.631 0.309,2.780 L0.309,29.218 C0.309,30.363 1.234,31.296 2.384,31.296 L20.616,31.296 C21.761,31.296 22.691,30.364 22.691,29.218 L22.691,2.780 C22.693,1.631 21.761,0.701 20.616,0.701 ZM11.501,30.517 C10.818,30.517 10.267,29.966 10.267,29.284 C10.267,28.602 10.818,28.051 11.501,28.051 C12.181,28.051 12.735,28.602 12.735,29.284 C12.735,29.966 12.181,30.517 11.501,30.517 ZM20.592,26.969 L2.410,26.969 L2.410,3.197 L20.592,3.197 L20.592,26.969 Z"
-                    />
-                  </svg>
-                  <span
-                    >Ремонт<br />
-                    планшетов</span
-                  ></a
-                >
-                <ul class="nav-submenu list">
-                       <li class="submenu-item"><a class="submenu-link" href="planshety/remont-kitajskix-planshetov.html.html">Ремонт китайских планшетов</a></li>
-                       <li class="submenu-item"><a class="submenu-link" href="planshety/remont-sensora-na-planshete.html.html">Ремонт сенсора на планшете</a></li>
-                       <li class="submenu-item"><a class="submenu-link" href="planshety/remont-ekrana-na-planshete.html.html">Ремонт экрана на планшете</a></li>
-                       <li class="submenu-item"><a class="submenu-link" href="planshety/remont-ipad.html">Ремонт iPad</a></li>
-                       <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-asus.html.html">Ремонт планшетов Asus</a></li>
-                       <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-acer.html.html">Ремонт планшетов Acer</a></li>
-                       <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-samsung.html.html">Ремонт планшетов Samsung</a></li>
-                       <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-lenovo.html.html">Ремонт планшетов Lenovo</a></li>
-                       <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-htc.html.html">Ремонт планшетов HTC</a></li>
-                       <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-prestigio.html.html">Ремонт планшетов Prestigio</a></li>
-                       <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-goclever.html.html">Ремонт планшетов GOclever</a></li>
-                       <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-ainol.html.html">Ремонт планшетов Ainol</a></li>
-                       <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-archos.html.html">Ремонт планшетов Archos</a></li>
-                       <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-sony.html.html">Ремонт планшетов Sony</a></li>
-                   </ul>
-                  
-              </div>
-              <div class="border-menu"></div>
-              <div class="menu-item js-menu-item">
-                <a href="remont-noutbukov.html" class="item-link">
-                  <svg
-                    class="item-icon icon"
-                    width="37px"
-                    height="36px"
-                    viewBox="0 -2 35 26"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <path
-                      d="M34.142,23.471 C33.571,23.820 32.885,23.995 32.083,23.995 L2.917,23.995 C2.115,23.995 1.429,23.820 0.857,23.471 C0.286,23.121 0.001,22.696 0.001,22.197 L0.001,20.397 L2.917,20.397 L32.083,20.397 L34.999,20.397 L34.999,22.197 C34.999,22.696 34.713,23.121 34.142,23.471 ZM18.958,21.596 L16.042,21.596 C15.847,21.596 15.750,21.696 15.750,21.896 C15.750,22.096 15.847,22.197 16.042,22.197 L18.958,22.197 C19.153,22.197 19.250,22.096 19.250,21.896 C19.250,21.696 19.153,21.596 18.958,21.596 ZM27.416,19.197 L7.584,19.197 C6.782,19.197 6.095,18.903 5.524,18.316 C4.953,17.729 4.667,17.022 4.667,16.198 L4.667,3.002 C4.667,2.176 4.953,1.471 5.524,0.883 C6.095,0.295 6.782,0.002 7.584,0.002 L27.416,0.002 C28.218,0.002 28.905,0.295 29.476,0.883 C30.047,1.471 30.333,2.176 30.333,3.002 L30.333,16.198 C30.333,17.022 30.047,17.729 29.476,18.316 C28.905,18.903 28.218,19.197 27.416,19.197 ZM27.999,3.002 C27.999,2.839 27.941,2.699 27.826,2.579 C27.711,2.460 27.574,2.401 27.416,2.401 L7.584,2.401 C7.426,2.401 7.289,2.461 7.174,2.579 C7.058,2.699 7.000,2.839 7.000,3.002 L7.000,16.198 C7.000,16.360 7.058,16.501 7.173,16.619 C7.289,16.738 7.426,16.798 7.584,16.798 L27.416,16.798 C27.574,16.798 27.711,16.738 27.826,16.619 C27.941,16.502 27.999,16.360 27.999,16.198 L27.999,3.002 Z"
-                    />
-                  </svg>
-                  <span
-                    >Ремонт <br />
-                    ноутбуков</span
-                  ></a
-                >
-                <ul class="nav-submenu list">
-                  <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-klaviaturyi-noutbuka.html.html">Ремонт клавиатуры ноутбука</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/zamena-batarei-v-noutbuke.html.html">Замена батареи в ноутбуке</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-bloka-pitaniya-noutbuka.html.html">Ремонт блока питания ноутбука</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-petel-noutbuka.html.html">Ремонт петель ноутбука</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-zhestkogo-diska-noutbuka.html.html">Ремонт жесткого диска ноутбука</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-shlejfa-noutbuka.html.html">Ремонт шлейфа ноутбука</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-kulera-noutbuka.html.html">Ремонт кулера ноутбука</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-razema-pitaniya-noutbuka.html.html">Ремонт разъема питания ноутбука</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-setevoj-kartyi-na-noutbuke.html.html">Ремонт сетевой карты ноутбука</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-usb-porta-na-noutbuke.html.html">Ремонт USB порта на ноутбуке</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/zamena-matriczyi.html.html">Замена матрицы</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-videokartyi-noutbuka.html.html">Ремонт видеокарты</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-korpusa-noutbuka.html.html">Ремонт корпуса</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-noutbukov-posle-zalitiya.html.html">Ремонт после залития</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/profilaktika-noutbukov.html.html">Профилактика ноутбуков</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-materinskoj-platyi.html.html">Ремонт материнской платы</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/zamena-wi-fi-bluetooth.html.html">Замена Wi-Fi, Bluetooth</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/note-diagnostic.html.html">Диагностика ноутбука</a></li>
-              </ul>
-               
-              </div>
-              <div class="border-menu"></div>
-              <div class="menu-item js-menu-item">
-                <a href="pc-service.html" class="item-link">
-                  <svg
-                    class="item-icon icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    width="38px"
-                    height="35px"
-                    viewBox="0 0 34 32"
-                  >
-                    <path
-                      d="M30.276,22.739 L12.220,22.739 L12.220,18.726 L30.276,18.726 L30.276,2.677 L12.220,2.677 L6.202,2.677 L4.196,2.677 C4.196,1.570 5.093,0.671 6.202,0.671 L30.276,0.671 C31.385,0.671 32.282,1.570 32.282,2.677 L32.282,20.733 C32.282,21.841 31.385,22.739 30.276,22.739 ZM18.239,19.729 C17.685,19.729 17.236,20.178 17.236,20.733 C17.236,21.287 17.685,21.735 18.239,21.735 C18.794,21.735 19.242,21.287 19.242,20.733 C19.242,20.178 18.794,19.729 18.239,19.729 ZM10.214,6.690 L10.214,28.757 C10.214,29.866 9.317,30.763 8.208,30.763 L2.189,30.763 C1.081,30.763 0.183,29.866 0.183,28.757 L0.183,6.690 C0.183,5.582 1.081,4.683 2.189,4.683 L8.208,4.683 C9.317,4.683 10.214,5.582 10.214,6.690 ZM3.193,24.745 C3.747,24.745 4.196,24.296 4.196,23.742 C4.196,23.187 3.747,22.739 3.193,22.739 C2.638,22.739 2.189,23.187 2.189,23.742 C2.189,24.296 2.638,24.745 3.193,24.745 ZM2.189,12.707 L8.208,12.707 L8.208,10.701 L2.189,10.701 L2.189,12.707 ZM2.189,8.696 L8.208,8.696 L8.208,6.690 L2.189,6.690 L2.189,8.696 ZM15.230,26.752 L15.230,24.745 L21.248,24.745 L21.248,26.752 C22.357,26.752 23.255,27.649 23.255,28.757 L13.224,28.757 C13.224,27.649 14.121,26.752 15.230,26.752 Z"
-                    />
-                  </svg>
-                  <span
-                    >Ремонт <br />
-                    компьютеров</span
-                  ></a
-                >
-                <ul class="nav-submenu list">
-                  <li class="submenu-item"><a class="submenu-link" href="pc-service/pc-video.html.html">Ремонт видео карт</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="pc-service/remont-materinskoj-platyi.html.html">Ремонт материнской платы</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="pc-service/remont-bp.html.html">Ремонт блоков питания</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="pc-service/modernizaciya.html.html">Модернизация</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="pc-service/sborka-pod-zakaz.html.html">Сборка под заказ</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="pc-service/pc-diagnostic.html.html">Диагностика компьютеров</a></li>
-              </ul>
-              </div>
-              <div class="border-menu"></div>
-              <div class="menu-item js-menu-item">
-                <a href="brands.html.html" class="item-link">
-                  <svg
-                    viewBox="0 0 28 36"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    class="item-icon icon"
-                    width="31px"
-                    height="41px"
-                  >
-                    <path
-                      d="M23.387,18.596 C23.343,14.163 26.938,12.037 27.099,11.932 C25.079,8.923 21.932,8.512 20.811,8.463 C18.133,8.188 15.586,10.069 14.227,10.069 C12.871,10.069 10.774,8.504 8.554,8.546 C5.635,8.589 2.944,10.273 1.441,12.934 C-1.592,18.289 0.664,26.224 3.620,30.568 C5.064,32.694 6.786,35.082 9.047,34.997 C11.225,34.908 12.048,33.562 14.681,33.562 C17.313,33.562 18.053,34.997 20.357,34.953 C22.700,34.908 24.185,32.786 25.619,30.653 C27.278,28.186 27.961,25.798 28.001,25.675 C27.949,25.651 23.432,23.890 23.387,18.596 ZM19.057,5.588 C20.257,4.106 21.067,2.050 20.846,-0.001 C19.117,0.070 17.022,1.172 15.782,2.649 C14.669,3.961 13.695,6.055 13.956,8.065 C15.886,8.218 17.855,7.067 19.057,5.588 Z"
-                    />
-                  </svg>
-                  <span>ВСЕ БРЕНДЫ</span>
-                </a>
-                <ul class="nav-submenu list">
-                  <li class="submenu-item"><a class="submenu-link" href="brands/sony.html.html">Sony</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="brands/lenovo.html.html">Lenovo</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="brands/samsung.html.html">Samsung</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="brands/lg.html.html">LG</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="brands/htc.html.html">HTC</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="brands/apple.html.html">Apple</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="brands/asus.html.html">Asus</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="brands/nokia.html.html">Nokia</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="brands/sony-ericsson.html.html">Sony Ericsson</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="brands/acer.html.html">Acer</a></li>
-                  <li class="submenu-item"><a class="submenu-link" href="brands/fly.html.html">Fly</a></li>
-              </ul>
-              </div>
-              <div class="border-menu"></div>
-              <div class="menu-item js-menu-item">
-                <a href="contacts.html" class="item-link">
-                  <svg
-                    viewBox="0 0 36 30"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    class="item-icon icon"
-                    width="37px"
-                    height="32px"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      fill="rgb(233, 244, 249)"
-                      d="M29.848,0.110 C29.715,-0.008 29.525,-0.035 29.363,0.040 L0.260,13.677 C0.103,13.750 0.002,13.908 0.000,14.082 C-0.002,14.257 0.096,14.416 0.251,14.493 L8.488,18.569 C8.638,18.645 8.819,18.627 8.954,18.525 L16.961,12.489 L10.675,19.011 C10.585,19.104 10.539,19.231 10.549,19.361 L11.175,27.582 C11.189,27.763 11.310,27.919 11.482,27.976 C11.528,27.991 11.576,27.999 11.622,27.999 C11.750,27.999 11.875,27.944 11.962,27.842 L16.333,22.734 L21.738,25.337 C21.855,25.394 21.991,25.396 22.110,25.344 C22.229,25.292 22.320,25.189 22.359,25.065 L29.980,0.586 C30.034,0.415 29.982,0.229 29.848,0.110 Z"
-                    />
-                  </svg>
-                  <span>Контакты</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </nav>
-        <div class="banner">
-          <div class="container">
-            <div class="row">
-              <div class="col-xl-6 banner__text ">
-                <h2 class="text-title">
-                  Сервисный центр
-                </h2>
-                <p class="text-about">
-                  “Мегамастер” ремонт и настройка любого портативного девайса
-                  максимально быстро.
-                </p>
-                <button class="text-button btn">
-                  ПОДРОБНЕЕ
-                  <svg
-                    class="text-icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    width="18px"
-                    height="12px"
-                  >
-                    <path
-                      d="M0.779,6.753 L15.341,6.753 L11.866,10.113 C11.562,10.407 11.562,10.885 11.866,11.179 C12.170,11.473 12.664,11.473 12.968,11.179 L17.773,6.532 C18.077,6.238 18.077,5.760 17.773,5.467 L12.968,0.819 C12.816,0.672 12.616,0.598 12.417,0.598 C12.218,0.598 12.018,0.672 11.866,0.819 C11.562,1.114 11.562,1.591 11.866,1.885 L15.341,5.245 L0.779,5.245 C0.349,5.245 -0.000,5.583 -0.000,5.999 C-0.000,6.415 0.349,6.753 0.779,6.753 Z"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div class="col-xl-6 position-img">
-                <img
-                  src="img/header-tele.png"
-                  alt="image"
-                  class="banner__image"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="manufacture__background ">
-          <div class="manufacture__wrap container">
-            <ul class="manufacture__list manufacture-carousel list mb0">
-              <li class="manufacture__item">
-                <img src="img/sam.png" alt="manufacture" class="item__img img" />
-              </li>
-              <li class="manufacture__item ">
-                <img
-                  src="img/apple.png"
-                  alt="manufacture"
-                  class="item__img img apple"
-                />
-              </li>
-              <li class="manufacture__item">
-                <img src="img/hts.png" alt="manufacture" class="item__img img" />
-              </li>
-              <li class="manufacture__item">
-                <img src="img/noki.png" alt="manufacture" class="item__img img" />
-              </li>
-              <li class="manufacture__item">
-                <img src="img/sony.png" alt="manufacture" class="item__img img" />
-              </li>
-              <li class="manufacture__item">
-                <img src="img/mi.png" alt="manufacture" class="item__img img" />
-              </li>
-              <li class="manufacture__item">
-                <img
-                  src="img/lenovo.png"
-                  alt="manufacture"
-                  class="item__img img"
-                />
-              </li>
-              <li class="manufacture__item">
-                <img src="img/hu.png" alt="manufacture" class="item__img img" />
-              </li>
-              <li class="manufacture__item">
-                <img src="img/me.png" alt="manufacture" class="item__img img" />
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="container">
-          <ul class="routing mb0">
-            <li class="routing__item">
-              <i class="fas fa-home icon-home"></i>
-              <a class="routing__link" href="https://megamaster.kiev.ua">Главная</a>
-            </li>
-            <li class="routing__item">
-              <i class="fas fa-chevron-right icon-right"></i>
-              <a class="routing__link" href="#">Все бренды</a>
-            </li>
-          </ul>
-        </div>
-      </header>
-    <!-- popup-menu -->
-    <div class="popup-menu-wrap ">
-      <div class="popup-menu js-popup-menu">
-        <button class="popup-close js-popup-close">
-          <i class="fas fa-times popup-button-icon"></i>
-        </button>
-        <ul class="popup-list list">
-          <li class="popup-item">
-            <button class="popup-button">
-              <i class="fas fa-arrow-right"></i>
-            </button>
 
-            <a class="popup-link js-popup-link" href="remont-mobilnyix-telefonov.html">
-              Ремонт мобильных телефонов
-            </a>
-
-            <ul class="submenu js-submenu">
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/remont-ekrana-telefona.html.html" class="submenu-link"
-                  >Ремонт экрана телефона</a
-                >
-              </li>
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/remont-shlejfa-telefona.html.html" class="submenu-link"
-                  >Ремонт шлейфа телефона</a
-                >
-              </li>
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/remont-kitajskix-telefonov.html.html" class="submenu-link">Ремонт китайских телефонов</a>
-              </li>
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/remont-akkumulyatora-telefona.html.html" class="submenu-link">Ремонт и замена аккумулятора</a>
-              </li>
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/remont-zaryadnogo-ustrojstva-telefona.html.html" class="submenu-link">Ремонт зарядного устройства телефона</a>
-              </li>
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/phone-diagnostic.html.html" class="submenu-link">Диагностика мобильного телефона</a>
-              </li>
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/remont-telefonov-fly.html.html" class="submenu-link">Ремонт телефонов Fly</a>
-              </li>
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/remont-telefonov-sony.html.html" class="submenu-link">Ремонт телефонов Sony</a>
-              </li>
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/remont-telefonov-lenovo.html.html" class="submenu-link">Ремонт телефонов Lenovo</a>
-              </li>
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/remont-telefonov-nokia.html.html" class="submenu-link">Ремонт телефонов Nokia</a>
-              </li>
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/remont-telefonov-htc.html.html" class="submenu-link">Ремонт телефонов HTC</a>
-              </li>
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/remont-telefonov-lg.html.html" class="submenu-link">Ремонт телефонов LG</a>
-              </li>
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/remont-telefonov-samsung.html.html" class="submenu-link">Ремонт телефонов Samsung</a>
-              </li>
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/remont-kitajskix-iphone.html.html" class="submenu-link">Ремонт китайских IPhone</a>
-              </li>
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/remont-apple-iphone.html.html" class="submenu-link">Ремонт Apple iPhone</a>
-              </li>
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/remont-telefonov-philips.html.html" class="submenu-link">Ремонт телефонов Philips</a>
-              </li>
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/remont-telefonov-xiaomi.html.html" class="submenu-link">Ремонт телефонов Xiaomi</a>
-              </li>
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/remont-telefonov-meizu.html.html" class="submenu-link">Ремонт телефонов Meizu</a>
-              </li>
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/remont-telefonov-asus.html.html" class="submenu-link">Ремонт телефонов Asus</a>
-              </li>
-              <li class="submenu-item">
-                <a href="remont-mobilnyix-telefonov/remont-telefonov-huawei.html.html" class="submenu-link">Ремонт телефонов Huawei</a>
-              </li>
-
-            </ul>
-          </li>
-          <li class="popup-item">
-            <button class="popup-button">
-              <i class="fas fa-arrow-right"></i>
-            </button>
-            <a class="popup-link js-popup-link" href="planshety.html">Ремонт планшетов </a>
-            <ul class="submenu js-submenu">
-              <li class="submenu-item"><a class="submenu-link" href="planshety/remont-kitajskix-planshetov.html.html">Ремонт китайских планшетов</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="planshety/remont-sensora-na-planshete.html.html">Ремонт сенсора на планшете</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="planshety/remont-ekrana-na-planshete.html.html">Ремонт экрана на планшете</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="planshety/remont-ipad.html">Ремонт iPad</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-asus.html.html">Ремонт планшетов Asus</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-acer.html.html">Ремонт планшетов Acer</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-samsung.html.html">Ремонт планшетов Samsung</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-lenovo.html.html">Ремонт планшетов Lenovo</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-htc.html.html">Ремонт планшетов HTC</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-prestigio.html.html">Ремонт планшетов Prestigio</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-goclever.html.html">Ремонт планшетов GOclever</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-ainol.html.html">Ремонт планшетов Ainol</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-archos.html.html">Ремонт планшетов Archos</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="planshety/remont-planshetov-sony.html.html">Ремонт планшетов Sony</a></li>
-          </ul>
-          </li>
-          <li class="popup-item">
-            <button class="popup-button">
-              <i class="fas fa-arrow-right"></i>
-            </button>
-            <a class="popup-link js-popup-link" href="remont-noutbukov.html">Ремонт ноутбуков</a>
-            <ul class="submenu js-submenu">
-              <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-klaviaturyi-noutbuka.html.html">Ремонт клавиатуры ноутбука</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/zamena-batarei-v-noutbuke.html.html">Замена батареи в ноутбуке</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-bloka-pitaniya-noutbuka.html.html">Ремонт блока питания ноутбука</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-petel-noutbuka.html.html">Ремонт петель ноутбука</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-zhestkogo-diska-noutbuka.html.html">Ремонт жесткого диска ноутбука</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-shlejfa-noutbuka.html.html">Ремонт шлейфа ноутбука</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-kulera-noutbuka.html.html">Ремонт кулера ноутбука</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-razema-pitaniya-noutbuka.html.html">Ремонт разъема питания ноутбука</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-setevoj-kartyi-na-noutbuke.html.html">Ремонт сетевой карты ноутбука</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-usb-porta-na-noutbuke.html.html">Ремонт USB порта на ноутбуке</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/zamena-matriczyi.html.html">Замена матрицы</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-videokartyi-noutbuka.html.html">Ремонт видеокарты</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-korpusa-noutbuka.html.html">Ремонт корпуса</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-noutbukov-posle-zalitiya.html.html">Ремонт после залития</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/profilaktika-noutbukov.html.html">Профилактика ноутбуков</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/remont-materinskoj-platyi.html.html">Ремонт материнской платы</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/zamena-wi-fi-bluetooth.html.html">Замена Wi-Fi, Bluetooth</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="remont-noutbukov/note-diagnostic.html.html">Диагностика ноутбука</a></li>
-            </ul>
-          </li>
-          <li class="popup-item" >
-            <button class="popup-button">
-              <i class="fas fa-arrow-right"></i>
-            </button>
-            <a class="popup-link js-popup-link" href="pc-service.html">Ремонт компьютеров </a>
-            <ul class="submenu js-submenu">
-              <li class="submenu-item"><a class="submenu-link" href="pc-service/pc-video.html.html">Ремонт видео карт</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="pc-service/remont-materinskoj-platyi.html.html">Ремонт материнской платы</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="pc-service/remont-bp.html.html">Ремонт блоков питания</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="pc-service/modernizaciya.html.html">Модернизация</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="pc-service/sborka-pod-zakaz.html.html">Сборка под заказ</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="pc-service/pc-diagnostic.html.html">Диагностика компьютеров</a></li>
-          </ul>
-          </li>
-          <li class="popup-item">
-              <button class="popup-button">
-                  <i class="fas fa-arrow-right"></i>
-                </button>
-            <a class="popup-link js-popup-link" href="brands.html.html">Все бренды </a>
-            <ul class="submenu js-submenu">
-                <li class="submenu-item"><a class="submenu-link" href="brands/sony.html.html">Sony</a></li>
-                <li class="submenu-item"><a class="submenu-link" href="brands/lenovo.html.html">Lenovo</a></li>
-                <li class="submenu-item"><a class="submenu-link" href="brands/samsung.html.html">Samsung</a></li>
-                <li class="submenu-item"><a class="submenu-link" href="brands/lg.html.html">LG</a></li>
-                <li class="submenu-item"><a class="submenu-link" href="brands/htc.html.html">HTC</a></li>
-                <li class="submenu-item"><a class="submenu-link" href="brands/apple.html.html">Apple</a></li>
-                <li class="submenu-item"><a class="submenu-link" href="brands/asus.html.html">Asus</a></li>
-                <li class="submenu-item"><a class="submenu-link" href="brands/nokia.html.html">Nokia</a></li>
-                <li class="submenu-item"><a class="submenu-link" href="brands/sony-ericsson.html.html">Sony Ericsson</a></li>
-                <li class="submenu-item"><a class="submenu-link" href="brands/acer.html.html">Acer</a></li>
-                <li class="submenu-item"><a class="submenu-link" href="brands/fly.html.html">Fly</a></li>
-            </ul>
-          </li>
-          <li class="popup-item">
-            <a class="popup-link" href="contacts.html">
-              Контакты
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
+@@include('footer-header/header.html')
     <!-- megaMasterBrandi -->
     <main class="megaMasterBrands">
       <section class="repair-catalog container">
+          <ul class="routing  ">
+              <li class="routing__item">
+                <i class="fas fa-home icon-home"></i>
+                <a class="routing__link" href="https://megamaster.kiev.ua">Главная</a>
+              </li>
+              <li class="routing__item">
+                <i class="fas fa-chevron-right icon-right"></i>
+                <a class="routing__link" href="">Все бренды</a>
+              </li>
+            </ul>
         <div class="row">
           <div class="col-12">
             <h2 class="repair-catalog__title">
@@ -726,7 +47,7 @@
                 >
                   <img
                     class="sidebar__img "
-                    src="img/attractive-banner1.png"
+                    src="/img/attractive-banner1.png"
                     alt="news"
                   />
                 </div>
@@ -736,7 +57,7 @@
                 >
                   <img
                     class="sidebar__img "
-                    src="img/attractive-banner2.png"
+                    src="/img/attractive-banner2.png"
                     alt="news"
                   />
                 </div>
@@ -746,7 +67,7 @@
                 >
                   <img
                     class="sidebar__img  "
-                    src="img/attractive-banner3.png"
+                    src="/img/attractive-banner3.png"
                     alt="news"
                   />
                 </div>
@@ -755,7 +76,7 @@
                 >
                   <img
                     class="sidebar__img  "
-                    src="img/attractive-banner4.png"
+                    src="/img/attractive-banner4.png"
                     alt="news"
                   />
                 </div>
@@ -765,7 +86,7 @@
                 <ul class="sidebar__reviews-list mb0 list">
                   <li class="sidebar__reviews-item">
                     <img
-                      src="img/Ellipse771.png"
+                      src="/img/Ellipse771.png"
                       alt="photo"
                       class="sidebar__reviews-photo"
                     />
@@ -786,7 +107,7 @@
                   </li>
                   <li class="sidebar__reviews-item">
                     <img
-                      src="img/Ellipse771.png"
+                      src="/img/Ellipse771.png"
                       alt="photo"
                       class="sidebar__reviews-photo"
                     />
@@ -805,7 +126,7 @@
                   </li>
                   <li class="sidebar__reviews-item">
                     <img
-                      src="img/Ellipse771.png"
+                      src="/img/Ellipse771.png"
                       alt="photo"
                       class="sidebar__reviews-photo"
                     />
@@ -823,7 +144,7 @@
                     </button>
                   </li>
                 </ul>
-                <a href="articles.html" class="sidebar__button">Все новости</a>
+                <a href="/articles.html" class="sidebar__button">Все новости</a>
               </div>
               <div class="sidebar__info">
                 <h4 class="sidebar__title mb0">Новости</h4>
@@ -868,7 +189,7 @@
                     </button>
                   </li>
                 </ul>
-                <a href="articles.html" class="sidebar__button">Все новости</a>
+                <a href="/articles.html" class="sidebar__button">Все новости</a>
               </div>
             </div>
           </div>
@@ -877,9 +198,9 @@
               <div class="brand-catalog__cards row">
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="brand-catalog__card">
-                    <a href="brands/samsung.html.html" class="card__link">
+                    <a href="/brands/samsung.html.html" class="card__link">
                       <img
-                        src="img/brand-samsung.png"
+                        src="/img/brand-samsung.png"
                         alt="brand"
                         class="card__img"
                       />
@@ -892,25 +213,25 @@
                     </h4>
                     <ul class="icons-list list">
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-mobile-alt item-icon"></i>
                           <span class="item-text">Смартфоны </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-laptop item-icon"></i>
                           <span class="item-text">Ноутбуки </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-tablet-alt item-icon"></i>
                           <span class="item-text">Планшеты</span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-desktop item-icon"></i>
                           <span class="item-text">Kомпьютеры</span>
                         </a>
@@ -920,9 +241,9 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="brand-catalog__card">
-                    <a href="brands/apple.html.html" class="card__link">
+                    <a href="/brands/apple.html.html" class="card__link">
                       <img
-                        src="img/brand-apple.png"
+                        src="/img/brand-apple.png"
                         alt="brand"
                         class="card__img"
                       />
@@ -930,25 +251,25 @@
                     </a>
                     <ul class="icons-list list">
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-mobile-alt item-icon"></i>
                           <span class="item-text">Смартфоны </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-laptop item-icon"></i>
                           <span class="item-text">Ноутбуки </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-tablet-alt item-icon"></i>
                           <span class="item-text">Планшеты</span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-desktop item-icon"></i>
                           <span class="item-text">Kомпьютеры</span>
                         </a>
@@ -958,9 +279,9 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="brand-catalog__card">
-                    <a href="brands/htc.html.html" class="card__link">
+                    <a href="/brands/htc.html.html" class="card__link">
                       <img
-                        src="img/brand-htc.png"
+                        src="/img/brand-htc.png"
                         alt="brand"
                         class="card__img"
                       />
@@ -968,25 +289,25 @@
                     </a>
                     <ul class="icons-list list">
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-mobile-alt item-icon"></i>
                           <span class="item-text">Смартфоны </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-laptop item-icon"></i>
                           <span class="item-text">Ноутбуки </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-tablet-alt item-icon"></i>
                           <span class="item-text">Планшеты</span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-desktop item-icon"></i>
                           <span class="item-text">Kомпьютеры</span>
                         </a>
@@ -996,9 +317,9 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="brand-catalog__card">
-                    <a href="brands/lg.html.html" class="card__link">
+                    <a href="/brands/lg.html.html" class="card__link">
                       <img
-                        src="img/brand-lg.png"
+                        src="/img/brand-lg.png"
                         alt="brand"
                         class="card__img"
                       />
@@ -1006,25 +327,25 @@
                     </a>
                     <ul class="icons-list list">
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-mobile-alt item-icon"></i>
                           <span class="item-text">Смартфоны </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-laptop item-icon"></i>
                           <span class="item-text">Ноутбуки </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-tablet-alt item-icon"></i>
                           <span class="item-text">Планшеты</span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-desktop item-icon"></i>
                           <span class="item-text">Kомпьютеры</span>
                         </a>
@@ -1034,9 +355,9 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="brand-catalog__card">
-                    <a href="brands/fly.html.html" class="card__link">
+                    <a href="/brands/fly.html.html" class="card__link">
                       <img
-                        src="img/brand-fly.png"
+                        src="/img/brand-fly.png"
                         alt="brand"
                         class="card__img"
                       />
@@ -1044,25 +365,25 @@
                     </a>
                     <ul class="icons-list list">
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-mobile-alt item-icon"></i>
                           <span class="item-text">Смартфоны </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-laptop item-icon"></i>
                           <span class="item-text">Ноутбуки </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-tablet-alt item-icon"></i>
                           <span class="item-text">Планшеты</span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-desktop item-icon"></i>
                           <span class="item-text">Kомпьютеры</span>
                         </a>
@@ -1072,9 +393,9 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="brand-catalog__card">
-                    <a href="brands/lenovo.html.html" class="card__link">
+                    <a href="/brands/lenovo.html.html" class="card__link">
                       <img
-                        src="img/brand-lenovo.png"
+                        src="/img/brand-lenovo.png"
                         alt="brand"
                         class="card__img"
                       />
@@ -1082,25 +403,25 @@
                     </a>
                     <ul class="icons-list list">
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-mobile-alt item-icon"></i>
                           <span class="item-text">Смартфоны </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-laptop item-icon"></i>
                           <span class="item-text">Ноутбуки </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-tablet-alt item-icon"></i>
                           <span class="item-text">Планшеты</span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-desktop item-icon"></i>
                           <span class="item-text">Kомпьютеры</span>
                         </a>
@@ -1110,9 +431,9 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="brand-catalog__card">
-                    <a href="brands/sony.html.html" class="card__link">
+                    <a href="/brands/sony.html.html" class="card__link">
                       <img
-                        src="img/brand-sony.png"
+                        src="/img/brand-sony.png"
                         alt="brand"
                         class="card__img"
                       />
@@ -1120,25 +441,25 @@
                     </a>
                     <ul class="icons-list list">
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-mobile-alt item-icon"></i>
                           <span class="item-text">Смартфоны </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-laptop item-icon"></i>
                           <span class="item-text">Ноутбуки </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-tablet-alt item-icon"></i>
                           <span class="item-text">Планшеты</span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-desktop item-icon"></i>
                           <span class="item-text">Kомпьютеры</span>
                         </a>
@@ -1148,9 +469,9 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="brand-catalog__card">
-                    <a href="brands/asus.html.html" class="card__link">
+                    <a href="/brands/asus.html.html" class="card__link">
                       <img
-                        src="img/brand-asus.png"
+                        src="/img/brand-asus.png"
                         alt="brand"
                         class="card__img"
                       />
@@ -1158,25 +479,25 @@
                     </a>
                     <ul class="icons-list list">
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-mobile-alt item-icon"></i>
                           <span class="item-text">Смартфоны </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-laptop item-icon"></i>
                           <span class="item-text">Ноутбуки </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-tablet-alt item-icon"></i>
                           <span class="item-text">Планшеты</span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-desktop item-icon"></i>
                           <span class="item-text">Kомпьютеры</span>
                         </a>
@@ -1186,9 +507,9 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="brand-catalog__card">
-                    <a href="brands/acer.html.html" class="card__link">
+                    <a href="/brands/acer.html.html" class="card__link">
                       <img
-                        src="img/brand-acer.png"
+                        src="/img/brand-acer.png"
                         alt="brand"
                         class="card__img"
                       />
@@ -1196,25 +517,25 @@
                     </a>
                     <ul class="icons-list list">
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-mobile-alt item-icon"></i>
                           <span class="item-text">Смартфоны </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-laptop item-icon"></i>
                           <span class="item-text">Ноутбуки </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-tablet-alt item-icon"></i>
                           <span class="item-text">Планшеты</span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-desktop item-icon"></i>
                           <span class="item-text">Kомпьютеры</span>
                         </a>
@@ -1224,9 +545,9 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="brand-catalog__card">
-                    <a href="brands/nokia.html.html" class="card__link">
+                    <a href="/brands/nokia.html.html" class="card__link">
                       <img
-                        src="img/brand-nokia.png"
+                        src="/img/brand-nokia.png"
                         alt="brand"
                         class="card__img"
                       />
@@ -1234,25 +555,25 @@
                     </a>
                     <ul class="icons-list list">
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-mobile-alt item-icon"></i>
                           <span class="item-text">Смартфоны </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-laptop item-icon"></i>
                           <span class="item-text">Ноутбуки </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-tablet-alt item-icon"></i>
                           <span class="item-text">Планшеты</span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-desktop item-icon"></i>
                           <span class="item-text">Kомпьютеры</span>
                         </a>
@@ -1262,9 +583,9 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="brand-catalog__card">
-                    <a href="brands/motorola.html" class="card__link">
+                    <a href="/brands/motorola.html" class="card__link">
                       <img
-                        src="img/brand-motorola.png"
+                        src="/img/brand-motorola.png"
                         alt="brand"
                         class="card__img"
                       />
@@ -1272,25 +593,25 @@
                     </a>
                     <ul class="icons-list list">
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-mobile-alt item-icon"></i>
                           <span class="item-text">Смартфоны </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-laptop item-icon"></i>
                           <span class="item-text">Ноутбуки </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-tablet-alt item-icon"></i>
                           <span class="item-text">Планшеты</span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-desktop item-icon"></i>
                           <span class="item-text">Kомпьютеры</span>
                         </a>
@@ -1300,9 +621,9 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="brand-catalog__card">
-                    <a href="brands/huawei.html" class="card__link">
+                    <a href="/brands/huawei.html" class="card__link">
                       <img
-                        src="img/brand-huawei.png"
+                        src="/img/brand-huawei.png"
                         alt="brand"
                         class="card__img"
                       />
@@ -1310,25 +631,25 @@
                     </a>
                     <ul class="icons-list list">
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-mobile-alt item-icon"></i>
                           <span class="item-text">Смартфоны </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-laptop item-icon"></i>
                           <span class="item-text">Ноутбуки </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-tablet-alt item-icon"></i>
                           <span class="item-text">Планшеты</span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-desktop item-icon"></i>
                           <span class="item-text">Kомпьютеры</span>
                         </a>
@@ -1338,9 +659,9 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="brand-catalog__card">
-                    <a href="brands/meizu.html" class="card__link">
+                    <a href="/brands/meizu.html" class="card__link">
                       <img
-                        src="img/brand-meizu.png"
+                        src="/img/brand-meizu.png"
                         alt="brand"
                         class="card__img"
                       />
@@ -1348,25 +669,25 @@
                     </a>
                     <ul class="icons-list list">
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-mobile-alt item-icon"></i>
                           <span class="item-text">Смартфоны </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-laptop item-icon"></i>
                           <span class="item-text">Ноутбуки </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-tablet-alt item-icon"></i>
                           <span class="item-text">Планшеты</span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-desktop item-icon"></i>
                           <span class="item-text">Kомпьютеры</span>
                         </a>
@@ -1376,9 +697,9 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="brand-catalog__card">
-                    <a href="brands/xiaomi.html" class="card__link">
+                    <a href="/brands/xiaomi.html" class="card__link">
                       <img
-                        src="img/brand-xiaomi.png"
+                        src="/img/brand-xiaomi.png"
                         alt="brand"
                         class="card__img"
                       />
@@ -1386,25 +707,25 @@
                     </a>
                     <ul class="icons-list list">
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-mobile-alt item-icon"></i>
                           <span class="item-text">Смартфоны </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-laptop item-icon"></i>
                           <span class="item-text">Ноутбуки </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-tablet-alt item-icon"></i>
                           <span class="item-text">Планшеты</span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-desktop item-icon"></i>
                           <span class="item-text">Kомпьютеры</span>
                         </a>
@@ -1414,9 +735,9 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="brand-catalog__card">
-                    <a href="brands/oneplus.html" class="card__link">
+                    <a href="/brands/oneplus.html" class="card__link">
                       <img
-                        src="img/brand-oneplus.png"
+                        src="/img/brand-oneplus.png"
                         alt="brand"
                         class="card__img"
                       />
@@ -1424,25 +745,25 @@
                     </a>
                     <ul class="icons-list list">
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-mobile-alt item-icon"></i>
                           <span class="item-text">Смартфоны </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-laptop item-icon"></i>
                           <span class="item-text">Ноутбуки </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-tablet-alt item-icon"></i>
                           <span class="item-text">Планшеты</span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-desktop item-icon"></i>
                           <span class="item-text">Kомпьютеры</span>
                         </a>
@@ -1452,9 +773,9 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="brand-catalog__card">
-                    <a href="brands/zte.html" class="card__link">
+                    <a href="/brands/zte.html" class="card__link">
                       <img
-                        src="img/brand-zte.png"
+                        src="/img/brand-zte.png"
                         alt="brand"
                         class="card__img"
                       />
@@ -1462,25 +783,25 @@
                     </a>
                     <ul class="icons-list list">
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-mobile-alt item-icon"></i>
                           <span class="item-text">Смартфоны </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-laptop item-icon"></i>
                           <span class="item-text">Ноутбуки </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-tablet-alt item-icon"></i>
                           <span class="item-text">Планшеты</span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-desktop item-icon"></i>
                           <span class="item-text">Kомпьютеры</span>
                         </a>
@@ -1490,9 +811,9 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="brand-catalog__card">
-                    <a href="brands/vertu.html" class="card__link">
+                    <a href="/brands/vertu.html" class="card__link">
                       <img
-                        src="img/brand-vertu.png"
+                        src="/img/brand-vertu.png"
                         alt="brand"
                         class="card__img"
                       />
@@ -1500,25 +821,25 @@
                     </a>
                     <ul class="icons-list list">
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-mobile-alt item-icon"></i>
                           <span class="item-text">Смартфоны </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-laptop item-icon"></i>
                           <span class="item-text">Ноутбуки </span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-tablet-alt item-icon"></i>
                           <span class="item-text">Планшеты</span>
                         </a>
                       </li>
                       <li class="icons-item">
-                        <a href="#" class="item-link">
+                        <a href="/#" class="item-link">
                           <i class="fas fa-desktop item-icon"></i>
                           <span class="item-text">Kомпьютеры</span>
                         </a>
@@ -1767,230 +1088,10 @@
         </div>
       </section>
     </main>
+    @@include('footer-header/footer.html')
 
-  <!-- footer -->
-  <footer class="footer">
-      <div class="recall__wrap">
-        <div class="recall container">
-          <h2 class="recall__title">
-            ПОЗВОНИТЕ НАМ И МЫ ОБЯЗАТЕЛЬНО ПОМОЖЕМ!
-          </h2>
-          <p class="recall__text">
-            Все эти и многие другие проблемы с вашими портативными устройствами
-            мы решаем в сервисном центре «Мегамастер», который находится в самом
-            центре Киева.
-          </p>
-  
-          <form class="recall__form">
-            <div class="row justify-center">
-              <div class="col-xl-4 col-lg-5 input__wrap">
-                <input
-                  placeholder="Имя"
-                  type="text"
-                  class="recall__form-input"
-                />
-              </div>
-              <div class="col-xl-4 col-lg-5 input__wrap">
-                <input
-                  placeholder="Телефон"
-                  type="text"
-                  class="recall__form-input"
-                />
-              </div>
-              <div class="col-xl-4 col-12 button__wrap">
-                <button type="submit" class="recall__form-button btn">
-                  Заказать звонок
-                  <svg
-                    class="recall__form-icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    width="18px"
-                    height="12px"
-                  >
-                    <path
-                      d="M0.779,6.753 L15.341,6.753 L11.866,10.113 C11.562,10.407 11.562,10.885 11.866,11.179 C12.170,11.473 12.664,11.473 12.968,11.179 L17.773,6.532 C18.077,6.238 18.077,5.760 17.773,5.467 L12.968,0.819 C12.816,0.672 12.616,0.598 12.417,0.598 C12.218,0.598 12.018,0.672 11.866,0.819 C11.562,1.114 11.562,1.591 11.866,1.885 L15.341,5.245 L0.779,5.245 C0.349,5.245 -0.000,5.583 -0.000,5.999 C-0.000,6.415 0.349,6.753 0.779,6.753 Z"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="main__wrap">
-        <div class="main container">
-          <div class="row">
-            <div class="col-xl-3 col-lg-6 col-md-6 col-12 flex-center">
-              <div class="main__logo ">
-                <a class="main__logo-link" href="https://megamaster.kiev.ua/">
-                  <img
-                    src="img/logotype.png"
-                    alt="logotype"
-                    class="main__logo-img"
-                  />
-                </a>
-                <div class="main__logo-icons">
-                  <a href="https://www.facebook.com/megamasterkiev" target="blank" class="logo-link">
-                    <img
-                      src="img/facebook-icon.png"
-                      alt="facebook"
-                      class="main__logo-icon"
-                    />
-                  </a>
-                  <a href="https://www.instagram.com/megamaster_kiev/" target="blank" class="logo-link">
-                    <img
-                      src="img/instagram-icon.png"
-                      alt="instagram"
-                      class="main__logo-icon"
-                    />
-                  </a>
-                  <a href="https://www.youtube.com/channel/UCAXCxLnFFQohkr2JalI2_gA?view_as=subscriber" target="blank" class="logo-link">
-                    <img
-                      src="img/youtube-icon.png"
-                      alt="youtube"
-                      class="main__logo-icon"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 col-12 flex-center">
-              <div class="main__menu">
-                <h3 class="main__title">Меню</h3>
-                <ul class="main__menu-list">
-                  <li class="main__menu-item">
-                    <a href="remont-mobilnyix-telefonov.html" class="item-link">
-                      Ремонт мобильных телефонов
-                    </a>
-                  </li>
-                  <li class="main__menu-item">
-                    <a href="remont-noutbukov.html" class="item-link">
-                      Ремонт ноутбуков
-                    </a>
-                  </li>
-                  <li class="main__menu-item">
-                    <a href="planshety.html" class="item-link">
-                      Ремонт планшетов
-                    </a>
-                  </li>
-                  <li class="main__menu-item">
-                    <a href="pc-service.html" class="item-link">
-                      Ремонт компьютеров
-                    </a>
-                  </li>
-                  <li class="main__menu-item">
-                    <a href="brands/apple.html.html" class="item-link">
-                      Ремонт Apple
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 col-12 flex-center">
-              <div class="main__adress-wrap">
-                <h3 class="main__title">Сервисные центры</h3>
-                <div class="main__adress">
-                  <svg
-                    class="green main__adress-icon"
-                    width="15px"
-                    height="18px"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    viewBox="0 0 18 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M14.501,0.159 L9.095,7.787 L3.573,0.336 L0.541,12.813 L4.644,12.813 L5.396,8.822 L9.028,13.839 L12.641,8.932 L13.368,12.835 L17.459,12.835 L14.501,0.159 Z"
-                    />
-                  </svg>
-                  <span class="main__adress-station">Лукьяновка</span>
-                  <p class="main__adress-street">
-                    ул. Сечевых Стрельцов 103
-                  </p>
-                </div>
-                <div class="main__adress">
-                  <svg
-                    class="red main__adress-icon"
-                    width="15px"
-                    height="18px"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    viewBox="0 0 18 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M14.501,0.159 L9.095,7.787 L3.573,0.336 L0.541,12.813 L4.644,12.813 L5.396,8.822 L9.028,13.839 L12.641,8.932 L13.368,12.835 L17.459,12.835 L14.501,0.159 Z"
-                    />
-                  </svg>
-                  <span class="main__adress-station">Арсенальная</span>
-                  <p class="main__adress-street">ул. Мазепы 12а</p>
-                </div>
-                <div class="main__adress">
-                  <svg
-                    class="green main__adress-icon"
-                    width="15px"
-                    height="18px"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    viewBox="0 0 18 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M14.501,0.159 L9.095,7.787 L3.573,0.336 L0.541,12.813 L4.644,12.813 L5.396,8.822 L9.028,13.839 L12.641,8.932 L13.368,12.835 L17.459,12.835 L14.501,0.159 Z"
-                    />
-                  </svg>
-                  <span class="main__adress-station">Позняки</span>
-                  <p class="main__adress-street">ул. Ахматовой 9/18</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 col-12 flex-center">
-              <div class="main__contacts">
-                <h3 class="main__title">Контакты</h3>
-                <div class="main__phone">
-                  <a class="main__phone-num" href="tel:+380996293030"
-                    >(099) 629 30 30</a
-                  >
-                  <a class="main__phone-num" href="tel:+380686293030"
-                    >(068) 629 30 30</a
-                  >
-                  <a class="main__phone-num" href="tel:+380635782890"
-                    >(063) 578 28 90</a
-                  >
-                </div>
-                <div class="main__contacts-mail">
-                  info@megamaster.kiev.ua
-                </div>
-                <div class="main__contacts-schedule">
-                  <svg
-                    class="main__contacts-icon"
-                    width="19px"
-                    height="20px"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    viewBox="1 1 20 20"
-                  >
-                    <path
-                      d="M11.000,0.498 C5.201,0.498 0.500,5.200 0.500,10.998 C0.500,16.798 5.201,21.499 11.000,21.499 C16.799,21.499 21.500,16.798 21.500,10.998 C21.500,5.200 16.799,0.498 11.000,0.498 ZM15.539,12.995 L11.088,12.995 C11.073,12.995 11.059,12.992 11.044,12.991 C11.029,12.992 11.015,12.995 11.000,12.995 C10.599,12.995 10.273,12.670 10.273,12.269 L10.273,4.857 C10.273,4.455 10.599,4.130 11.000,4.130 C11.401,4.130 11.726,4.455 11.726,4.857 L11.726,11.543 L15.539,11.543 C15.940,11.543 16.265,11.868 16.265,12.269 C16.265,12.670 15.940,12.995 15.539,12.995 Z"
-                    />
-                  </svg>
-                  <span class="main__contacts-shedule-time">
-                    Время работы С 10:00 до 19:00
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-info">
-          © Все права защищены. МегаМастер - 2010 - 2018
-        </div>
-      </div>
-  </footer>
+@@include('footer-header/scripts.html')
 
-    <script src="https://use.fontawesome.com/d23847c791.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./js/slick.min.js"></script>
-    <script src="js/common.min.js"></script>
+
   </body>
 </html>

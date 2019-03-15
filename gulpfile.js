@@ -11,7 +11,8 @@ var sass = require("gulp-sass"), // переводит SASS в CSS
   coffee = require("gulp-coffee"),
   browserSync = require("browser-sync"), // Подключаем Browser Sync
   rigger = require("gulp-rigger"),
-  babel = require("gulp-babel");
+  babel = require("gulp-babel"),
+  fileinclude = require('gulp-file-include');
 //npm i потом код снизу!
 //npm install --save-dev gulp-install установка gulp
 ///установка плагинов npm i gulp-jshint --save-dev
@@ -22,10 +23,22 @@ var sass = require("gulp-sass"), // переводит SASS в CSS
 	------------------------------------------------------------ */
 
 // Копирование файлов HTML в папку dist
+// gulp.task("html", function() {
+//   return gulp
+//     .src("src/*.html")
+//     .pipe(rigger())
+//     .pipe(gulp.dest("dist"))
+//     .pipe(browserSync.reload({ stream: true }));
+// });
+
 gulp.task("html", function() {
   return gulp
-    .src("src/*.html")
-    .pipe(rigger())
+    .src("src/**/*.html")
+    .pipe(plumber())
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
     .pipe(gulp.dest("dist"))
     .pipe(browserSync.reload({ stream: true }));
 });
@@ -91,9 +104,23 @@ gulp.task("scripts", function() {
 });
 
 // Сжимаем картинки
+// gulp.task("imgs", function() {
+//   return gulp
+//     .src("src/img/*.+(jpg|jpeg|png|gif)")
+//     .pipe(
+//       imagemin({
+//         progressive: true,
+//         svgoPlugins: [{ removeViewBox: false }],
+//         interlaced: true
+//       })
+//     )
+//     .pipe(gulp.dest("dist/img/"))
+//     .pipe(browserSync.reload({ stream: true })); // Обновляем CSS на странице при изменении
+// });
+
 gulp.task("imgs", function() {
   return gulp
-    .src("src/img/*.+(jpg|jpeg|png|gif)")
+    .src("src/img/**/*.+(jpg|jpeg|png|gif)")
     .pipe(
       imagemin({
         progressive: true,
@@ -107,7 +134,7 @@ gulp.task("imgs", function() {
 
 // Задача слежения за измененными файлами
 gulp.task("watch", function() {
-  gulp.watch("src/*.html", ["html"], browserSync.reload);
+  gulp.watch("src/**/*.html", ["html"], browserSync.reload);
   gulp.watch("src/js/*.js", ["scripts"], browserSync.reload);
   gulp.watch("src/sass/*.sass", ["sass"], browserSync.reload);
   gulp.watch("src/img/*.+(jpg|jpeg|png|gif)", ["imgs"], browserSync.reload);

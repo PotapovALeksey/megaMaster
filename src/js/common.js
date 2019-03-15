@@ -135,6 +135,31 @@ $(document).ready(function() {
     })
   );
 
+// Работа с popup-form
+const openButtonPopupForm = document.querySelector('.info__btn');
+const popupForm = document.querySelector('.popup-form-wrap');
+const closeButtonPopupForm = document.querySelector('.popup-form-close');
+
+openButtonPopupForm.addEventListener("click", () => {
+  popupForm.classList.add('open');
+});
+closeButtonPopupForm.addEventListener("click", () => {
+  popupForm.classList.remove("open");
+})
+
+popupForm.addEventListener("click", (e) => {
+  if (e.target !== popupForm) return; 
+  popupForm.classList.remove("open");
+})
+
+const discountButton = document.querySelector('.discount-recall__button');
+
+if (discountButton) {
+  discountButton.addEventListener("click", () => {
+    popupForm.classList.add('open');
+  });
+}
+
   //---------------------OUR-CASE --------------------------//
 
   //-------------------------------------------------------//
@@ -160,21 +185,13 @@ $(document).ready(function() {
     return false;
   });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Маска для input телефонов
+  document.querySelectorAll("input[name=phone").forEach(el => {
+    $(function($){
+      $(el)
+        .mask("+38(099) 999-99-99");
+      });
+  });
 
   //-------------------------
 });
